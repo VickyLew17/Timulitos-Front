@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timulitos</title>
+    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQyIiBoZWlnaHQ9IjIzMyIgdmlld0JveD0iMCAwIDE0MiAyMzMiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik02My4wMDc4IDkzLjk1ODZDOTcuNDg1IDkzLjk1ODcgMTI1LjUxNiAxMjQuNzkyIDEyNS41MTYgMTYyLjkzMkMxMjUuNTE2IDIwMS4wNzIgOTcuNDg1IDIzMS45MDYgNjMuMDA3OCAyMzEuOTA2QzI4LjUzMDYgMjMxLjkwNiAwLjUgMjAxLjA3MiAwLjUgMTYyLjkzMkMwLjUwMDAxNSAxMjQuNzkyIDI4LjUzMDYgOTMuOTU4NiA2My4wMDc4IDkzLjk1ODZaIiBmaWxsPSIjRTRENEJFIiBzdHJva2U9IiNGOUY5RjkiLz4KPGVsbGlwc2UgY3g9IjE4Ljc5NTgiIGN5PSI2MS45MTE2IiByeD0iMTguNzk1OCIgcnk9IjYxLjkxMTYiIHRyYW5zZm9ybT0ibWF0cml4KDAuOTg2OTAzIC0wLjE2MTMxMiAwLjEzMzI0NSAwLjk5MTA4MyA0LjUwMDQ5IDYuMDYzOTYpIiBmaWxsPSIjRTRENEJFIi8+CjxwYXRoIG9wYWNpdHk9IjAuOSIgZD0iTTI2LjkyNSAyOS42MDQ1QzI4LjIzNTUgMjkuMzkwMyAyOS42OCAyOS45OTk2IDMxLjE5NTMgMzEuNDg0MUMzMi43MDM3IDMyLjk2MiAzNC4yMTE4IDM1LjI0MjQgMzUuNjI0NSAzOC4xNzk2QzM4LjQ0NzYgNDQuMDQ5MiA0MC44NDE4IDUyLjQzNjIgNDIuMTIwMyA2MS45NDU4QzQzLjM5ODggNzEuNDU1NCA0My4zMTQzIDgwLjI0NzUgNDIuMTU2OSA4Ni43Njc4QzQxLjU3NzcgOTAuMDMwOCA0MC43MzQ3IDkyLjY5NjIgMzkuNjc5OSA5NC41OTMxQzM4LjYyMDQgOTYuNDk4MyAzNy4zOTgxIDk3LjU0MjcgMzYuMDg3NiA5Ny43NTY5QzM0Ljc3NzMgOTcuOTcxIDMzLjMzMzUgOTcuMzYyMiAzMS44MTg0IDk1Ljg3ODFDMzAuMzA5OSA5NC40MDAyIDI4LjgwMTggOTIuMTE5IDI3LjM4OSA4OS4xODE3QzI0LjU2NTkgODMuMzEyIDIyLjE3MTcgNzQuOTI1MSAyMC44OTMyIDY1LjQxNTRDMTkuNjE0NyA1NS45MDU4IDE5LjY5OTMgNDcuMTEzNyAyMC44NTY2IDQwLjU5MzRDMjEuNDM1OCAzNy4zMzA2IDIyLjI3OSAzNC42NjU5IDIzLjMzMzggMzIuNzY5MUMyNC4zOTMzIDMwLjg2MzkgMjUuNjE0NiAyOS44MTg4IDI2LjkyNSAyOS42MDQ1WiIgZmlsbD0iI0ZGRUNGMSIgc3Ryb2tlPSIjRjlGOUY5Ii8+CjxwYXRoIGQ9Ik05OC41MjQ1IDE1Ny44NTRDMTA4Ljc2OSAxNTYuMTggMTA4LjgyNSAxMTYuMDg3IDEwOC44MjUgODAuMTI3NUMxNDUuNDEgMTQwLjg5OSAxNDIuNzg1IDcxLjgzOTIgOTguNTI0NSAzNi42ODg5Qzg4LjI3OTkgMzguMzYzNCA3Ny40Njk4IDQ2LjIzOTUgODIuMDI1OCA4MC4xMjc0Qzg2LjU4MTggMTE0LjAxNSA4OC4yNzk5IDE1OS41MjkgOTguNTI0NSAxNTcuODU0WiIgZmlsbD0iI0U0RDRCRSIvPgo8cGF0aCBvcGFjaXR5PSIwLjkiIGQ9Ik0xMDguMzM4IDY4LjM0OTFDMTA3LjQwOSA3Ny43MDc3IDEwNS4zNzUgODYuMDEwNiAxMDIuODMgOTEuOTA1QzEwMS41MzMgOTQuOTA2OSAxMDAuMTE2IDk3LjI1NzMgOTguNjY2MyA5OC44MDU3Qzk3LjIxMDMgMTAwLjM2MSA5NS43OTE3IDEwMS4wMzggOTQuNDc0OCAxMDAuODg2QzkzLjE1NzkgMTAwLjczNSA5MS44OTY2IDk5Ljc0OTUgOTAuNzYzNCA5Ny44OTYxQzg5LjYzNTMgOTYuMDUxMSA4OC42ODg3IDkzLjQyODUgODcuOTgyMyA5MC4xOTYxQzg2LjU5NTQgODMuODQ5MSA4Ni4xNjA1IDc1LjI2MiA4Ny4wMDQ1IDY1Ljg5MzZMMTA4LjMzOCA2OC4zNDkxWiIgZmlsbD0iI0ZGRUNGMSIgc3Ryb2tlPSIjRjlGOUY5Ii8+CjxsaW5lIHkxPSItNiIgeDI9IjU3Ljc4NDYiIHkyPSItNiIgdHJhbnNmb3JtPSJtYXRyaXgoMC43Mzk5MDggMC42NzI3MDggLTAuNTk4ODgyIDAuODAwODM4IDgzLjI2MDMgNTcuODk0OCkiIHN0cm9rZT0iI0U0RDRCRSIgc3Ryb2tlLXdpZHRoPSIxMiIvPgo8ZWxsaXBzZSBjeD0iMzguMjU0NiIgY3k9IjE2MC40NTEiIHJ4PSI2LjAwMDc0IiByeT0iNi42MTY1NCIgZmlsbD0iYmxhY2siLz4KPGVsbGlwc2UgY3g9Ijg4LjUxMDciIGN5PSIxNjAuNDUxIiByeD0iNi4wMDA3NCIgcnk9IjYuNjE2NTQiIGZpbGw9ImJsYWNrIi8+CjxlbGxpcHNlIGN4PSI0MC4xMyIgY3k9IjE1OS4yMTEiIHJ4PSIyLjYyNTMyIiByeT0iMi44OTQ3NCIgZmlsbD0id2hpdGUiLz4KPGVsbGlwc2UgY3g9IjkwLjM4NjEiIGN5PSIxNTkuMjExIiByeD0iMi42MjUzMiIgcnk9IjIuODk0NzQiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik02OC4xMDkgMTc3LjMwNkM2Ni4wMzM3IDE4MS41NTMgNTkuOTgxOCAxODEuNTUzIDU3LjkwNjUgMTc3LjMwNkM1Ni4wNjMxIDE3My41MzQgNTguODA5NCAxNjkuMTM1IDYzLjAwNzcgMTY5LjEzNUM2Ny4yMDYgMTY5LjEzNSA2OS45NTI0IDE3My41MzQgNjguMTA5IDE3Ny4zMDZaIiBmaWxsPSIjRkZFQkYwIi8+Cjwvc3ZnPgo=">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="Comenzar">
+        <div class="popup">
+          <h2>¿Cómo querés jugar?</h2>
+            <button class="btn-popup" id="btn-con-cuenta">Entrar con cuenta</button>
+            <button class="btn-popup" id="btn-sin-cuenta">Jugar sin cuenta</button>
+            <button id="btn-cerrar-popup">Cancelar</button>
+        </div>
+</div>
+
+<div class="pantalla" id="pantalla-elegir-usuarios">
+
+  <div class="BotonDerecha">
+    <button class="BotonSalir">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+    </button>
+  </div>
+
+  <div class="elegir-usuarios">
+
+    <div class="jugador-seccion">
+      <h2>Jugador 1</h2>
+      <p>¿Quién jugará hoy?</p>
+      <p class="JugadoresAnteriores">Jugadores anteriores:</p>
+    
+      <div class="lista-jugadores">
+        <div class="jugador-item">Usuario 1</div>
+        <div class="jugador-item">Usuario 2</div>
+        <div class="jugador-item">Usuario 3</div>
+        <div class="jugador-item">Usuario 4</div>
+      </div>
+
+    <button class="btn-crear-jugador">Crear cuenta jugador 1</button>
+    </div>
+
+    <div class="jugador-seccion">
+      <h2>Jugador 2</h2>
+      <p>¿Quién jugará hoy?</p>
+      <p class="JugadoresAnteriores">Jugadores anteriores:</p>
+      
+    <div class="lista-jugadores">
+        <div class="jugador-item">Usuario 1</div>
+        <div class="jugador-item">Usuario 2</div>
+        <div class="jugador-item">Usuario 3</div>
+        <div class="jugador-item">Usuario 4</div>
+    </div>
+      <button class="btn-crear-jugador">Crear cuenta jugador 2</button>
+    </div>
+
+    
+  </div>
+
+</div>
+
+<div id="CrearUsuario">
+    <div class="popup">
+        <h2>Crea tu usuario</h2>
+        <p>Alguna frase de bienvenida</p>
+
+       <input type="text" placeholder="Nombre del usuario" class="input-cuenta" />
+
+        <button class="btn-popup" id="btn-jugar">¡Jugar!</button>
+        <button id="btn-cerrar-popup">Cancelar</button>    
+    </div>
+</div>
+
+<div class="pantalla" id="pantalla-inicio">
+<button class="BotonInformes">    
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard-list-icon lucide-clipboard-list"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg>
+</button>
+
+
+
+<h1 id="TituloPrincipal">Timulitos</h1>
+<p id="slogan">¡El único requisito es querer pasarla bien!</p>
+
+<div class="BotonesInicio">
+    <button class="btnInicio">Comenzar</button>
+    <button class="btnInicio">Más sobre nosotras</button>
+</div>
+</div>
+
+<div class="pantalla" id="pantalla-about">
+
+<div class="encabezado-pantalla">
+    <h2>Más sobre nosotras</h2>
+    <button class="BotonSalir"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
+    </button>
+</div>
+
+   
+   <p>Un texto es una composición ordenada de signos codificados en un sistema de escritura que forma una unidad de sentido. Su propósito principal es transmitir un mensaje claro con una intención comunicativa específica dentro de un contexto.Para que un escrito sea considerado un texto, debe cumplir con tres propiedades fundamentales:Coherencia: Las ideas deben estar organizadas de forma lógica y tener una unidad temática.Cohesión: Las oraciones y párrafos deben estar conectados correctamente mediante conectores y signos de puntuación.Adecuación: El mensaje debe adaptarse al receptor y a la situación</p>
+   <p>Darío Mischener es un destacado educador y tecnólogo argentino, ampliamente reconocido por su rol como Director de la Orientación en Tecnologías de la Información y Comunicación (TIC) en la Escuela Técnica ORT (Sede Belgrano). Ocupa este cargo desde marzo de 2004 y es el principal creador de su plan de estudios adaptativo enfocado en la tecnología y la innovación.Trayectoria y Filosofía EducativaEnfoque pedagógico: Promueve activamente el aprendizaje basado en proyectos y el valor del error como una herramienta pedagógica indispensable para la innovación y la resiliencia.Docencia universitaria: Se desempeña además como Docente Especialista en la Escuela de Educación de la Universidad de San Andrés.Proyectos con impacto: Coordina la muestra anual TICExperience, un espacio donde los estudiantes exhiben desarrollos tecnológicos creados para resolver problemáticas del mundo real.Logros y ReconocimientosPatente de inversión: Desarrolló un dispositivo que permite operar computadoras mediante el movimiento de la pupila, diseñado para personas con discapacidades motrices. Este invento recibió una declaración de beneplácito por parte de la Honorable Cámara de Diputados de la Nación.Premios educativos: Su plan de estudios ha sido distinguido y premiado tanto por el Ministerio de Educación de la Nación como por la Cámara de la Industria Argentina del Software (CESSI).¿Te interesaría conocer más detalles sobre algún proyecto tecnológico de sus alumnos o profundizar en su método de enseñanza basado en el error?</p>
+</div>
+
+<div class="pantalla" id="cuadricula">
+
+
+<div class="BotonDerecha">
+    <button class="BotonSalir">    
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
+    </button>
+</div>
+
+    <h1 id="TituloJuegos">Juegos </h1>
+    
+    <div class = "grilla">
+            <div class="juego-card" data-juego="Juego1">
+            <span class="juego-nombre">Juego 1</span>
+            </div>
+
+            <div class="juego-card" data-juego="Juego2">
+            <span class="juego-nombre">Juego 2</span>
+            </div>
+
+            <div class="juego-card" data-juego="Juego3">
+            <span class="juego-nombre">Juego 3</span>
+            </div>
+
+            <div class="juego-card" data-juego="Juego4">
+            <span class="juego-nombre">Juego 4</span>
+            </div>
+
+            <div class="juego-card" data-juego="Juego5">
+            <span class="juego-nombre">Juego 5</span>
+            </div>
+
+            <div class="juego-card" data-juego="Juego6">
+            <span class="juego-nombre">Juego 6</span>
+            </div>
+
+            <div class="juego-card" data-juego="Juego7">
+            <span class="juego-nombre">Juego 7</span>
+            </div>
+
+            <div class="juego-card" data-juego="Juego8">
+            <span class="juego-nombre">Juego 8</span>
+            </div>
+
+            <div class="juego-card" data-juego="Juego9">
+            <span class="juego-nombre">Juego 9</span>
+            </div>
+
+</div>
+</div>
+
+<div class="pantalla" id="pantalla-informes">
+
+<div class="encabezado-pantalla">
+    <h2>Informes</h2>
+    <button class="BotonSalir"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
+    </button>
+</div>
+
+  
+  <p>Seleccioná un usuario para ver su análisis</p>
+  <div class="lista-usuarios">
+    <div class="usuario-item">Usuario 1</div>
+    <div class="usuario-item">Usuario 2</div>
+    <div class="usuario-item">Usuario 3</div>
+    <div class="usuario-item">Usuario 4</div>
+  </div>
+</div>
+
+<div class="pantalla" id="pantalla-informe-usuario">
+
+<div class="encabezado-pantalla">
+    <h2>Usuario 1</h2>
+    <button class="BotonSalir"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
+    </button>
+</div>
+
+
+  <div class="informe-contenido">
+    <div class="informe-fila titulo">Cuánto tiempo jugó en su última sesión</div>
+    <div class="informe-fila dato">---</div>
+    <div class="informe-fila titulo">Cuáles juegos repitió</div>
+    <div class="informe-fila dato">---</div>
+    <div class="informe-fila titulo">Cuándo fue su última sesión</div>
+    <div class="informe-fila dato">---</div>
+    <div class="informe-fila titulo">Con quién fue su último juego</div>
+    <div class="informe-fila dato">---</div>
+    <div class="informe-fila titulo">CUALQUIER COSAAAAA</div>
+    <div class="informe-fila dato">---</div>
+  </div>
+</div>
+
+<style>
+
+        body{
+            font-family: Jua;
+            background-color: #fff8d8;
+        }
+
+        #TituloJuegos {
+            color: rgb(0, 0, 0);
+            text-align: center;
+            font-size: 60px;
+            font-weight: 700;
+            margin-top: 10px;
+        }
+
+        .juego-nombre {
+            font-size: 24px;
+        }
+
+        .grilla {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            max-width: 1000px;
+            margin: 0 auto;
+            align-items: center;
+            margin-bottom: 100px;
+        }
+
+        .juego-card {
+            background-color: rgb(168, 168, 168);
+            border-radius: 16px;
+            padding: 50px;
+            gap: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            border: 2px solid #000000;
+        }
+
+        .juego-card:hover {
+            box-shadow: 0 5px 10px rgba(107, 140, 255, 0.18);
+            transform: translateY(-2px);
+        }
+
+        .juego-card:active {
+            transform: translateY(0);
+        }
+
+        .BotonesInicio {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        }
+
+        .btnInicio {
+        display: inline-block;
+        text-decoration: none;
+        background-color: #FDE6E3;
+        color: #000000;
+        font-size: 16px;
+        font-weight: 400;
+        padding: 14px 35px;
+        border: 1px solid #000000;
+        border-radius: 50px;
+        margin-bottom: 150px;
+        font-family: Jua;
+        }
+
+        .btnInicio:hover {
+            box-shadow: 0 5px 10px rgba(107, 140, 255, 0.18);
+            transform: translateY(-2px);
+        }
+
+        .btnInicio:active {
+            transform: translateY(0);
+        }
+
+        #slogan {
+            font-size: 25px;
+            text-align: center;
+            margin-top: 0px;
+            margin-bottom: 60px;
+            color: #FFC1D1;
+        }
+
+        #TituloPrincipal {
+            font-size:  150px;
+            font-weight: 400;
+            color: #FFC1D1;
+            margin-top: 60px;
+            margin-bottom: -10px;
+            -webkit-text-stroke: 30px #e2faff;
+            paint-order: stroke fill;  
+            text-align: center; 
+        }
+
+       .BotonInformes {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: #e2faff;
+        border: 3px solid #FFC1D1;
+        color: #000000; 
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        margin-left: 24px;  
+        margin-top: 24px;  
+        }
+
+        .BotonInformes:hover {
+            box-shadow: 0 5px 10px rgba(107, 140, 255, 0.18);
+            transform: translateY(-2px);
+        }
+
+        .BotonInformes:active {
+            transform: translateY(0);
+        }
+
+        #pantalla-informes h2 {
+            font-size: 48px;
+            margin-bottom: -10px;
+            margin-left: 24px;
+        }
+
+        #pantalla-informes p {
+            font-size: 28px;
+            margin-bottom: 32px;
+            color:  rgb(168, 168, 168);
+            margin-left: 48px;
+        }
+
+        .lista-usuarios {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            max-width: 900px;
+            margin-left: 48px;
+            margin-bottom: 150px;
+        }
+
+        .usuario-item {
+            background: #FDE6E3;
+            border: 1.5px solid #000;
+            border-radius: 16px;
+            padding: 32px 16px;
+            font-size: 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .usuario-item:hover {
+            box-shadow: 0 5px 10px rgba(107, 140, 255, 0.18);
+            transform: translateY(-2px);
+        }
+
+        .usuario-item:active {
+            transform: translateY(0);
+        }
+
+        .BotonDerecha {
+        display: flex;
+        justify-content: flex-end; 
+        width: 99%;              
+        }
+
+        .BotonSalir {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #e2faff;
+        border: 3px solid #FFC1D1;
+        color: #000000; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 24px;  
+        margin-top: 24px;  
+        
+        }
+
+        .BotonSalir:hover {
+            box-shadow: 0 5px 10px rgba(107, 140, 255, 0.18);
+            transform: translateY(-2px);
+        }
+
+        .BotonSalir:active {
+            transform: translateY(0);
+        }
+
+        #pantalla-informe-usuario h2 {
+        font-size: 48px;
+        margin-bottom: 32px;
+        margin-left: 30px;
+        }
+
+        .informe-contenido {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-left: 30px;
+        margin-right: 30px;
+
+        }
+
+        .informe-fila {
+        padding: 16px 20px;
+        border-radius: 10px;
+        font-size: 28px;
+        }
+
+        .informe-fila.titulo {
+        background: #FFC1D1;
+        font-weight: bold;
+        }
+
+        .informe-fila.dato {
+        background: #e2faff;
+        }
+
+        #pantalla-about h2 {
+        font-size: 48px;
+        margin-bottom: 24px;
+        margin-left: 50px;
+
+        }
+
+        #pantalla-about p {
+        background: #e2faff;
+        border-radius: 20px;
+        padding: 40px;
+        max-width: 900px;
+        font-size: 24px;
+        margin-left: 30px;
+        }
+
+        .about-contenido p {
+        margin-bottom: 16px;
+        }
+    
+        .popup h2 { 
+        font-size: 28px; 
+        }
+
+        .popup {
+        background: #fff8d8; 
+        border: 3px solid #FFC1D1;
+        border-radius: 24px; 
+        padding: 48px 40px;
+        text-align: center;
+        max-width: 420px; 
+        display: flex; 
+        flex-direction: column; 
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        }
+
+        .btn-popup {
+        width: 300px;
+        font-family: Jua;
+        display: flex; 
+        flex-direction: column; 
+        font-size: 18px;
+        padding: 14px; 
+        border-radius: 50px; 
+        max-width: 300px; 
+        border: 2px solid #000; 
+        cursor: pointer;
+        
+        }
+        
+        .btn-popup:hover { 
+            box-shadow: 0 5px 10px rgba(107, 140, 255, 0.18);
+            transform: translateY(-2px);
+        }
+
+        .btn-popup:active { 
+        transform: translateY(0); 
+        }
+       
+        #btn-con-cuenta {
+        background-color: #FFC1D1; 
+        }
+
+        #btn-sin-cuenta { 
+        background-color: #e2faff; 
+        margin-bottom: 20px;
+        }
+
+        #btn-cerrar-popup {
+        background: none; border: none; color: #aaa;
+        font-size: 14px; cursor: pointer; font-family: 'Jua', sans-serif;
+        }
+
+        #btn-cerrar-popup:hover {
+        color: #000; 
+        }
+
+        #btn-jugar {
+        background-color: #FFC1D1; 
+        width: 180px;
+        margin-bottom: 20px;
+        }
+
+        .input-cuenta {
+        font-family: Jua;
+        font-size: 18px;
+        padding: 14px 20px;
+        border: 2px solid #000;
+        border-radius: 50px;
+        width: 100%;
+        text-align: center;
+        outline: none;
+        }
+
+        .input-cuenta:focus {
+        border-color: #FFC1D1;
+        }
+     
+        .popup p {
+            margin-top: -20px;
+        }
+
+        .elegir-usuarios {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        padding: 0 32px;
+        }
+
+        .jugador-seccion {
+        background: #e2faff;
+        border-radius: 20px;
+        padding: 28px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 32px;
+        }
+
+        .jugador-seccion h2 {
+        font-size: 38px;
+        margin-bottom: -28px;
+        }
+
+        .jugador-seccion p {
+        font-size: 24px;
+        color: #555;
+        }
+
+       .JugadoresAnteriores{
+        font-size: 18px;
+        color: #888;
+        margin-bottom: 8px;
+        margin-top: 8px;
+        }   
+
+        .lista-jugadores {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        }
+
+        .jugador-item {
+        background: #FFC1D1;
+        border: 2px solid #000;
+        border-radius: 12px;
+        padding: 20px;
+        text-align: center;
+        font-size: 18px;
+        cursor: pointer;
+        }
+
+        .jugador-item:hover {
+        box-shadow: 0 5px 10px rgba(107, 140, 255, 0.18);
+        transform: translateY(-2px);
+        }
+
+        .jugador-item:active {
+        transform: translateY(0);
+        }
+
+        .btn-crear-jugador {
+        font-family: Jua;
+        font-size: 16px;
+        padding: 12px 20px;
+        border: 2px solid #000;
+        border-radius: 50px;
+        background: #FDE6E3;
+        cursor: pointer;
+        margin-top: 8px;
+        }
+
+        .btn-crear-jugador:hover {
+        box-shadow: 0 5px 10px rgba(107, 140, 255, 0.18);
+        transform: translateY(-2px);
+        }
+
+        .encabezado-pantalla {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 24px 32px 0 32px;
+        }
+
+     /*.pantalla {
+        display: none;
+        }
+
+        #pantalla-inicio {
+        display: block;
+        }
+
+        #Comenzar,
+        #CrearUsuario {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.4);
+        align-items: center;
+        justify-content: center;
+        z-index: 100;
+        } */
+
+
+</style>
+
+</body> 
+</html>
