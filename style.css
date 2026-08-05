@@ -289,12 +289,12 @@
         margin-bottom: 20px;
         }
 
-        #btn-cerrar-popup {
+        .btn-cerrar-popup {
         background: none; border: none; color: #aaa;
         font-size: 14px; cursor: pointer; font-family: 'Jua', sans-serif;
         }
 
-        #btn-cerrar-popup:hover {
+        .btn-cerrar-popup:hover {
         color: #000; 
         }
 
@@ -405,25 +405,26 @@
         padding: 24px 32px 0 32px;
         }
 
-     /*.pantalla {
-        display: none;
+        .pantalla {
+            display: none;
+            min-height: 100vh;
         }
-
+        
+        .pantalla.activa {
+            display: block;
+        }
+        
         #pantalla-inicio {
-        display: block;
+            display: block;
         }
-
+        
         #Comenzar,
         #CrearUsuario {
-        display: none;
-        position: fixed;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.4);
-        align-items: center;
-        justify-content: center;
-        z-index: 100;
-        } */
-
-
-
-
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,.4);
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+        } 
