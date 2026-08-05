@@ -6,17 +6,23 @@ function cambiarPantalla(idPantalla) {
 
     document.getElementById(idPantalla).style.display = "block";
 }
+cambiarPantalla("pantalla-inicio");
 
-/*cambiarPantalla("pantalla-inicio");
-
-document.getElementById("btnAbout").addEventListener("click", () => {
-    cambiarPantalla("pantalla-about");
-});
 
 document.getElementById("btnInformes").addEventListener("click", () => {
     cambiarPantalla("pantalla-informes");
-});
+})
+
+document.getElementById("btnAbout").addEventListener("click", () => {
+    cambiarPantalla("pantalla-about");
+})
 
 document.getElementById("btnComenzar").addEventListener("click", () => {
-    document.getElementById("Comenzar").style.display = "flex";
-}); */
+   document.getElementById("Comenzar").style.display= "flex";
+})
+
+document.querySelectorAll(".BotonSalir").forEach (pantalla => {
+    boton.addEventListener("click", () => {
+        cambiarPantalla(boton.dataset.destino);
+    });
+})
