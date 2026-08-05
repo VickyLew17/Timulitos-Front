@@ -21,8 +21,48 @@ document.getElementById("btnComenzar").addEventListener("click", () => {
    document.getElementById("Comenzar").style.display= "flex";
 })
 
-document.querySelectorAll(".BotonSalir").forEach (pantalla => {
+document.querySelectorAll(".BotonSalir").forEach (boton => {
     boton.addEventListener("click", () => {
         cambiarPantalla(boton.dataset.destino);
+    });
+})
+
+document.querySelectorAll(".btn-cerrar-popup").forEach (boton => {
+    boton.addEventListener("click", () => {
+        boton.closest("#Comenzar, #CrearUsuario").style.display = "none";
+    });
+})
+
+document.querySelectorAll("#btn-con-cuenta").forEach (boton => {
+    boton.addEventListener("click", () => {
+        cambiarPantalla(boton.dataset.destino);
+        document.getElementById("Comenzar").style.display = "none";
+    });
+})
+
+document.querySelectorAll("#btn-sin-cuenta").forEach (boton => {
+    boton.addEventListener("click", () => {
+        cambiarPantalla(boton.dataset.destino);
+        document.getElementById("Comenzar").style.display = "none";
+    });
+})
+
+document.querySelectorAll("#btnCrearJugador1, #btnCrearJugador2").forEach(boton => {
+    boton.addEventListener("click", () => {
+        document.getElementById("CrearUsuario").style.display = "flex";
+    });
+});
+
+document.querySelectorAll("#btn-jugar").forEach (boton => {
+    boton.addEventListener("click", () => {
+        cambiarPantalla(boton.dataset.destino);
+        document.getElementById("CrearUsuario").style.display = "none";
+    });
+})
+
+document.querySelectorAll(".usuario-item").forEach (boton => {
+    boton.addEventListener("click", () => {
+        cambiarPantalla(boton.dataset.destino);
+      
     });
 })
