@@ -244,7 +244,7 @@
         border-radius: 24px; 
         padding: 48px 40px;
         text-align: center;
-        max-width: 420px; 
+        width: 420px; 
         display: flex; 
         flex-direction: column; 
         gap: 10px;
@@ -318,11 +318,13 @@
             margin-top: -20px;
         }
 
+      
         .elegir-usuarios {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 32px;
         padding: 0 32px;
+        margin-top: 90px;
         }
 
         .jugador-seccion {
@@ -333,6 +335,7 @@
         flex-direction: column;
         gap: 12px;
         margin-bottom: 32px;
+        
         }
 
         .jugador-seccion h2 {
@@ -402,7 +405,6 @@
 
         .pantalla {
             display: none;
-            min-height: 100vh;
         }
         
         .pantalla.activa {
@@ -413,13 +415,11 @@
             display: block;
         }
         
-        #Comenzar,
-        #CrearUsuario {
+        #Comenzar,#CrearUsuario {
             display: none;
             position: fixed;
             inset: 0;
             background: rgba(0,0,0,.4);
             justify-content: center;
             align-items: center;
-            z-index: 100;
         } 
