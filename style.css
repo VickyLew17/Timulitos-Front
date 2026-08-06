@@ -396,6 +396,10 @@
         transform: translateY(-2px);
         }
 
+        .btn-crear-jugador:active {
+            transform: translateY(0);
+        }
+
         .encabezado-pantalla {
         display: flex;
         justify-content: space-between;
@@ -423,3 +427,35 @@
             justify-content: center;
             align-items: center;
         } 
+
+        .titulo-juego {
+            text-align: center;
+            font-weight: 700;
+            font-size: 100px;
+        }
+
+        .div-btn-comenzar-juego{
+            display: flex;
+            justify-content: center;
+        }
+        
+        .btn-comenzar-juego { 
+            background-color: #FFC1D1;
+            color: #000000;
+            font-size: 32px;
+            font-weight: 400;
+            padding: 14px 35px;
+            border: 1px solid #000000;
+            border-radius: 50px;
+            margin-bottom: 150px;
+            font-family: Jua;
+         }
+
+         .btn-comenzar-juego:hover {
+            box-shadow: 0 5px 10px rgba(107, 140, 255, 0.18);
+            transform: translateY(-2px);
+        }
+    
+        .btn-comenzar-juego:active {
+                transform: translateY(0);
+        }

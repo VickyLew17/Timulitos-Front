@@ -3,7 +3,6 @@ function cambiarPantalla(idPantalla) {
     document.querySelectorAll(".pantalla").forEach(pantalla => {
         pantalla.style.display = "none";
     });
-
     document.getElementById(idPantalla).style.display = "block";
 }
 cambiarPantalla("pantalla-inicio");
@@ -63,6 +62,6 @@ document.querySelectorAll("#btn-jugar").forEach (boton => {
 document.querySelectorAll(".usuario-item").forEach (boton => {
     boton.addEventListener("click", () => {
         cambiarPantalla(boton.dataset.destino);
-      
+
     });
 })
