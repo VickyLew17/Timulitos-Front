@@ -65,3 +65,9 @@ document.querySelectorAll(".usuario-item").forEach (boton => {
 
     });
 })
+
+document.querySelectorAll(".juego-card").forEach(card => {
+    card.addEventListener("click", () => {
+        cambiarPantalla(card.dataset.destino);
+    });
+});

@@ -22,7 +22,7 @@
             max-width: 1000px;
             margin: 0 auto;
             align-items: center;
-            margin-bottom: 100px;
+            
         }
 
         .juego-card {
@@ -429,6 +429,7 @@
         } 
 
         .titulo-juego {
+            margin-top: 200px;
             text-align: center;
             font-weight: 700;
             font-size: 100px;
