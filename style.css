@@ -1,7 +1,7 @@
         body{
             font-family: Jua;
             background-color: #fff8d8;
-        }
+         }
 
         #TituloJuegos {
             color: rgb(0, 0, 0);
@@ -458,5 +458,27 @@
         }
     
         .btn-comenzar-juego:active {
-                transform: translateY(0);
+            transform: translateY(0);
         }
+
+        button:focus-visible,
+        .juego-card:focus-visible,  
+        .usuario-item:focus-visible,
+        .jugador-item:focus-visible {
+    outline: 2px solid #000000;
+    outline-offset: 4px;
+        }
+
+        .btnInicio,
+        .btn-popup,
+        .btn-crear-jugador,
+        .btn-comenzar-juego,
+        .BotonInformes,
+        .BotonSalir, .juego-card, .usuario-item, .jugador-item {
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        button {
+            cursor: pointer;
+            user-select: none;
+         }

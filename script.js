@@ -1,12 +1,11 @@
 function cambiarPantalla(idPantalla) {
-
     document.querySelectorAll(".pantalla").forEach(pantalla => {
         pantalla.style.display = "none";
     });
     document.getElementById(idPantalla).style.display = "block";
 }
-cambiarPantalla("pantalla-inicio");
 
+cambiarPantalla("pantalla-inicio");
 
 document.getElementById("btnInformes").addEventListener("click", () => {
     cambiarPantalla("pantalla-informes");
@@ -62,11 +61,16 @@ document.querySelectorAll("#btn-jugar").forEach (boton => {
 document.querySelectorAll(".usuario-item").forEach (boton => {
     boton.addEventListener("click", () => {
         cambiarPantalla(boton.dataset.destino);
-
     });
 })
 
 document.querySelectorAll(".juego-card").forEach(card => {
+    card.addEventListener("click", () => {
+        cambiarPantalla(card.dataset.destino);
+    });
+});
+
+document.querySelectorAll(".btn-comenzar-juego").forEach(card => {
     card.addEventListener("click", () => {
         cambiarPantalla(card.dataset.destino);
     });
