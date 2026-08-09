@@ -31,19 +31,14 @@ document.querySelectorAll(".btn-cerrar-popup").forEach (boton => {
     });
 })
 
-document.querySelectorAll("#btn-con-cuenta").forEach (boton => {
+document.querySelectorAll("#btn-con-cuenta, #btn-sin-cuenta").forEach(boton => {
     boton.addEventListener("click", () => {
         cambiarPantalla(boton.dataset.destino);
         document.getElementById("Comenzar").style.display = "none";
     });
-})
+});
 
-document.querySelectorAll("#btn-sin-cuenta").forEach (boton => {
-    boton.addEventListener("click", () => {
-        cambiarPantalla(boton.dataset.destino);
-        document.getElementById("Comenzar").style.display = "none";
-    });
-})
+
 
 document.querySelectorAll("#btnCrearJugador1, #btnCrearJugador2").forEach(boton => {
     boton.addEventListener("click", () => {

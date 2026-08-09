@@ -1,7 +1,7 @@
         body{
             font-family: Jua;
             background-color: #fff8d8;
-         }
+        }
 
         #TituloJuegos {
             color: rgb(0, 0, 0);
@@ -65,7 +65,7 @@
         border-radius: 50px;
         margin-bottom: 150px;
         font-family: Jua;
-        }
+        z-index: 1;}
 
         .btnInicio:hover {
             box-shadow: 0 5px 10px rgba(107, 140, 255, 0.18);
@@ -426,6 +426,7 @@
             background: rgba(0,0,0,.4);
             justify-content: center;
             align-items: center;
+            z-index: 1000;
         } 
 
         .titulo-juego {
@@ -450,9 +451,9 @@
             border-radius: 50px;
             margin-bottom: 150px;
             font-family: Jua;
-         }
+        }
 
-         .btn-comenzar-juego:hover {
+        .btn-comenzar-juego:hover {
             box-shadow: 0 5px 10px rgba(107, 140, 255, 0.18);
             transform: translateY(-2px);
         }
@@ -474,11 +475,14 @@
         .btn-crear-jugador,
         .btn-comenzar-juego,
         .BotonInformes,
-        .BotonSalir, .juego-card, .usuario-item, .jugador-item {
+        .BotonSalir, 
+        .juego-card, 
+        .usuario-item, 
+        .jugador-item {
     transition: transform 0.15s ease, box-shadow 0.15s ease;
         }
 
         button {
             cursor: pointer;
             user-select: none;
-         }
+        }
