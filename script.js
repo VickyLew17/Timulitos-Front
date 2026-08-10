@@ -38,8 +38,6 @@ document.querySelectorAll("#btn-con-cuenta, #btn-sin-cuenta").forEach(boton => {
     });
 });
 
-
-
 document.querySelectorAll("#btnCrearJugador1, #btnCrearJugador2").forEach(boton => {
     boton.addEventListener("click", () => {
         document.getElementById("CrearUsuario").style.display = "flex";
