@@ -1,4 +1,9 @@
-        body{
+      
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Jua, sans-serif;
+            background-color: #fff8d8;
             font-family: Jua;
             background-color: #fff8d8;
         }
@@ -6,45 +11,34 @@
         #TituloJuegos {
             color: rgb(0, 0, 0);
             text-align: center;
-            font-size: 60px;
+            font-size: 4rem;
             font-weight: 700;
-            margin-top: 10px;
         }
 
         .juego-nombre {
-            font-size: 24px;
+            font-size: 1.5rem;
         }
 
         .grilla {
+    
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            max-width: 1000px;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: clamp(16px, 2vw, 24px);
+            width: min(90%, 1000px);
             margin: 0 auto;
             align-items: center;
-            
+
         }
 
         .juego-card {
             background-color: rgb(168, 168, 168);
             border-radius: 16px;
-            padding: 50px;
-            gap: 12px;
+            padding: clamp(30px, 3vw, 50px);
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 12px;
             cursor: pointer;
             border: 2px solid #000000;
-        }
-
-        .juego-card:hover {
-            box-shadow: 0 5px 10px rgba(107, 140, 255, 0.18);
-            transform: translateY(-2px);
-        }
-
-        .juego-card:active {
-            transform: translateY(0);
         }
 
         .BotonesInicio {
@@ -58,26 +52,17 @@
         text-decoration: none;
         background-color: #FDE6E3;
         color: #000000;
-        font-size: 18px;
+        font-size: 1.1rem;
         font-weight: 400;
         padding: 14px 35px;
         border: 1px solid #000000;
         border-radius: 50px;
-        margin-bottom: 150px;
         font-family: Jua;
-        z-index: 1;}
-
-        .btnInicio:hover {
-            box-shadow: 0 5px 10px rgba(107, 140, 255, 0.18);
-            transform: translateY(-2px);
-        }
-
-        .btnInicio:active {
-            transform: translateY(0);
+        z-index: 1;
         }
 
         #slogan {
-            font-size: 35px;
+            font-size: 2rem;
             text-align: center;
             margin-top: 0px;
             margin-bottom: 40px;
@@ -85,7 +70,7 @@
         }
 
         #TituloPrincipal {
-            font-size:  160px;
+            font-size:  10rem;
             font-weight: 400;
             color: #FFC1D1;
             margin-top: 50px;
@@ -109,23 +94,14 @@
         margin-top: 24px;  
         }
 
-        .BotonInformes:hover {
-            box-shadow: 0 5px 10px rgba(107, 140, 255, 0.18);
-            transform: translateY(-2px);
-        }
-
-        .BotonInformes:active {
-            transform: translateY(0);
-        }
-
         #pantalla-informes h2 {
-            font-size: 48px;
+            font-size: 4rem;
             margin-bottom: -10px;
             margin-left: 24px;
         }
 
         #pantalla-informes p {
-            font-size: 28px;
+            font-size: 1.8rem;
             margin-bottom: 32px;
             color:  rgb(168, 168, 168);
             margin-left: 48px;
@@ -145,20 +121,10 @@
             border: 1.5px solid #000;
             border-radius: 16px;
             padding: 32px 16px;
-            font-size: 20px;
+            font-size: 1.3rem;
             text-align: center;
             cursor: pointer;
         }
-
-        .usuario-item:hover {
-            box-shadow: 0 5px 10px rgba(107, 140, 255, 0.18);
-            transform: translateY(-2px);
-        }
-
-        .usuario-item:active {
-            transform: translateY(0);
-        }
-
 
         .BotonSalir {
         position: fixed;
@@ -175,17 +141,8 @@
         justify-content: center;
         }
 
-        .BotonSalir:hover {
-            box-shadow: 0 5px 10px rgba(107, 140, 255, 0.18);
-            transform: translateY(-2px);
-        }
-
-        .BotonSalir:active {
-            transform: translateY(0);
-        }
-
         #pantalla-informe-usuario h2 {
-        font-size: 48px;
+        font-size: 4rem;
         margin-bottom: 32px;
         margin-left: 30px;
         }
@@ -202,7 +159,7 @@
         .informe-fila {
         padding: 16px 20px;
         border-radius: 10px;
-        font-size: 28px;
+        font-size: 2rem;
         }
 
         .informe-fila.titulo {
@@ -215,7 +172,7 @@
         }
 
         #pantalla-about h2 {
-        font-size: 48px;
+        font-size: 4rem;
         margin-bottom: 24px;
         margin-left: 50px;
 
@@ -226,7 +183,7 @@
         border-radius: 20px;
         padding: 40px;
         max-width: 900px;
-        font-size: 24px;
+        font-size: 1.5rem;
         margin-left: 30px;
         }
 
@@ -235,7 +192,7 @@
         }
     
         .popup h2 { 
-        font-size: 28px; 
+        font-size: 2rem; 
         }
 
         .popup {
@@ -257,22 +214,12 @@
         font-family: Jua;
         display: flex; 
         flex-direction: column; 
-        font-size: 18px;
+        font-size: 1.2rem;
         padding: 14px; 
         border-radius: 50px; 
         max-width: 300px; 
         border: 2px solid #000; 
         cursor: pointer;
-        
-        }
-        
-        .btn-popup:hover { 
-            box-shadow: 0 5px 10px rgba(107, 140, 255, 0.18);
-            transform: translateY(-2px);
-        }
-
-        .btn-popup:active { 
-        transform: translateY(0); 
         }
        
         #btn-con-cuenta {
@@ -285,12 +232,12 @@
         }
 
         .btn-cerrar-popup {
-        background: none; border: none; color: #aaa;
-        font-size: 14px; cursor: pointer; font-family: 'Jua', sans-serif;
-        }
-
-        .btn-cerrar-popup:hover {
-        color: #000; 
+        background: none; 
+        border: none; 
+        color: #aaa;
+        font-size: 0.9rem; 
+        cursor: pointer; 
+        font-family: 'Jua', sans-serif;
         }
 
         #btn-jugar {
@@ -301,7 +248,7 @@
 
         .input-cuenta {
         font-family: Jua;
-        font-size: 18px;
+        font-size: 1rem;
         padding: 14px 20px;
         border: 2px solid #000;
         border-radius: 50px;
@@ -315,6 +262,7 @@
         }
      
         .popup p {
+            font-size: 1.2rem;
             margin-top: -20px;
         }
 
@@ -339,17 +287,17 @@
         }
 
         .jugador-seccion h2 {
-        font-size: 38px;
+        font-size: 2.4rem;
         margin-bottom: -28px;
         }
 
         .jugador-seccion p {
-        font-size: 24px;
+        font-size: 1.6rem;
         color: #555;
         }
 
        .JugadoresAnteriores{
-        font-size: 18px;
+        font-size: 1.1rem;
         color: #888;
         margin-bottom: 8px;
         margin-top: 8px;
@@ -367,37 +315,19 @@
         border-radius: 12px;
         padding: 20px;
         text-align: center;
-        font-size: 18px;
+        font-size: 1.1rem;
         cursor: pointer;
-        }
-
-        .jugador-item:hover {
-        box-shadow: 0 5px 10px rgba(107, 140, 255, 0.18);
-        transform: translateY(-2px);
-        }
-
-        .jugador-item:active {
-        transform: translateY(0);
         }
 
         .btn-crear-jugador {
         font-family: Jua;
-        font-size: 16px;
+        font-size: 1rem;
         padding: 12px 20px;
         border: 2px solid #000;
         border-radius: 50px;
         background: #FDE6E3;
         cursor: pointer;
         margin-top: 8px;
-        }
-
-        .btn-crear-jugador:hover {
-        box-shadow: 0 5px 10px rgba(107, 140, 255, 0.18);
-        transform: translateY(-2px);
-        }
-
-        .btn-crear-jugador:active {
-            transform: translateY(0);
         }
 
         .encabezado-pantalla {
@@ -433,7 +363,7 @@
             margin-top: 200px;
             text-align: center;
             font-weight: 700;
-            font-size: 100px;
+            font-size: 7rem;
         }
 
         .div-btn-comenzar-juego{
@@ -444,7 +374,7 @@
         .btn-comenzar-juego { 
             background-color: #FFC1D1;
             color: #000000;
-            font-size: 32px;
+            font-size: 2rem;
             font-weight: 400;
             padding: 14px 35px;
             border: 1px solid #000000;
@@ -453,21 +383,12 @@
             font-family: Jua;
         }
 
-        .btn-comenzar-juego:hover {
-            box-shadow: 0 5px 10px rgba(107, 140, 255, 0.18);
-            transform: translateY(-2px);
-        }
-    
-        .btn-comenzar-juego:active {
-            transform: translateY(0);
-        }
-
         button:focus-visible,
         .juego-card:focus-visible,  
         .usuario-item:focus-visible,
         .jugador-item:focus-visible {
-    outline: 2px solid #000000;
-    outline-offset: 4px;
+            outline: 2px solid #000000;
+            outline-offset: 4px;
         }
 
         .btnInicio,
@@ -479,10 +400,42 @@
         .juego-card, 
         .usuario-item, 
         .jugador-item {
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
         }
 
         button {
             cursor: pointer;
             user-select: none;
+        }
+
+        .juego-card:hover, 
+        .btnInicio:hover, 
+        .BotonInformes:hover, 
+        .BotonSalir:hover, 
+        .btn-popup:hover, 
+        .juego-card:hover, 
+        .jugador-item:hover, 
+        .usuario-item:hover,  
+        .btn-crear-jugador:hover, 
+        .btn-comenzar-juego:hover {
+            box-shadow: 0 5px 10px rgba(107, 140, 255, 0.18);
+            transform: translateY(-2px);
+        }
+
+        .btn-cerrar-popup:hover {
+         color: #000;
+        }
+
+        .juego-card:active, 
+        .btnInicio:active, 
+        .BotonInformes:active, 
+        .BotonSalir:active, 
+        .btn-popup:active, 
+        .juego-card:active, 
+        .jugador-item:active, 
+        .usuario-item:active, 
+        .btn-cerrar-popup:active, 
+        .btn-crear-jugador:active, 
+        .btn-comenzar-juego:active {
+           transform: translateY(0);
         }
