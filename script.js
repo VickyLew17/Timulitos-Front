@@ -68,3 +68,47 @@ document.querySelectorAll(".btn-comenzar-juego").forEach(card => {
         cambiarPantalla(card.dataset.destino);
     });
 });
+
+//JUEGO 1111111111111111111111111111111111111111111111
+
+const juego = document.getElementById("juego1");
+
+const burbujas = [];
+
+for (let i = 0; i < 20; i++) {
+
+    const burbuja = document.createElement("div");
+
+    burbuja.classList.add("burbuja");
+
+    const tamaño = Math.random() * 200 + 40;
+
+    burbuja.style.width = tamaño + "px";
+    burbuja.style.height = tamaño + "px";
+
+    burbuja.style.left =
+        Math.random() * (window.innerWidth - tamaño) + "px";
+
+    burbuja.style.top =
+        Math.random() * (window.innerHeight - tamaño) + "px";
+
+    juego.appendChild(burbuja);
+
+    burbujas.push(burbuja);
+}
+
+document.addEventListener("keydown", function(event) {
+    if(event.code === "Space") {
+
+        const numero = Math.floor(Math.random() * burbujas.length);
+
+        const burbuja = burbujas[numero];
+
+        burbuja.remove();
+        burbujas.splice(numero, 1);
+
+
+
+    console.log("chau");
+    }
+});
