@@ -92,13 +92,46 @@ for (let i = 0; i < 20; i++) {
     burbuja.style.top =
         Math.random() * (window.innerHeight - tamaño) + "px";
 
+        burbuja.dx = (Math.random() - 1) * 1;
+        burbuja.dy = (Math.random() - 1) * 1;
+    
+
     juego.appendChild(burbuja);
 
     burbujas.push(burbuja);
 }
 
+function moverBurbujas() {
+
+    burbujas.forEach(burbuja => {
+
+        let x = parseFloat(burbuja.style.left);
+        let y = parseFloat(burbuja.style.top);
+
+        const tamaño = burbuja.offsetWidth;
+
+        x += burbuja.dx;
+        y += burbuja.dy;
+
+        if (x <= 0 || x + tamaño >= window.innerWidth) {
+            burbuja.dx *= -1;
+        }
+
+        if (y <= 0 || y + tamaño >= window.innerHeight) {
+            burbuja.dy *= -1;
+        }
+
+        burbuja.style.left = x + "px";
+        burbuja.style.top = y + "px";
+    });
+
+    requestAnimationFrame(moverBurbujas);
+}
+
+moverBurbujas();
+
 document.addEventListener("keydown", function(event) {
-    if(event.code === "Space") {
+    if(event.code === "Space" || "Enter") {
 
         if (burbujas.length===0){
             console.log("TERMINASTE");
@@ -111,11 +144,12 @@ document.addEventListener("keydown", function(event) {
         
         burbujas.splice(numero, 1);
 
-    console.log("explotaste una burbuja😊");
+    console.log("explotaste una burbuja😊✨😜😁");
 
-    if (burbujas.length===0){
-        console.log("TERMINASTE");
+    if (burbujas.length === 0){
+        alert("TERMINASTE😁😜✨❤🙌😎😉🌹💋👏💖");
     }
     }
 });
 
+//JUEGO 222222222222222222222222222222222222
