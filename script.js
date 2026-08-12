@@ -100,15 +100,22 @@ for (let i = 0; i < 20; i++) {
 document.addEventListener("keydown", function(event) {
     if(event.code === "Space") {
 
+        if (burbujas.length===0){
+            console.log("TERMINASTE");
+        }
         const numero = Math.floor(Math.random() * burbujas.length);
 
         const burbuja = burbujas[numero];
 
         burbuja.remove();
+        
         burbujas.splice(numero, 1);
 
+    console.log("explotaste una burbuja😊");
 
-
-    console.log("chau");
+    if (burbujas.length===0){
+        console.log("TERMINASTE");
+    }
     }
 });
+
