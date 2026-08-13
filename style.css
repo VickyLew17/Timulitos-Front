@@ -408,8 +408,6 @@
             user-select: none;
         }
 
-<<<<<<< HEAD
-=======
         .juego-card:hover, 
         .btnInicio:hover, 
         .BotonInformes:hover, 
@@ -461,5 +459,20 @@
         }
 
 
->>>>>>> d5f1bdff406ecf8ae5249caa3c2605a1dde073f4
+
+
+        #juego2 {
+            background-color: #000;
+        }
+        .particula {
+            width: 8px;
+            height: 8px;
+        
+            background-color: rgb(3, 53, 109);
+        
+            border-radius: 50%;
+        
+            position: absolute;
+        }
+        
         

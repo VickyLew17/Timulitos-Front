@@ -71,7 +71,7 @@ document.querySelectorAll(".btn-comenzar-juego").forEach(card => {
 
 //JUEGO 1111111111111111111111111111111111111111111111
 
-const juego = document.getElementById("juego1");
+const juego1 = document.getElementById("juego1");
 
 const burbujas = [];
 
@@ -81,7 +81,7 @@ for (let i = 0; i < 20; i++) {
 
     burbuja.classList.add("burbuja");
 
-    const tamaño = Math.random() * 200 + 40;
+    const tamaño = Math.random() * 200 + 60;
 
     burbuja.style.width = tamaño + "px";
     burbuja.style.height = tamaño + "px";
@@ -92,11 +92,11 @@ for (let i = 0; i < 20; i++) {
     burbuja.style.top =
         Math.random() * (window.innerHeight - tamaño) + "px";
 
-        burbuja.dx = (Math.random() - 1) * 1;
-        burbuja.dy = (Math.random() - 1) * 1;
+        burbuja.dx = (Math.random() * 2 - 1) * 1;
+        burbuja.dy = (Math.random() * 2 - 1) * 1;
     
 
-    juego.appendChild(burbuja);
+    juego1.appendChild(burbuja);
 
     burbujas.push(burbuja);
 }
@@ -131,8 +131,8 @@ function moverBurbujas() {
 moverBurbujas();
 
 document.addEventListener("keydown", function(event) {
-    if(event.code === "Space" || "Enter") {
-
+    if(event.code === "Space" || event.code === "Enter") {
+    
         if (burbujas.length===0){
             console.log("TERMINASTE");
         }
@@ -152,4 +152,68 @@ document.addEventListener("keydown", function(event) {
     }
 });
 
+
+
 //JUEGO 222222222222222222222222222222222222
+
+
+const juego2 = document.getElementById("juego2");
+
+document.addEventListener("keydown", function(event) {
+
+    if (event.code === "Space" || event.code === "Enter") {
+
+        crearFuegoArtificial();
+
+    }
+
+});
+
+function crearFuegoArtificial() {
+
+    const particulas = [];
+
+    // Creamos 30 partículas
+    for (let i = 0; i < 30; i++) {
+
+        const particula = document.createElement("div");
+
+        particula.classList.add("particula");
+
+        // El fuego aparece en un lugar aleatorio
+        particula.style.left = Math.random() * window.innerWidth + "px";
+        particula.style.top = Math.random() * window.innerHeight + "px";
+
+        // Velocidad aleatoria
+        particula.dx = (Math.random() * 2 - 1) * 3;
+        particula.dy = (Math.random() * 2 - 1) * 3;
+
+        juego2.appendChild(particula);
+
+        particulas.push(particula);
+    }
+
+    moverParticulas(particulas);
+}
+
+
+function moverParticulas(particulas) {
+
+    particulas.forEach(particula => {
+
+        let x = parseFloat(particula.style.left);
+        let y = parseFloat(particula.style.top);
+
+        x += particula.dx;
+        y += particula.dy;
+
+        particula.style.left = x + "px";
+        particula.style.top = y + "px";
+
+    });
+
+    requestAnimationFrame(function() {
+        moverParticulas(particulas);
+    });
+
+}
