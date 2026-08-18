@@ -156,7 +156,6 @@ document.addEventListener("keydown", function(event) {
 
 //JUEGO 222222222222222222222222222222222222
 
-
 const juego2 = document.getElementById("juego2");
 
 document.addEventListener("keydown", function(event) {
@@ -173,20 +172,34 @@ function crearFuegoArtificial() {
 
     const particulas = [];
 
-    // Creamos 30 partículas
+   
+    const xInicial = Math.random() * window.innerWidth;
+    const yInicial = Math.random() * window.innerHeight;
+
+    
+    const colores = ["red", "blue", "yellow", "green", "pink", "purple", "orange"];
+
+    const color = colores[Math.floor(Math.random() * colores.length)];
+
+
     for (let i = 0; i < 30; i++) {
 
         const particula = document.createElement("div");
 
         particula.classList.add("particula");
 
-        // El fuego aparece en un lugar aleatorio
-        particula.style.left = Math.random() * window.innerWidth + "px";
-        particula.style.top = Math.random() * window.innerHeight + "px";
+      
+        particula.style.left = xInicial + "px";
+        particula.style.top = yInicial + "px";
 
-        // Velocidad aleatoria
-        particula.dx = (Math.random() * 2 - 1) * 3;
-        particula.dy = (Math.random() * 2 - 1) * 3;
+
+        particula.style.backgroundColor = color;
+
+        particula.style.opacity = 1;
+
+      
+        particula.dx = (Math.random() * 2 - 1) * 4;
+        particula.dy = (Math.random() * 2 - 1) * 4;
 
         juego2.appendChild(particula);
 
@@ -199,7 +212,7 @@ function crearFuegoArtificial() {
 
 function moverParticulas(particulas) {
 
-    particulas.forEach(particula => {
+    particulas.forEach(function(particula) {
 
         let x = parseFloat(particula.style.left);
         let y = parseFloat(particula.style.top);
@@ -209,6 +222,16 @@ function moverParticulas(particulas) {
 
         particula.style.left = x + "px";
         particula.style.top = y + "px";
+
+        let opacidad = parseFloat(particula.style.opacity);
+
+        opacidad -= 0.01;
+
+        particula.style.opacity = opacidad;
+
+        if (opacidad <= 0) {
+            particula.remove();
+        }
 
     });
 
