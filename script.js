@@ -75,6 +75,8 @@ const juego1 = document.getElementById("juego1");
 
 const burbujas = [];
 
+function crearBurbujas() {
+
 for (let i = 0; i < 20; i++) {
 
     const burbuja = document.createElement("div");
@@ -99,7 +101,10 @@ for (let i = 0; i < 20; i++) {
     juego1.appendChild(burbuja);
 
     burbujas.push(burbuja);
+} 
 }
+
+crearBurbujas();
 
 function moverBurbujas() {
 
@@ -131,11 +136,12 @@ function moverBurbujas() {
 moverBurbujas();
 
 document.addEventListener("keydown", function(event) {
+
     if(event.code === "Space" || event.code === "Enter") {
     
-        if (burbujas.length===0){
-            console.log("TERMINASTE");
-        }
+        if (document.getElementById("juego1").style.display === "block") {
+
+
         const numero = Math.floor(Math.random() * burbujas.length);
 
         const burbuja = burbujas[numero];
@@ -144,15 +150,28 @@ document.addEventListener("keydown", function(event) {
         
         burbujas.splice(numero, 1);
 
-    console.log("explotaste una burbuja😊✨😜😁");
+        console.log("explotaste una burbuja");
 
-    if (burbujas.length === 0){
-        alert("TERMINASTE😁😜✨❤🙌😎😉🌹💋👏💖");
+        if (burbujas.length === 0){
+            document.getElementById("fin-juego1").style.display = "block";
+        }
     }
-    }
+  }
 });
 
 
+document.getElementById("btn-reiniciar-juego1").addEventListener("click", function() {
+
+    burbujas.length = 0;
+
+    document.querySelectorAll("#juego1 .burbuja").forEach(burbuja => {
+        burbuja.remove();
+    });
+
+    document.getElementById("fin-juego1").style.display = "none";
+
+    crearBurbujas();
+});
 
 //JUEGO 222222222222222222222222222222222222
 
@@ -162,10 +181,14 @@ document.addEventListener("keydown", function(event) {
 
     if (event.code === "Space" || event.code === "Enter") {
 
+        if (document.getElementById("juego2").style.display === "block") {
+        
+            console.log("creando fuego artificial");
+
         crearFuegoArtificial();
 
     }
-
+    }
 });
 
 function crearFuegoArtificial() {
