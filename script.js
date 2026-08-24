@@ -77,7 +77,7 @@ const burbujas = [];
 
 function crearBurbujas() {
 
-for (let i = 0; i < 20; i++) {
+for (let i = 0; i < 30; i++) {
 
     const burbuja = document.createElement("div");
 
@@ -205,7 +205,7 @@ function crearFuegoArtificial() {
     const color = colores[Math.floor(Math.random() * colores.length)];
 
 
-    for (let i = 0; i < 30; i++) {
+    for (let i = 0; i < 60; i++) {
 
         const particula = document.createElement("div");
 
@@ -263,3 +263,6 @@ function moverParticulas(particulas) {
     });
 
 }
+
+//JUEGO 33333333333333333333333333333333333333333333333333333333333333
+

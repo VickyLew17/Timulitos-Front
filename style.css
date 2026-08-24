@@ -143,6 +143,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        z-index: 100;
         }
 
         #pantalla-informe-usuario h2 {
@@ -523,6 +524,11 @@
             border-radius: 50%;
             position: absolute;
         }
-        
-       
-     
+
+        /* Juego 3*/
+
+        #pelota{
+         width: 10vw;
+         aspect-ratio: 1/1;
+    
+        }
