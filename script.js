@@ -266,3 +266,55 @@ function moverParticulas(particulas) {
 
 //JUEGO 33333333333333333333333333333333333333333333333333333333333333
 
+const juego3 = document.getElementById("juego3");
+
+document.addEventListener("keydown", function(event) {
+
+    if (event.code === "Space" || event.code === "Enter") {
+
+        if (juego3.style.display === "block") {
+
+            const aro = document.getElementById("aro");
+            const pelota = document.getElementById("pelota");
+            
+            tirarPelota(pelota, aro);
+    }}});
+
+function tirarPelota(pelota, aro) {
+
+    //const numero = Math.floor(Math.random() * 3);
+
+    const numero = 0;
+    let tiempo = 0;
+
+    function animarPelota() {
+        tiempo += 0.02;
+
+        let x = 70 - 50 * tiempo;
+
+        let y;
+
+        if (numero === 0) {
+            y = 10 + (100 * tiempo) - (100 * tiempo * tiempo);
+        } 
+        
+        else {
+            y = 10 + (50 * tiempo);
+        }
+
+        pelota.style.left = x + "%";
+        pelota.style.bottom = y + "%";
+
+        if (tiempo < 1) {
+            requestAnimationFrame(animarPelota);
+        } else if (numero === 0) {
+            console.log("¡Encestaste!");
+            document.getElementById("puntaje-juego3").textContent = "¡Encestaste!";
+        } else {
+            console.log("Fallaste");
+            document.getElementById("puntaje-juego3").textContent = "Fallaste";
+        }
+    }
+    
+    animarPelota();
+}

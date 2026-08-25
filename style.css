@@ -527,8 +527,25 @@
 
         /* Juego 3*/
 
+        #juego3 {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+        }
+
         #pelota{
          width: 10vw;
          aspect-ratio: 1/1;
-    
+         position: absolute;
+         left: 70%;
+         bottom:10%;
+        }
+
+        #aro{
+         width: 10vw;
+         aspect-ratio: 1/1;
+         position: absolute;
+         left: 20%;
+         bottom:10%;
         }
