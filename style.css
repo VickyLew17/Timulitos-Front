@@ -535,7 +535,7 @@
         }
 
         #pelota-basket{
-         width: 10vw;
+         width: 8vw;
          aspect-ratio: 1/1;
          position: absolute;
          left: 70%;
@@ -543,9 +543,9 @@
         }
 
         #aro{
-         width: 10vw;
-         aspect-ratio: 1/1;
+         width: 27vw;
+         transform: scaleX(-1);
          position: absolute;
-         left: 20%;
-         bottom:10%;
+         bottom: 2%;
+         left: 4%;
         }

@@ -282,8 +282,7 @@ document.addEventListener("keydown", function(event) {
 
 function tirarPelota(pelota, aro) {
 
-const numero = Math.floor(Math.random() * 3);
-
+    const numero = Math.floor(Math.random() * 2);
     let tiempo = 0;
 
     function animarPelota() {
@@ -294,17 +293,17 @@ const numero = Math.floor(Math.random() * 3);
         let y;
 
         if (numero === 0) {
-            y = 10 + (200 * tiempo) - (175 * tiempo * tiempo);
+            y = 10 + (250 * tiempo) - (200 * tiempo * tiempo);
         } 
         
         else {
-            y = 10 + (50 * tiempo);
+            y = 10 + (150 * tiempo) - (160 * tiempo * tiempo);
         }
 
         pelota.style.left = x + "%";
         pelota.style.bottom = y + "%";
 
-        if (tiempo < 1) {
+        if (tiempo < 1 ) {
             requestAnimationFrame(animarPelota);
         } 
         
@@ -312,11 +311,29 @@ const numero = Math.floor(Math.random() * 3);
             console.log("¡Encestaste!");
             document.getElementById("puntaje-juego3").textContent = "Entro";
 
-            setTimeout(() =>  {
-                pelota.style.left = "70%";
-                pelota.style.bottom = "10%";
-            }, 500);
-            
+            pelota.style.left = x + "%";
+            pelota.style.bottom = y + "%";
+
+            let tiempoCaida = 0;
+
+            function caerPelota () {
+                tiempoCaida += 0.02;
+
+                pelota.style.left = x + "%";
+
+                let nuevaY = y - (100 * tiempoCaida);
+
+                pelota.style.bottom = nuevaY + "%";
+                
+
+                if (nuevaY > 10) {
+                    requestAnimationFrame(caerPelota);
+                } else {
+                    pelota.style.bottom = "10%";
+                }
+            }
+
+                caerPelota();
         } 
         
         else {
