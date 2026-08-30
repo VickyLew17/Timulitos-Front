@@ -232,7 +232,6 @@ function crearFuegoArtificial() {
     moverParticulas(particulas);
 }
 
-
 function moverParticulas(particulas) {
 
     particulas.forEach(function(particula) {
@@ -278,7 +277,7 @@ document.addEventListener("keydown", function(event) {
             const pelota = document.getElementById("pelota-basket");
             
             tirarPelota(pelota, aro);
-    }}});
+}}});
 
 function tirarPelota(pelota, aro) {
 
@@ -330,11 +329,18 @@ function tirarPelota(pelota, aro) {
                     requestAnimationFrame(caerPelota);
                 } else {
                     pelota.style.bottom = "10%";
+
+                setTimeout(() =>  {
+                    pelota.style.left = "70%";
+                    pelota.style.bottom = "10%";
+                }, 500);
                 }
             }
 
                 caerPelota();
+
         } 
+
         
         else {
             console.log("Fallaste");
@@ -350,3 +356,4 @@ function tirarPelota(pelota, aro) {
     
     animarPelota();
 }
+
