@@ -265,7 +265,10 @@ function moverParticulas(particulas) {
 
 //JUEGO 33333333333333333333333333333333333333333333333333333333333333
 
+
 const juego3 = document.getElementById("juego3");
+
+let puntaje3 = 0;
 
 document.addEventListener("keydown", function(event) {
 
@@ -308,7 +311,8 @@ function tirarPelota(pelota, aro) {
         
         else if (numero === 0) {
             console.log("¡Encestaste!");
-            document.getElementById("puntaje-juego3").textContent = "Entro";
+            puntaje3 ++;
+            document.getElementById("puntaje-juego3").textContent = "Puntaje: " + puntaje3;
 
             pelota.style.left = x + "%";
             pelota.style.bottom = y + "%";
@@ -344,7 +348,7 @@ function tirarPelota(pelota, aro) {
         
         else {
             console.log("Fallaste");
-            document.getElementById("puntaje-juego3").textContent = "No entro";
+            
 
             
             setTimeout(() =>  {
