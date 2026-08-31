@@ -393,6 +393,8 @@ juego3.querySelector(".BotonSalir").addEventListener("click", () => {
 const juego4 = document.getElementById ("juego4");
 const instrumento = document.getElementById ("instrumento-juego4");
 
+let sonido = new Audio();
+
 const instrumentos = [
     {
         imagen: "assets/personajes/teclado.png",
@@ -418,7 +420,19 @@ instrumento.src = instrumentos[numero].imagen;
 document.addEventListener("keydown", function(event) {
     if (event.code === "Space" || event.code === "Enter") {
         if (juego4.style.display === "block") {
-            
+       
+        numero++;
+
+        if (numero >= instrumentos.length) {
+            numero = 0;
+        }
+
+        instrumento.src = instrumentos[numero].imagen;
+
+        sonido.pause();
+        sonido.currentTime = 0;
+        sonido.src = instrumentos[numero].sonido;
+        sonido.play();
         }
     }
 
