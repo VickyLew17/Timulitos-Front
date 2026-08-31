@@ -75,6 +75,10 @@ const juego1 = document.getElementById("juego1");
 
 const burbujas = [];
 
+const sonidoPop = new Audio("assets/sonidos/bubble-pop.mp3");
+sonidoPop.preload = "auto";
+
+
 function crearBurbujas() {
 
 for (let i = 0; i < 30; i++) {
@@ -149,6 +153,12 @@ document.addEventListener("keydown", function(event) {
         burbuja.remove();
         
         burbujas.splice(numero, 1);
+
+        sonidoPop.pause();
+        sonidoPop.currentTime = 0;
+        sonidoPop.play().catch(error => {
+            console.log("No se pudo reproducir el sonido:", error);
+        });
 
         console.log("explotaste una burbuja");
 
@@ -378,3 +388,38 @@ juego3.querySelector(".BotonSalir").addEventListener("click", () => {
     document.getElementById("puntaje-juego3").textContent = "Puntaje: " + puntaje3;
 });
 
+//JUEGO 444444444444444444444444444444444444444444444444444444444444444444444
+
+const juego4 = document.getElementById ("juego4");
+const instrumento = document.getElementById ("instrumento-juego4");
+
+const instrumentos = [
+    {
+        imagen: "assets/personajes/teclado.png",
+        sonido: "assets/sonidos/teclado.mp3"
+    },
+
+    {
+        imagen: "assets/personajes/violin.png",
+        sonido: "assets/sonidos/violin.mp3"
+    }, 
+    
+    {
+        imagen: "assets/personajes/guitarra.png",
+        sonido: "assets/sonidos/guitarra.mp3"
+    }
+
+]
+
+let numero = 0;
+
+instrumento.src = instrumentos[numero].imagen;
+
+document.addEventListener("keydown", function(event) {
+    if (event.code === "Space" || event.code === "Enter") {
+        if (juego4.style.display === "block") {
+            
+        }
+    }
+
+})
