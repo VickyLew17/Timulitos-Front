@@ -159,6 +159,18 @@ document.addEventListener("keydown", function(event) {
   }
 });
 
+juego1.querySelector(".BotonSalir").addEventListener("click", () => {
+    burbujas.length = 0;
+
+    document.querySelectorAll("#juego1 .burbuja").forEach(burbuja => {
+        burbuja.remove();
+    });
+
+    document.getElementById("fin-juego1").style.display = "none";
+
+    crearBurbujas();
+    
+});
 
 document.getElementById("btn-reiniciar-juego1").addEventListener("click", function() {
 
@@ -360,4 +372,9 @@ function tirarPelota(pelota, aro) {
     
     animarPelota();
 }
+
+juego3.querySelector(".BotonSalir").addEventListener("click", () => {
+    puntaje3 = 0;
+    document.getElementById("puntaje-juego3").textContent = "Puntaje: " + puntaje3;
+});
 
