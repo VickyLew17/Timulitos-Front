@@ -577,9 +577,31 @@
             justify-content: center;
             align-items: center;
         }
-#instrumento-juego4 {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
+        
+        #instrumento-juego4 {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        }
+
+        /* Juego 5 */
+
+        
+        #juego5 {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #animal-juego5 {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        }

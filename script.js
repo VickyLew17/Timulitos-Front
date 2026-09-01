@@ -393,47 +393,117 @@ juego3.querySelector(".BotonSalir").addEventListener("click", () => {
 const juego4 = document.getElementById ("juego4");
 const instrumento = document.getElementById ("instrumento-juego4");
 
-let sonido = new Audio();
+let sonido4 = new Audio();
 
 const instrumentos = [
     {
-        imagen: "assets/personajes/teclado.png",
+        imagen: "assets/personajes/instrumentos/teclado.png",
         sonido: "assets/sonidos/teclado.mp3"
     },
 
     {
-        imagen: "assets/personajes/violin.png",
+        imagen: "assets/personajes/instrumentos/violin.png",
         sonido: "assets/sonidos/violin.mp3"
     }, 
     
     {
-        imagen: "assets/personajes/guitarra.png",
+        imagen: "assets/personajes/instrumentos/guitarra.png",
         sonido: "assets/sonidos/guitarra.mp3"
+    },
+
+    {
+        imagen: "assets/personajes/instrumentos/flauta.webp",
+        sonido: "assets/sonidos/flauta.mp3"
+    },
+
+    {
+        imagen: "assets/personajes/instrumentos/maracas.jfif",
+        sonido: "assets/sonidos/maracas.mp3"
+    },
+
+    {
+        imagen: "assets/personajes/instrumentos/bateria.webp",
+        sonido: "assets/sonidos/bateria.mp3"
+    },
+
+    {
+        imagen: "assets/personajes/instrumentos/arpa.avif",
+        sonido: "assets/sonidos/arpa.mp3"
     }
 
 ]
 
-let numero = 0;
+let numero4 = 0;
 
-instrumento.src = instrumentos[numero].imagen;
+instrumento.src = instrumentos[numero4  ].imagen;
 
 document.addEventListener("keydown", function(event) {
     if (event.code === "Space" || event.code === "Enter") {
         if (juego4.style.display === "block") {
        
-        numero++;
+        numero4++;
 
-        if (numero >= instrumentos.length) {
-            numero = 0;
+        if (numero4 >= instrumentos.length) {
+            numero4 = 0;
         }
 
-        instrumento.src = instrumentos[numero].imagen;
+        instrumento.src = instrumentos[numero4].imagen;
 
-        sonido.pause();
-        sonido.currentTime = 0;
-        sonido.src = instrumentos[numero].sonido;
-        sonido.play();
+        sonido4.pause();
+        sonido4.currentTime = 0;
+        sonido4.src = instrumentos[numero4].sonido;
+        sonido4.play();
         }
     }
 
-})
+});
+
+//JUEGO 5555555555555555555555555555555555555555555555555555555
+
+const juego5 = document.getElementById ("juego5");
+const animal = document.getElementById ("animal-juego5");
+
+let sonido5 = new Audio();
+
+const animales = [
+    {
+        imagen: "assets/personajes/animales/pollito.png",
+        sonido: "assets/sonidos/pollito.mp3" //AGREGARRRRRRR
+    },
+
+    {
+        imagen: "assets/personajes/animales/topito-cabezon.png",
+        sonido: "assets/sonidos/topito-cabezon.mp3" //AGREGARRRRRRR
+    }, 
+    
+    {
+        imagen: "assets/personajes/animales/conejito-timulitos.png",
+        sonido: "assets/sonidos/conejito-timulitos.mp3" //AGREGARRRRRRR
+    }
+
+]
+
+let numero5 = 0;
+
+animal.src = animales[numero5].imagen;
+
+document.addEventListener("keydown", function(event) {
+    if (event.code === "Space" || event.code === "Enter") {
+        if (juego5.style.display === "block") {
+        
+        numero5++;
+
+        if (numero5 >= animales.length) {
+            numero5 = 0;
+        }
+
+        animal.src = animales[numero5].imagen;
+
+        sonido5.pause();
+        sonido5.currentTime = 0;
+        sonido5.src = animales[numero5].sonido5;
+        sonido5.play();
+        }
+    }
+
+});
