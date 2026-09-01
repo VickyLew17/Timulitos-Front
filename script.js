@@ -69,6 +69,15 @@ document.querySelectorAll(".btn-comenzar-juego").forEach(card => {
     });
 });
 
+document.querySelectorAll(".juego-card").forEach(card => {
+    card.addEventListener("keydown", function(event) {
+        if (event.code === "Enter" || event.code === "Space") {
+            event.preventDefault();
+            card.click();
+        }
+    });
+});
+
 //JUEGO 1111111111111111111111111111111111111111111111
 
 const juego1 = document.getElementById("juego1");

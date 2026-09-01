@@ -335,6 +335,20 @@
         cursor: pointer;
         margin-top: 8px;
         }
+        
+        .btn-comenzar-jugar {
+        font-family: Jua;
+        font-size: 1.5rem;
+        padding: 14px 30px;
+        border: 2px solid #000;
+        border-radius: 50px;
+        background: #FFC1D1;
+        cursor: pointer;
+
+        grid-column: 1 / -1;
+        justify-self: center;
+        margin-top: 0;
+        }
 
         .encabezado-pantalla {
         display: flex;
@@ -420,11 +434,11 @@
         .BotonInformes:hover, 
         .BotonSalir:hover, 
         .btn-popup:hover, 
-        .juego-card:hover, 
         .jugador-item:hover, 
         .usuario-item:hover,  
         .btn-crear-jugador:hover, 
-        .btn-comenzar-juego:hover {
+        .btn-comenzar-juego:hover,
+        .btn-comenzar-jugar:hover {
             box-shadow: 0 5px 10px rgba(107, 140, 255, 0.18);
             transform: translateY(-2px);
         }
@@ -443,7 +457,9 @@
         .usuario-item:active, 
         .btn-cerrar-popup:active, 
         .btn-crear-jugador:active, 
-        .btn-comenzar-juego:active {
+        .btn-comenzar-juego:active,
+        .btn-comenzar-jugar:active {
+            box-shadow: 0 2px 5px rgba(107, 140, 255, 0.18);
            transform: translateY(0);
         }
 
@@ -605,3 +621,4 @@
         top: 50%;
         transform: translate(-50%, -50%);
         }
+        
