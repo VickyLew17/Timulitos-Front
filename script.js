@@ -468,19 +468,38 @@ let sonido5 = new Audio();
 const animales = [
     {
         imagen: "assets/personajes/animales/pollito.png",
-        sonido: "assets/sonidos/pollito.mp3" //AGREGARRRRRRR
+        sonido: "assets/sonidos/pollito.mp3"
     },
-
-    {
-        imagen: "assets/personajes/animales/topito-cabezon.png",
-        sonido: "assets/sonidos/topito-cabezon.mp3" //AGREGARRRRRRR
-    }, 
     
     {
         imagen: "assets/personajes/animales/conejito-timulitos.png",
-        sonido: "assets/sonidos/conejito-timulitos.mp3" //AGREGARRRRRRR
-    }
+        sonido: "assets/sonidos/conejito-timulitos.mp3"
+    },
 
+    {
+        imagen: "assets/personajes/animales/vaca.jpg",
+        sonido: "assets/sonidos/vaca.mp3"
+    },
+
+    {
+        imagen: "assets/personajes/animales/cerdo.jpg",
+        sonido: "assets/sonidos/cerdo.mp3"
+    },
+
+    {
+        imagen: "assets/personajes/animales/gato.png",
+        sonido: "assets/sonidos/gato.mp3"
+    },
+
+    {
+        imagen: "assets/personajes/animales/oveja.jpg",
+        sonido: "assets/sonidos/oveja.mp3"
+    },
+
+    {
+        imagen: "assets/personajes/animales/perro.jpg",
+        sonido: "assets/sonidos/perro.mp3"
+    }
 ]
 
 let numero5 = 0;
@@ -501,7 +520,7 @@ document.addEventListener("keydown", function(event) {
 
         sonido5.pause();
         sonido5.currentTime = 0;
-        sonido5.src = animales[numero5].sonido5;
+        sonido5.src = animales[numero5].sonido;
         sonido5.play();
         }
     }
