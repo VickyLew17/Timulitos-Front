@@ -78,7 +78,7 @@ document.querySelectorAll(".juego-card").forEach(card => {
     });
 });
 
-//JUEGO 1111111111111111111111111111111111111111111111
+//JUEGO 1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
 
 const juego1 = document.getElementById("juego1");
 
@@ -204,7 +204,7 @@ document.getElementById("btn-reiniciar-juego1").addEventListener("click", functi
     crearBurbujas();
 });
 
-//JUEGO 222222222222222222222222222222222222
+//JUEGO 2222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222
 
 const juego2 = document.getElementById("juego2");
 
@@ -294,7 +294,7 @@ function moverParticulas(particulas) {
 
 }
 
-//JUEGO 33333333333333333333333333333333333333333333333333333333333333
+//JUEGO 333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333
 
 
 const juego3 = document.getElementById("juego3");
@@ -397,7 +397,7 @@ juego3.querySelector(".BotonSalir").addEventListener("click", () => {
     document.getElementById("puntaje-juego3").textContent = "Puntaje: " + puntaje3;
 });
 
-//JUEGO 444444444444444444444444444444444444444444444444444444444444444444444
+//JUEGO 444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444
 
 const juego4 = document.getElementById ("juego4");
 const instrumento = document.getElementById ("instrumento-juego4");
@@ -438,6 +438,11 @@ const instrumentos = [
     {
         imagen: "assets/personajes/instrumentos/arpa.avif",
         sonido: "assets/sonidos/arpa.mp3"
+    },
+
+    {
+        imagen: "assets/personajes/instrumentos/saxo.webp",
+        sonido: "assets/sonidos/saxo.mp3"
     }
 
 ]
@@ -467,7 +472,7 @@ document.addEventListener("keydown", function(event) {
 
 });
 
-//JUEGO 5555555555555555555555555555555555555555555555555555555
+//JUEGO 5555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555
 
 const juego5 = document.getElementById ("juego5");
 const animal = document.getElementById ("animal-juego5");
@@ -508,6 +513,16 @@ const animales = [
     {
         imagen: "assets/personajes/animales/perro.jpg",
         sonido: "assets/sonidos/perro.mp3"
+    },
+
+    {
+        imagen: "assets/personajes/animales/mono.jpg",
+        sonido: "assets/sonidos/mono.mp3"
+    },
+
+    {
+        imagen: "assets/personajes/animales/lobo.jpg",
+        sonido: "assets/sonidos/lobo.mp3"
     }
 ]
 

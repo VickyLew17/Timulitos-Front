@@ -408,8 +408,8 @@
         .juego-card:focus-visible,  
         .usuario-item:focus-visible,
         .jugador-item:focus-visible {
-            outline: 2px solid #000000;
-            outline-offset: 4px;
+        outline: 2px solid #000000;
+        outline-offset: 4px;
         }
 
         .btnInicio,
@@ -421,12 +421,12 @@
         .juego-card, 
         .usuario-item, 
         .jugador-item {
-            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
         }
 
         button {
-            cursor: pointer;
-            user-select: none;
+        cursor: pointer;
+        user-select: none;
         }
 
         .juego-card:hover, 
@@ -439,8 +439,8 @@
         .btn-crear-jugador:hover, 
         .btn-comenzar-juego:hover,
         .btn-comenzar-jugar:hover {
-            box-shadow: 0 5px 10px rgba(107, 140, 255, 0.18);
-            transform: translateY(-2px);
+        box-shadow: 0 5px 10px rgba(107, 140, 255, 0.18);
+        transform: translateY(-2px);
         }
 
         .btn-cerrar-popup:hover {
@@ -459,8 +459,8 @@
         .btn-crear-jugador:active, 
         .btn-comenzar-juego:active,
         .btn-comenzar-jugar:active {
-            box-shadow: 0 2px 5px rgba(107, 140, 255, 0.18);
-           transform: translateY(0);
+        box-shadow: 0 2px 5px rgba(107, 140, 255, 0.18);
+        transform: translateY(0);
         }
 
         #portada-juego1,
@@ -472,7 +472,7 @@
         #portada-juego7, 
         #portada-juego8,
         #portada-juego9{
-            overflow: hidden;
+        overflow: hidden;
         }
 
 
@@ -582,7 +582,6 @@
 
         /* Juego 4 */
 
-        
         #juego4 {
             width: 100vw;
             height: 100vh;
@@ -602,8 +601,7 @@
         }
 
         /* Juego 5 */
-
-        
+   
         #juego5 {
             width: 100vw;
             height: 100vh;
