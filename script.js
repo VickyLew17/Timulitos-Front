@@ -207,6 +207,8 @@ document.getElementById("btn-reiniciar-juego1").addEventListener("click", functi
 //JUEGO 2222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222
 
 const juego2 = document.getElementById("juego2");
+const sonido2 = new Audio("assets/sonidos/fuego-artificial.mp3");
+sonido2.preload = "auto";
 
 document.addEventListener("keydown", function(event) {
 
@@ -230,7 +232,13 @@ function crearFuegoArtificial() {
     const xInicial = Math.random() * window.innerWidth;
     const yInicial = Math.random() * window.innerHeight;
 
-    
+    sonido2.pause();
+    sonido2.playbackRate = 2.0;
+    sonido2.currentTime = 1;
+    sonido2.play().catch(error => {
+        console.log("No se pudo reproducir el sonido:", error);
+    });
+
     const colores = ["red", "blue", "yellow", "green", "pink", "purple", "orange"];
 
     const color = colores[Math.floor(Math.random() * colores.length)];

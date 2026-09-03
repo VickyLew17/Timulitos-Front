@@ -387,6 +387,14 @@
             font-size: 7rem;
         }
 
+        .descripcion-juego {
+            margin-top: 200px;
+            text-align: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 2rem;
+        }
+
         .div-btn-comenzar-juego{
             display: flex;
             justify-content: center;

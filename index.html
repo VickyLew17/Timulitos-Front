@@ -79,7 +79,7 @@
 </div>
 
 <div class="pantalla" id="pantalla-inicio">
-<button class="BotonInformes" id="btnInformes">    
+<button class="BotonInformes" id="btnInformes" data-destino="UsuarioTerapeuta">    
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard-list-icon lucide-clipboard-list"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg>
 </button>
 
@@ -117,23 +117,24 @@
     
     <div class = "grilla">
             <div class="juego-card" data-juego="Juego1" tabindex="0" data-destino="portada-juego1">
-            <span class="juego-nombre" >Bubbly Pop</span>
+            <span class="juego-nombre">Burbujas</span>
             </div>
 
             <div class="juego-card" data-juego="Juego2" tabindex="0" data-destino="portada-juego2">
-            <span class="juego-nombre">Rocket Rush</span>
+            <span class="juego-nombre">Fiesta de Colores</span>
             </div>
 
             <div class="juego-card" data-juego="Juego3" tabindex="0" data-destino="portada-juego3">
-            <span class="juego-nombre">Lucky Shot</span>
+            <span class="juego-nombre">Franchu Lazota</span>
             </div>
 
-            <div>
-            <img src="assets/portadas juegos/portada-tiny-tunes.png" alt="Logo Juego 4" class="juego-card" data-juego="Juego4" tabindex="0" data-destino="portada-juego4">
+
+            <div class="juego-card" data-juego="Juego4" tabindex="0" data-destino="portada-juego4">
+              <span class="juego-nombre">Banda Loca</span>
             </div>
 
             <div class="juego-card" data-juego="Juego5" tabindex="0" data-destino="portada-juego5">
-            <span class="juego-nombre">Pet Parade</span>
+            <span class="juego-nombre">Granja Sonora</span>
             </div>
 
             <div class="juego-card" data-juego="Juego6" tabindex="0" data-destino="portada-juego6">
@@ -159,7 +160,7 @@
     <button class="BotonSalir" data-destino="cuadricula"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
     </button>
 
-  <h1 class="titulo-juego" id="titulo-juego1">Bubbly Pop</h1>
+  <h1 class="titulo-juego" id="titulo-juego1">Burbujas</h1>
 
 <div class="div-btn-comenzar-juego">
     <button class="btn-comenzar-juego" id="btn-comenzar-juego1" data-destino="juego1">¡Comenzar!</button>
@@ -171,7 +172,9 @@
   <button class="BotonSalir" data-destino="cuadricula"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
   </button>
 
-<h1 class="titulo-juego" id="titulo-juego2">Rocket Rush</h1>
+<h1 class="titulo-juego" id="titulo-juego2">Fiesta de Colores</h1>
+
+<p class="descripcion-juego">QWWERTYUIOKHGFDSDFGHJKMNBVCDRTasdfghjbktu ftyfyuft drtu drtu ddrtd th rrtyyett</p>
 
 <div class="div-btn-comenzar-juego">
   <button class="btn-comenzar-juego" id="btn-comenzar-juego2" data-destino="juego2">¡Comenzar!</button>
@@ -182,7 +185,7 @@
   <button class="BotonSalir" data-destino="cuadricula"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
   </button>
 
-<h1 class="titulo-juego" id="titulo-juego3">Lucky Shot</h1>
+<h1 class="titulo-juego" id="titulo-juego3">Franchu Lazota</h1>
 
 <div class="div-btn-comenzar-juego">
   <button class="btn-comenzar-juego" id="btn-comenzar-juego3" data-destino="juego3">¡Comenzar!</button>
@@ -193,7 +196,7 @@
   <button class="BotonSalir" data-destino="cuadricula"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
   </button>
 
-<h1 class="titulo-juego" id="titulo-juego4">Tiny Tunes</h1>
+<h1 class="titulo-juego" id="titulo-juego4">Banda Loca</h1>
 
 <div class="div-btn-comenzar-juego">
   <button class="btn-comenzar-juego" id="btn-comenzar-juego4" data-destino="juego4">¡Comenzar!</button>
@@ -204,7 +207,7 @@
   <button class="BotonSalir" data-destino="cuadricula"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
   </button>
 
-<h1 class="titulo-juego" id="titulo-juego5">Pet Parade</h1>
+<h1 class="titulo-juego" id="titulo-juego5">Granja Sonora</h1>
 
 <div class="div-btn-comenzar-juego">
   <button class="btn-comenzar-juego" id="btn-comenzar-juego5" data-destino="juego5">¡Comenzar!</button>
@@ -324,6 +327,11 @@
 </button>
 
 </div>
+
+ 
+<!--AGREGAR USUARIOS TERAPEUTAS. DOS POPUPS, INICIR SECION/CREAR USUARIO-->
+
+
 
 <div class="pantalla" id="pantalla-informes">
 
