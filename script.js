@@ -1,8 +1,11 @@
 function cambiarPantalla(idPantalla) {
+    console.log(idPantalla);
+
     document.querySelectorAll(".pantalla").forEach(pantalla => {
         pantalla.style.display = "none";
     });
     document.getElementById(idPantalla).style.display = "block";
+
 }
 
 cambiarPantalla("pantalla-inicio");
@@ -14,12 +17,13 @@ document.getElementById("btnInformes").addEventListener("click", () => {
 
 document.getElementById("btn-login-terapeuta").addEventListener("click", () => {
     document.getElementById("LoginTerapeuta").style.display = "flex";
+    document.getElementById("UsuarioTerapeuta").style.display = "none";
 })
 
 document.getElementById("btn-crear-terapeuta").addEventListener("click", () => {
     document.getElementById("CrearTerapeuta").style.display = "flex";
+    document.getElementById("UsuarioTerapeuta").style.display = "none";
 })
-
 
 document.getElementById("btnAbout").addEventListener("click", () => {
     cambiarPantalla("pantalla-about");
@@ -58,6 +62,20 @@ document.querySelectorAll("#btn-jugar").forEach (boton => {
     boton.addEventListener("click", () => {
         cambiarPantalla(boton.dataset.destino);
         document.getElementById("CrearUsuario").style.display = "none";
+    });
+})
+
+document.querySelectorAll("#btn-ingresar-terapeuta").forEach (boton => {
+    boton.addEventListener("click", () => {
+        cambiarPantalla(boton.dataset.destino);
+        document.getElementById("LoginTerapeuta").style.display = "none";
+    });
+})
+
+document.querySelectorAll("#btn-crear-cuenta-terapeuta").forEach (boton => {
+    boton.addEventListener("click", () => {
+        cambiarPantalla(boton.dataset.destino);
+        document.getElementById("CrearTerapeuta").style.display = "none";
     });
 })
 
