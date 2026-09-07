@@ -99,6 +99,18 @@
         margin-top: 24px;  
         }
 
+        /* POPUPS USUARIO TERAPEUTA*/
+
+        #btn-login-terapeuta {
+        background-color: #FFC1D1;
+        }
+
+        #btn-crear-terapeuta {
+        background-color: #e2faff;
+        margin-bottom: 20px;
+        }  
+
+
         #pantalla-informes h2 {
             font-size: 4rem;
             margin-bottom: -10px;
@@ -268,8 +280,8 @@
         }
      
         .popup p {
-            font-size: 1.2rem;
-            margin-top: -20px;
+        font-size: 1.2rem;
+        margin-top: -20px;
         }
 
       
@@ -370,11 +382,22 @@
             overflow: hidden;
         }
         
-        #Comenzar,#CrearUsuario {
+        #Comenzar,#CrearUsuario, #UsuarioTerapeuta{
             display: none;
             position: fixed;
             inset: 0;
             background: rgba(0,0,0,.4);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        } 
+
+        /*HAY QUE HACER UNO SEPARADO XQ SINO SE PONE MUY NEGRO EL FONDO*/
+
+        #LoginTerapeuta, #CrearTerapeuta {
+            display: none;
+            position: fixed;
+            inset: 0;
             justify-content: center;
             align-items: center;
             z-index: 1000;
@@ -482,6 +505,8 @@
         #portada-juego9{
         overflow: hidden;
         }
+
+
 
 
         /* Juego 1 */

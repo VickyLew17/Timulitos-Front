@@ -8,8 +8,18 @@ function cambiarPantalla(idPantalla) {
 cambiarPantalla("pantalla-inicio");
 
 document.getElementById("btnInformes").addEventListener("click", () => {
-    cambiarPantalla("pantalla-informes");
+    document.getElementById("UsuarioTerapeuta").style.display = "flex";
+
+});
+
+document.getElementById("btn-login-terapeuta").addEventListener("click", () => {
+    document.getElementById("LoginTerapeuta").style.display = "flex";
 })
+
+document.getElementById("btn-crear-terapeuta").addEventListener("click", () => {
+    document.getElementById("CrearTerapeuta").style.display = "flex";
+})
+
 
 document.getElementById("btnAbout").addEventListener("click", () => {
     cambiarPantalla("pantalla-about");
@@ -27,7 +37,7 @@ document.querySelectorAll(".BotonSalir").forEach (boton => {
 
 document.querySelectorAll(".btn-cerrar-popup").forEach (boton => {
     boton.addEventListener("click", () => {
-        boton.closest("#Comenzar, #CrearUsuario").style.display = "none";
+        boton.closest("#Comenzar, #CrearUsuario, #UsuarioTerapeuta, #LoginTerapeuta, #CrearTerapeuta").style.display = "none";
     });
 })
 
