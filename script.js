@@ -261,8 +261,8 @@ function crearFuegoArtificial() {
     const yInicial = Math.random() * window.innerHeight;
 
     sonido2.pause();
-    sonido2.playbackRate = 2.0;
-    sonido2.currentTime = 1;
+    sonido2.playbackRate = 1.0;
+    sonido2.currentTime = 1.7;
     sonido2.play().catch(error => {
         console.log("No se pudo reproducir el sonido:", error);
     });
@@ -519,11 +519,6 @@ const animales = [
     {
         imagen: "assets/personajes/animales/pollito.png",
         sonido: "assets/sonidos/pollito.mp3"
-    },
-    
-    {
-        imagen: "assets/personajes/animales/conejito-timulitos.png",
-        sonido: "assets/sonidos/conejito-timulitos.mp3"
     },
 
     {
