@@ -581,3 +581,44 @@ document.addEventListener("keydown", function(event) {
     }
 
 });
+
+//JUEGO 6666666666666666666666666666666666666666666666666666666666666
+
+const juego6 = document.getElementById ("juego6");
+const objeto = document.getElementById ("objeto-juego6");
+
+const objetos = [
+    {
+        imagen: "assets/personajes/naipes.jpg"
+    },
+
+    {
+        imagen: "assets/personajes/paloma.webp"
+    }, 
+    
+    {
+        imagen: "assets/personajes/pañuelo-colores.PNG"
+    },
+    
+    {
+        imagen: "assets/personajes/zapato.jfif"
+    }
+]
+
+let numero6 = 0;
+
+objeto.src = objetos[numero6].imagen;
+
+document.addEventListener ("keydown", function(event) {
+    if (event.code === "Space" || event.code === "Enter") {
+        if (juego6.style.display === "block") { 
+
+            numero6++;
+
+            if (numero6 >= objetos.length){
+                numero6 = 0;
+            }
+
+        objeto.src = objetos[numero6].imagen;
+
+    }}})
