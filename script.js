@@ -362,11 +362,11 @@ function tirarPelota(pelota, aro) {
         let y;
 
         if (numero === 0) {
-            y = 10 + (250 * tiempo) - (200 * tiempo * tiempo);
+            y = 10 + (250 * tiempo) - (210 * tiempo * tiempo);
         } 
         
         else {
-            y = 10 + (150 * tiempo) - (160 * tiempo * tiempo);
+            y = 10 + (160 * tiempo) - (165 * tiempo * tiempo);
         }
 
         pelota.style.left = x + "%";
@@ -391,7 +391,7 @@ function tirarPelota(pelota, aro) {
 
                 pelota.style.left = x + "%";
 
-                let nuevaY = y - (100 * tiempoCaida);
+                let nuevaY = y - (80 * tiempoCaida);
 
                 pelota.style.bottom = nuevaY + "%";
                 
@@ -586,6 +586,7 @@ document.addEventListener("keydown", function(event) {
 
 const juego6 = document.getElementById ("juego6");
 const objeto = document.getElementById ("objeto-juego6");
+const varita = document.getElementById ("varita-magica");
 
 const objetos = [
     {
@@ -607,18 +608,42 @@ const objetos = [
 
 let numero6 = 0;
 
-objeto.src = objetos[numero6].imagen;
+objeto.style.opacity = 0;
 
-document.addEventListener ("keydown", function(event) {
+document.addEventListener("keydown", function(event) {
     if (event.code === "Space" || event.code === "Enter") {
-        if (juego6.style.display === "block") { 
+        if (juego6.style.display === "block") {
 
-            numero6++;
+            sacarObjeto();
+        }
+    }
+});
 
-            if (numero6 >= objetos.length){
-                numero6 = 0;
-            }
 
-        objeto.src = objetos[numero6].imagen;
+function sacarObjeto() {
 
-    }}})
+    objeto.src = objetos[numero6].imagen;
+
+    let posicion6 = 0;
+
+    objeto.style.opacity = "1";
+    objeto.style.bottom = "25%";
+
+    let movimiento = setInterval(() => {
+
+        posicion6 += 2;
+
+        objeto.style.transform = `translateY(-${posicion6}px)`;
+
+        if (posicion6 >= 150) {
+            clearInterval(movimiento);
+        }
+
+    }, 20);
+
+    numero6++;
+
+    if (numero6 >= objetos.length) {
+        numero6 = 0;
+    }
+}
