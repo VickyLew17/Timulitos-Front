@@ -102,12 +102,13 @@
         /* POPUPS USUARIO TERAPEUTA*/
 
         #btn-login-terapeuta {
-        background-color: #E90053;
+            border-color: #E90053;
+            color: #E90053;     
         }
 
         #btn-crear-terapeuta {
-        background-color: #e2faff;
-        margin-bottom: 20px;
+        border-color: #1E1B4B;
+        color: #1E1B4B;
         }  
 
 
@@ -672,10 +673,9 @@
 
         #sombrero-mago {
          position: absolute;
-         width: 25vw;
-         max-width: 350px;
-         left: 15%;
-         bottom: 15%;
+         width: 35vw;
+         left: 10%;
+         bottom: 5%;
         }
 
 

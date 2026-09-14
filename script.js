@@ -614,32 +614,72 @@ document.addEventListener("keydown", function(event) {
     if (event.code === "Space" || event.code === "Enter") {
         if (juego6.style.display === "block") {
 
+            moverVarita();
             sacarObjeto();
+    
         }
     }
 });
 
 
+function moverVarita() {
+
+    let tiempo = 0;
+
+    function animarVarita() {
+
+        tiempo += 0.03;
+
+        let rotacion;
+
+        if (tiempo < 0.5) {
+            rotacion = -20 * (tiempo / 0.5);
+        } 
+        else {
+            rotacion = -20 + (20 * ((tiempo - 0.5) / 0.5));
+        }
+
+        varita.style.transform = `rotate(${rotacion}deg)`;
+
+        if (tiempo < 1) {
+            requestAnimationFrame(animarVarita);
+        } 
+        
+        else {
+            varita.style.transform = "rotate(0deg)";
+        }
+    }
+
+    animarVarita();
+}
+
 function sacarObjeto() {
 
     objeto.src = objetos[numero6].imagen;
 
-    let posicion6 = 0;
+    let tiempo = 0;
 
     objeto.style.opacity = "1";
-    objeto.style.bottom = "25%";
 
-    let movimiento = setInterval(() => {
+    function animarObjeto() {
 
-        posicion6 += 2;
+        tiempo += 0.01;
 
-        objeto.style.transform = `translateY(-${posicion6}px)`;
+        let x = 20 + (35 * tiempo);
 
-        if (posicion6 >= 150) {
-            clearInterval(movimiento);
-        }
+        let y = 10 + (180 * tiempo) - (180 * tiempo * tiempo);
 
-    }, 20);
+        objeto.style.left = x + "%";
+        objeto.style.bottom = y + "%";
+
+        if (tiempo < .8) {
+            requestAnimationFrame(animarObjeto);
+        } 
+       
+       
+    }
+
+    animarObjeto();
 
     numero6++;
 
