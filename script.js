@@ -687,3 +687,72 @@ function sacarObjeto() {
         numero6 = 0;
     }
 }
+
+//JUEGO 7777777777777777777777777777777777777777777777777777777777777777777777777
+
+const juego7 = document.getElementById("juego7");
+
+const anzuelo = document.getElementById("anzuelo");
+
+let pescando1 = false;
+let pescando2 = false;
+
+const peces = [
+    document.getElementById("pez-1"),
+    document.getElementById("pez-2"),
+    document.getElementById("pez-3"),
+    document.getElementById("pez-4")
+];
+
+let movimientoPeces = 0;
+
+function  moverPeces () {
+    movimientoPeces += 0.01;
+
+    peces[0].style.transform =
+    `translateX(${Math.sin(movimientoPeces) * 30}px)`;
+
+    peces[1].style.transform =
+    `translateX(${Math.sin(movimientoPeces + 1) * 30}px)`;
+
+    peces[2].style.transform =
+    `translateX(${Math.sin(movimientoPeces + 2) * 30}px)`;
+
+    peces[3].style.transform =
+    `translateX(${Math.sin(movimientoPeces + 3) * 30}px)`;
+
+    requestAnimationFrame(moverPeces);
+
+}
+
+moverPeces();   
+
+document.addEventListener("keydown", function(event) {
+
+    if (juego7.style.display === "block") {
+
+        if (event.code === "Space" && !pescando1) {
+            pescar(anzuelo1, 1);
+        }
+
+        if (event.code === "Enter" && !pescando2) {
+            pescar(anzuelo2, 2);
+        }
+
+    }
+});
+
+function pescar(anzuelo, jugador) {
+
+    let pez;
+
+    if (jugador === 1){
+        pez = peces [Math.floor(Math.random() * 2)];
+        pescando1 = true;
+    }
+
+    if (jugador === 2){
+        pez = peces [2 + Math.floor(Math.random() * 2)];
+        pescando2 = true;
+    }
+}

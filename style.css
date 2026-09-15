@@ -697,3 +697,54 @@
         bottom: 25%;
         opacity: 0;
         }
+
+        /*Juego 7*/
+        
+        #juego7 {
+         width: 100vw;
+         height: 100vh;
+         position: relative;
+         overflow: hidden;
+        } 
+
+        .pez {
+            position: absolute;
+            width: 12vw;
+            max-width: 180px;
+        }
+        
+        #pez-1 {
+            left: 15%;
+            top: 55%;
+        }
+        
+        #pez-2 {
+            left: 40%;
+            top: 70%;
+        }
+
+        #pez-3 {
+            left: 65%;
+            top: 55%;
+        }
+        
+        #pez-4 {
+            left: 80%;
+            top: 72%;
+        }
+
+        .anzuelo{
+        position: absolute;
+        width: 12vw;
+        max-width: 180px;
+        top: 10%;
+        }
+
+        #anzuelo-1 {
+            left: 15%;
+        }
+
+        #anzuelo-2 {
+            right: 15%;
+            transform: scaleX(-1);
+        }
