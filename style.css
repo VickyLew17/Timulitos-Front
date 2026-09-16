@@ -59,10 +59,16 @@
         font-size: 1.5rem;
         font-weight: 550;
         padding: 14px 35px;
-        border: .25rem solid #1E1B4B;
+        border: .2rem solid #1E1B4B;
         border-radius: 50px;
         font-family: Jua;
         z-index: 1;
+        }
+
+        #btnComenzar{
+            color: #E90053;
+            border: #E90053 solid .3rem;
+            font-weight: 575;
         }
 
         #slogan {
