@@ -241,7 +241,7 @@
         font-weight: 500;
         padding: 14px; 
         border-radius: 50px; 
-        max-width: 300px; 
+         
         border: .2rem solid; 
         cursor: pointer;
         background-color: #ffff;
@@ -250,6 +250,8 @@
         #btn-con-cuenta {
         border-color: #E90053;
         color: #E90053;
+        font-size: 2rem;
+        border: .4rem solid;
         }
 
         #btn-sin-cuenta { 
