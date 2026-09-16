@@ -73,7 +73,7 @@
             color: #1E1B4B;
         }
 
-        #TituloPrincipal {
+      /* #TituloPrincipal {
             font-size:  10rem;
             font-family: Jua;
             font-weight: 400;
@@ -83,6 +83,16 @@
             -webkit-text-stroke: 30px #E90053;
             paint-order: stroke fill;  
             text-align: center; 
+        }*/
+
+        #pantalla-inicio{
+           text-align: center;
+
+        }
+
+        #LogoPrincipal{
+           margin-top: 5.5vh;
+            width: 43vw;
         }
 
        .BotonInformes {
@@ -275,6 +285,19 @@
         margin-bottom: 20px;
         }
 
+
+       #Comenzar{ 
+        background-image: url('assets/fondos/Paisaje\ popups.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        height: 100vh;
+        margin: 0;
+
+        overflow: hidden;
+        }
+
         .input-cuenta {
         font-family: Jua;
         font-size: 1rem;
@@ -295,7 +318,7 @@
         margin-top: -20px;
         }
 
-        #pantalla-elegir-usuarios{
+        #elegir-usuarios{
             overflow: hidden;
         }
 
@@ -399,7 +422,7 @@
             overflow: hidden;
         }
         
-        #Comenzar,#CrearUsuario, #UsuarioTerapeuta, #LoginTerapeuta, #CrearTerapeuta {
+        #CrearUsuario, #UsuarioTerapeuta, #LoginTerapeuta, #CrearTerapeuta, #elegir-usuarios {
             display: none;
             position: fixed;
             inset: 0;

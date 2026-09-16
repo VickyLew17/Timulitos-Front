@@ -30,8 +30,8 @@ document.getElementById("btnAbout").addEventListener("click", () => {
 })
 
 document.getElementById("btnComenzar").addEventListener("click", () => {
-   document.getElementById("Comenzar").style.display= "flex";
-})
+    cambiarPantalla("Comenzar");
+});
 
 document.querySelectorAll(".BotonSalir").forEach (boton => {
     boton.addEventListener("click", () => {
@@ -41,20 +41,27 @@ document.querySelectorAll(".BotonSalir").forEach (boton => {
 
 document.querySelectorAll(".btn-cerrar-popup").forEach (boton => {
     boton.addEventListener("click", () => {
-        boton.closest("#Comenzar, #CrearUsuario, #UsuarioTerapeuta, #LoginTerapeuta, #CrearTerapeuta").style.display = "none";
+        boton.closest("#elegir-usuarios, #CrearUsuario, #UsuarioTerapeuta, #LoginTerapeuta, #CrearTerapeuta").style.display = "none";
     });
 })
 
-document.querySelectorAll("#btn-con-cuenta, #btn-sin-cuenta").forEach(boton => {
-    boton.addEventListener("click", () => {
-        cambiarPantalla(boton.dataset.destino);
-        document.getElementById("Comenzar").style.display = "none";
-    });
+document.getElementById("btn-sin-cuenta").addEventListener("click", () => {
+    cambiarPantalla("cuadricula");
 });
+
+document.getElementById("btn-con-cuenta").addEventListener("click", () => {
+  
+    document.getElementById("elegir-usuarios").style.display = "flex";
+});
+
+
 
 document.querySelectorAll("#btnCrearJugador1, #btnCrearJugador2").forEach(boton => {
     boton.addEventListener("click", () => {
+
         document.getElementById("CrearUsuario").style.display = "flex";
+        document.getElementById("elegir-usuarios").style.display = "none";
+
     });
 });
 
