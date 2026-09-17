@@ -52,6 +52,7 @@ document.getElementById("btn-sin-cuenta").addEventListener("click", () => {
 document.getElementById("btn-con-cuenta").addEventListener("click", () => {
   
     document.getElementById("elegir-usuarios").style.display = "flex";
+    
 });
 
 
@@ -622,8 +623,10 @@ document.addEventListener("keydown", function(event) {
         if (juego6.style.display === "block") {
 
             moverVarita();
-            sacarObjeto();
-    
+            
+            setTimeout(() =>  {
+                sacarObjeto();
+            }, 500);
         }
     }
 });

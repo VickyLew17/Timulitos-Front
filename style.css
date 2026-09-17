@@ -69,6 +69,7 @@
             color: #E90053;
             border: #E90053 solid .3rem;
             font-weight: 575;
+            
         }
 
         #slogan {
@@ -113,6 +114,27 @@
         justify-content: center; 
         margin-left: 24px;  
         margin-top: 24px;  
+        }
+
+        #contenedor-comenzar{
+            background:#ffff;
+            border: .3rem solid #1E1B4B;
+            border-radius: 24px; 
+            padding: 48px ;
+            text-align: center;
+            width: 480px; 
+            display: flex; 
+            flex-direction: column; 
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+
+            margin-top: 10vh;
+            
+        }
+
+        .como-jugar-hoy{
+            font-size: 2.4rem;
         }
 
         /* POPUPS USUARIO TERAPEUTA*/
@@ -266,8 +288,8 @@
         #btn-con-cuenta {
         border-color: #E90053;
         color: #E90053;
-        font-size: 2rem;
-        border: .4rem solid;
+        font-size: 2.4rem;
+        border: .3rem solid;
         }
 
         #btn-sin-cuenta { 
@@ -302,6 +324,14 @@
         margin: 0;
 
         overflow: hidden;
+
+        }
+
+        .comenzar{
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+
         }
 
         .input-cuenta {
@@ -553,6 +583,8 @@
             width: 100vw;
             height: 100vh;
             overflow: hidden;
+
+            background-color:#e2faff;
         }
         
         .burbuja {
@@ -714,7 +746,7 @@
 
         #varita-magica {
          position: absolute;
-         width: 20vw;
+         width: 30vw;
          max-width: 280px;
          right: 15%;
          top: 35%;
