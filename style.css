@@ -367,8 +367,10 @@
         margin-top: 90px;
         }
 
+       
+
         .jugador-seccion {
-        background: #E9F6FF;
+        background: #ffffff;
        
         border: .2rem solid #1E1B4B;
         border-radius: 20px;
@@ -377,12 +379,17 @@
         flex-direction: column;
         gap: 12px;
         margin-bottom: 32px;
+        margin-top: 50px;
+
+        width: 30vw;
         
         }
 
         .jugador-seccion h2 {
         font-size: 2.4rem;
         margin-bottom: -28px;
+
+        margin-top: -15px;
         }
 
         .jugador-seccion p {
@@ -458,7 +465,7 @@
             overflow: hidden;
         }
         
-        #CrearUsuario, #UsuarioTerapeuta, #LoginTerapeuta, #CrearTerapeuta, #elegir-usuarios {
+        #CrearUsuario1, #CrearUsuario2, #UsuarioTerapeuta, #LoginTerapeuta, #CrearTerapeuta, #elegir-usuarios {
             display: none;
             position: fixed;
             inset: 0;

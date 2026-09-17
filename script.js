@@ -31,6 +31,8 @@ document.getElementById("btnAbout").addEventListener("click", () => {
 
 document.getElementById("btnComenzar").addEventListener("click", () => {
     cambiarPantalla("Comenzar");
+    document.getElementById("contenedor-comenzar").style.display = "flex";
+
 });
 
 document.querySelectorAll(".BotonSalir").forEach (boton => {
@@ -41,35 +43,56 @@ document.querySelectorAll(".BotonSalir").forEach (boton => {
 
 document.querySelectorAll(".btn-cerrar-popup").forEach (boton => {
     boton.addEventListener("click", () => {
-        boton.closest("#elegir-usuarios, #CrearUsuario, #UsuarioTerapeuta, #LoginTerapeuta, #CrearTerapeuta").style.display = "none";
+        boton.closest("#elegir-usuarios, #CrearUsuario1, #CrearUsuario2, #UsuarioTerapeuta, #LoginTerapeuta, #CrearTerapeuta").style.display = "none";
+    });
+})
+
+
+
+document.querySelectorAll("#btn-cerrar-popup-usuarios-jugadores, #btn-cerrar-popup-usuario1, #btn-cerrar-popup-usuario2").forEach (boton => {
+    boton.addEventListener("click", () => {
+    document.getElementById("contenedor-comenzar").style.display = "flex";
+        
     });
 })
 
 document.getElementById("btn-sin-cuenta").addEventListener("click", () => {
     cambiarPantalla("cuadricula");
+
 });
 
 document.getElementById("btn-con-cuenta").addEventListener("click", () => {
   
     document.getElementById("elegir-usuarios").style.display = "flex";
+    document.getElementById("contenedor-comenzar").style.display = "none";
+
+    
+});
+
+document.getElementById("btnCrearJugador1").addEventListener("click", () => {
+  
+    document.getElementById("CrearUsuario1").style.display = "flex";
+    document.getElementById("elegir-usuarios").style.display = "none";
+
+    
+});
+
+document.getElementById("btnCrearJugador2").addEventListener("click", () => {
+  
+    document.getElementById("CrearUsuario2").style.display = "flex";
+    document.getElementById("elegir-usuarios").style.display = "none";
+
     
 });
 
 
 
-document.querySelectorAll("#btnCrearJugador1, #btnCrearJugador2").forEach(boton => {
-    boton.addEventListener("click", () => {
-
-        document.getElementById("CrearUsuario").style.display = "flex";
-        document.getElementById("elegir-usuarios").style.display = "none";
-
-    });
-});
-
 document.querySelectorAll("#btn-jugar").forEach (boton => {
     boton.addEventListener("click", () => {
         cambiarPantalla(boton.dataset.destino);
-        document.getElementById("CrearUsuario").style.display = "none";
+        document.getElementById("CrearUsuario1").style.display = "none";
+        document.getElementById("CrearUsuario2").style.display = "none";
+
     });
 })
 

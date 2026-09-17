@@ -71,20 +71,37 @@
     
   </div>
   
-  <button class="btn-cerrar-popup">Cancelar</button>  
+  <button 
+    class="btn-cerrar-popup" 
+    id="btn-cerrar-popup-usuarios-jugadores">
+    Cancelar
+</button>
 </div>
 
-<div id="CrearUsuario">
+<div id="CrearUsuario1">
     <div class="popup">
-        <h2>Crea tu usuario</h2>
-        <p>Alguna frase de bienvenida</p>
+        <h2>Crear cuenta jugador 1</h2>
+      
 
-       <input type="text" placeholder="Nombre del usuario" class="input-cuenta" />
-       <input type="text" placeholder="ID del usuario" class="input-cuenta" />
+       <input type="text" placeholder="Nombre del usuario" class="input-cuenta" id="nombre-usuario-jugador1" />
+       <input type="text" placeholder="ID del usuario" class="input-cuenta" id="ID-usuario-jugador1"/>
 
         <button class="btn-popup" id="btn-jugar" data-destino="cuadricula">¡Jugar!</button>
-        <button class="btn-cerrar-popup">Cancelar</button>    
+        <button class="btn-cerrar-popup" id="btn-cerrar-popup-usuario1">Cancelar</button>    
     </div>
+</div>
+
+<div id="CrearUsuario2">
+  <div class="popup">
+      <h2>Crear cuenta jugador 2</h2>
+    
+
+     <input type="text" placeholder="Nombre del usuario" class="input-cuenta" id="nombre-usuario-jugador2" />
+     <input type="text" placeholder="ID del usuario" class="input-cuenta" id="ID-usuario-jugador2" />
+
+      <button class="btn-popup" id="btn-jugar" data-destino="cuadricula">¡Jugar!</button>
+      <button class="btn-cerrar-popup" id="btn-cerrar-popup-usuario2">Cancelar</button>    
+  </div>
 </div>
 
 <div class="pantalla" id="pantalla-inicio">
