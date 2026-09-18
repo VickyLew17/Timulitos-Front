@@ -120,20 +120,26 @@
             background:#ffff;
             border: .3rem solid #1E1B4B;
             border-radius: 24px; 
-            padding: 48px ;
+            padding: 30px 40px;
             text-align: center;
-            width: 480px; 
+            width: 550px; 
+            height: 300px;
+
             display: flex; 
             flex-direction: column; 
             gap: 10px;
             align-items: center;
             justify-content: center;
 
-            margin-top: 10vh;
-            
+            font-weight: 700;
+
+            margin-top: 4%;
+
         }
 
         .como-jugar-hoy{
+            margin-top: -40px;
+            margin-bottom: 40px;
             font-size: 2.4rem;
         }
 
@@ -198,6 +204,7 @@
         justify-content: center;
         z-index: 100;
         }
+        
 
         #pantalla-informe-usuario h2 {
         font-size: 4rem;
@@ -257,7 +264,7 @@
         }
 
         .popup {
-        background:#E9F6FF;
+        background:#ffff;
         border: .3rem solid #1E1B4B;
         border-radius: 24px; 
         padding: 48px 40px;
@@ -295,7 +302,7 @@
         #btn-sin-cuenta { 
         border-color: #1E1B4B;
         color: #1E1B4B;
-        margin-bottom: 20px;
+        margin-bottom: -30px;
         }
 
         .btn-cerrar-popup {
@@ -330,7 +337,9 @@
         .comenzar{
         display: flex; 
         justify-content: center; 
-        align-items: center; 
+            
+
+        margin-top: 20vh;
 
         }
 
@@ -371,6 +380,7 @@
 
         .jugador-seccion {
         background: #ffffff;
+
        
         border: .2rem solid #1E1B4B;
         border-radius: 20px;
@@ -392,43 +402,78 @@
         margin-top: -15px;
         }
 
-        .jugador-seccion p {
-        font-size: 1.6rem;
-        color: #555;
-        }
+        
 
        .JugadoresAnteriores{
-        font-size: 1.1rem;
-        color: #888;
-        margin-bottom: 8px;
-        margin-top: 8px;
+        font-size: 2rem;
+    
+        color: #1E1B4B;
+        margin-bottom: -20px;
+       
+
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0 auto;
+
+        border: #1E1B4B solid .2rem;
+        border-radius: 5px;
+        padding: 10px;
         }   
 
         .lista-jugadores {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            
+
+            width: 100%;
+            box-sizing: border-box;
+            margin: 0 auto;
+
+            border: #1E1B4B solid .2rem;
+            border-radius: 5px;
+            padding: 10px;
+
+
+
+            max-height: 200px;
+            overflow-y: auto;
         }
 
-        .jugador-item {
-        background: #E90053;
-        border: 2px solid #000;
-        border-radius: 12px;
-        padding: 20px;
-        text-align: center;
-        font-size: 1.1rem;
-        cursor: pointer;
-        }
+       .jugador-item {
+    background: #ffffff;
+    border: .2rem solid #1E1B4B;
+    border-radius: 30px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+
+    color: #1E1B4B;
+
+    font-family: Jua;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
 
         .btn-crear-jugador {
         font-family: Jua;
         font-size: 1rem;
-        padding: 12px 20px;
-        border: 2px solid #000;
+        padding: 12px ;
+        width: 70%;
+        border: .2rem solid #E90053;
+        color: #E90053;
         border-radius: 50px;
-        background: #FDE6E3;
+        background: #ffffff;
         cursor: pointer;
         margin-top: 8px;
+
+        font-weight: 600;
+        font-size: 1.5rem;
+
+        margin-left: auto;
+        margin-right: auto; 
+
+        margin-bottom: 5px;
         }
         
         .btn-comenzar-jugar {
