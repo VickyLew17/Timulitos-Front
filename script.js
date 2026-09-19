@@ -1,3 +1,6 @@
+
+//FUNCIONES DE CAMBIO DE PANTALLA
+
 function cambiarPantalla(idPantalla) {
     console.log(idPantalla);
 
@@ -10,6 +13,27 @@ function cambiarPantalla(idPantalla) {
 
 cambiarPantalla("pantalla-inicio");
 
+
+//DATOS PARA NO HARDCODEAR 
+
+const jugadores = [
+    "Usuario 1",
+    "Usuario 2",
+    "Usuario 3",
+    "Usuario 4",
+    "Usuario 5",
+    "Usuario 6",
+    "Usuario 7",
+    "Usuario 8"
+];
+
+
+
+
+
+
+//BOTONES Y CAMBIO DE PANTALLAS
+
 document.getElementById("btnInformes").addEventListener("click", () => {
     document.getElementById("UsuarioTerapeuta").style.display = "flex";
 
@@ -18,16 +42,16 @@ document.getElementById("btnInformes").addEventListener("click", () => {
 document.getElementById("btn-login-terapeuta").addEventListener("click", () => {
     document.getElementById("LoginTerapeuta").style.display = "flex";
     document.getElementById("UsuarioTerapeuta").style.display = "none";
-})
+});
 
 document.getElementById("btn-crear-terapeuta").addEventListener("click", () => {
     document.getElementById("CrearTerapeuta").style.display = "flex";
     document.getElementById("UsuarioTerapeuta").style.display = "none";
-})
+});
 
 document.getElementById("btnAbout").addEventListener("click", () => {
     cambiarPantalla("pantalla-about");
-})
+});
 
 document.getElementById("btnComenzar").addEventListener("click", () => {
     cambiarPantalla("Comenzar");
@@ -39,14 +63,13 @@ document.querySelectorAll(".BotonSalir").forEach (boton => {
     boton.addEventListener("click", () => {
         cambiarPantalla(boton.dataset.destino);
     });
-})
+});
 
 document.querySelectorAll(".btn-cerrar-popup").forEach (boton => {
     boton.addEventListener("click", () => {
         boton.closest("#elegir-usuarios, #CrearUsuario1, #CrearUsuario2, #UsuarioTerapeuta, #LoginTerapeuta, #CrearTerapeuta, #Tutorial, #video-tutorial").style.display = "none";
     });
-})
-
+});
 
 
 document.querySelectorAll("#btn-cerrar-popup-usuarios-jugadores, #btn-cerrar-popup-usuario1, #btn-cerrar-popup-usuario2, #btn-cerrar-popup-tutorial, #btn-cerrar-popup-video-tutorial").forEach (boton => {
@@ -86,8 +109,6 @@ document.getElementById("btnCrearJugador2").addEventListener("click", () => {
 
     
 });
-
-
 
 document.querySelectorAll("#btn-jugar1, #btn-jugar2").forEach (boton => {
     boton.addEventListener("click", () => {
@@ -134,7 +155,7 @@ document.querySelectorAll("#btn-crear-cuenta-terapeuta").forEach (boton => {
 
 document.querySelectorAll(".usuario-item").forEach (boton => {
     boton.addEventListener("click", () => {
-        cambiarPantalla(boton.dataset.destino);
+        cambiarPantalla("pantalla-informe-usuario");
     });
 })
 
@@ -158,6 +179,42 @@ document.querySelectorAll(".juego-card").forEach(card => {
         }
     });
 });
+
+
+
+//DATOS DINAMICOS
+
+function mostrarJugadores() {
+
+    const listasJugadores = document.querySelectorAll(".lista-jugadores");
+
+    listasJugadores.forEach(lista => {
+        jugadores.forEach(jugador => {
+
+            const elemento = document.createElement("div");
+
+            elemento.classList.add("jugador-item");
+            elemento.textContent = jugador;
+
+            lista.appendChild(elemento);
+        });
+    });
+
+
+    const listaInformes = document.querySelector(".lista-usuarios");
+
+    jugadores.forEach(jugador => {
+
+        const elemento = document.createElement("div");
+
+        elemento.classList.add("usuario-item");
+        elemento.textContent = jugador;
+
+        listaInformes.appendChild(elemento);
+    });
+}
+
+mostrarJugadores();
 
 //JUEGO 1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
 
