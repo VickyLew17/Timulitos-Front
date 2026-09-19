@@ -43,13 +43,13 @@ document.querySelectorAll(".BotonSalir").forEach (boton => {
 
 document.querySelectorAll(".btn-cerrar-popup").forEach (boton => {
     boton.addEventListener("click", () => {
-        boton.closest("#elegir-usuarios, #CrearUsuario1, #CrearUsuario2, #UsuarioTerapeuta, #LoginTerapeuta, #CrearTerapeuta").style.display = "none";
+        boton.closest("#elegir-usuarios, #CrearUsuario1, #CrearUsuario2, #UsuarioTerapeuta, #LoginTerapeuta, #CrearTerapeuta, #Tutorial, #video-tutorial").style.display = "none";
     });
 })
 
 
 
-document.querySelectorAll("#btn-cerrar-popup-usuarios-jugadores, #btn-cerrar-popup-usuario1, #btn-cerrar-popup-usuario2").forEach (boton => {
+document.querySelectorAll("#btn-cerrar-popup-usuarios-jugadores, #btn-cerrar-popup-usuario1, #btn-cerrar-popup-usuario2, #btn-cerrar-popup-tutorial, #btn-cerrar-popup-video-tutorial").forEach (boton => {
     boton.addEventListener("click", () => {
     document.getElementById("contenedor-comenzar").style.display = "flex";
         
@@ -57,7 +57,9 @@ document.querySelectorAll("#btn-cerrar-popup-usuarios-jugadores, #btn-cerrar-pop
 })
 
 document.getElementById("btn-sin-cuenta").addEventListener("click", () => {
-    cambiarPantalla("cuadricula");
+     document.getElementById("Tutorial").style.display = "flex";
+
+      document.getElementById("contenedor-comenzar").style.display = "none";
 
 });
 
@@ -87,14 +89,34 @@ document.getElementById("btnCrearJugador2").addEventListener("click", () => {
 
 
 
-document.querySelectorAll("#btn-jugar").forEach (boton => {
+document.querySelectorAll("#btn-jugar1, #btn-jugar2").forEach (boton => {
     boton.addEventListener("click", () => {
-        cambiarPantalla(boton.dataset.destino);
+        document.getElementById("Tutorial").style.display = "flex";
+
         document.getElementById("CrearUsuario1").style.display = "none";
         document.getElementById("CrearUsuario2").style.display = "none";
 
     });
 })
+
+document.getElementById("sin-tutorial").addEventListener("click", () => {
+    cambiarPantalla("cuadricula");
+    document.getElementById("Tutorial").style.display = "none";
+
+});
+
+document.getElementById("listos-para-tutorial").addEventListener("click", () => {
+    document.getElementById("video-tutorial").style.display = "flex";
+
+    document.getElementById("Tutorial").style.display = "none";
+
+});
+
+document.getElementById("btn-listo-video-tutorial").addEventListener("click", () => {
+    cambiarPantalla("cuadricula");
+    document.getElementById("video-tutorial").style.display = "none";
+
+});
 
 document.querySelectorAll("#btn-ingresar-terapeuta").forEach (boton => {
     boton.addEventListener("click", () => {
@@ -744,7 +766,10 @@ const peces = [
     document.getElementById("pez-1"),
     document.getElementById("pez-2"),
     document.getElementById("pez-3"),
-    document.getElementById("pez-4")
+    document.getElementById("pez-4"),
+    document.getElementById("pez-5"),
+    document.getElementById("pez-6"),
+    document.getElementById("pez-7")
 ];
 
 let pezPescado = null;
@@ -772,6 +797,20 @@ function moverPeces() {
     if (pezPescado !== peces[3]) {
         peces[3].style.transform =
             `translateX(${Math.sin(movimientoPeces + 3) * 30}px)`;
+    }
+
+     if (pezPescado !== peces[4]) {
+        peces[4].style.transform =
+            `translateX(${Math.sin(movimientoPeces + 4) * 30}px)`;
+    }
+
+     if (pezPescado !== peces[5]) {
+        peces[5].style.transform =
+            `translateX(${Math.sin(movimientoPeces + 5) * 30}px)`;
+    }
+     if (pezPescado !== peces[6]) {
+        peces[6].style.transform =
+            `translateX(${Math.sin(movimientoPeces + 6) * 30}px)`;
     }
 
     requestAnimationFrame(moverPeces);
