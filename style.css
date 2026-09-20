@@ -320,6 +320,28 @@
         border: .3rem solid;
         }
 
+        #btn-ingresar-terapeuta {
+        border-color: #e90053;
+        color: #E90053;
+        font-size: 1.4rem;
+        border: .3rem solid;
+
+        width: 10rem;
+
+        margin-top: 15px;
+        }
+
+        #btn-crear-cuenta-terapeuta {
+        border-color: #1E1B4B;
+        color: #1E1B4B;
+        font-size: 1.4rem;
+        border: .3rem solid;
+
+        width: 15rem;
+
+        margin-top: 15px;
+        }
+
         #popup-video-tutorial, #popup-tutorial {
             width: 75vw;
             height: 70vh;
@@ -356,6 +378,9 @@
         font-size: 0.9rem; 
         cursor: pointer; 
         font-family: 'Jua', sans-serif;
+
+        margin-bottom: -20px;
+        margin-top: 10px;
         }
 
         #btn-jugar1, #btn-jugar2{

@@ -17,14 +17,62 @@ cambiarPantalla("pantalla-inicio");
 //DATOS PARA NO HARDCODEAR 
 
 const jugadores = [
-    "Usuario 1",
-    "Usuario 2",
-    "Usuario 3",
-    "Usuario 4",
-    "Usuario 5",
-    "Usuario 6",
-    "Usuario 7",
-    "Usuario 8"
+    {
+        nombre: "Liam_cht",
+        tiempo: "15 minutos",
+        juegosRepetidos: "Burbujas y Pesca",
+        ultimaSesion: "18/09/2026",
+        jugoCon: "Franchu"
+    },
+    {
+        nombre: "Franchu",
+        tiempo: "20 minutos",
+        juegosRepetidos: "Banda Loca",
+        ultimaSesion: "19/09/2026",
+        jugoCon: "Liam_cht"
+    },
+    {
+        nombre: "Coco",
+        tiempo: "10 minutos",
+        juegosRepetidos: "Granja Sonora",
+        ultimaSesion: "17/09/2026",
+        jugoCon: "Delfi.67"
+    },
+    {
+        nombre: "Delfi.67",
+        tiempo: "25 minutos",
+        juegosRepetidos: "Pesca",
+        ultimaSesion: "16/09/2026",
+        jugoCon: "Coco"
+    },
+    {
+        nombre: "Kiky",
+        tiempo: "15 minutos",
+        juegosRepetidos: "Burbujas y Pesca",
+        ultimaSesion: "18/09/2026",
+        jugoCon: "Cab.cata"
+    },
+    {
+        nombre: "Cab.cata",
+        tiempo: "20 minutos",
+        juegosRepetidos: "Banda Loca",
+        ultimaSesion: "19/09/2026",
+        jugoCon: "Kiky"
+    },
+    {
+        nombre: "Usuario 7",
+        tiempo: "10 minutos",
+        juegosRepetidos: "Granja Sonora",
+        ultimaSesion: "17/09/2026",
+        jugoCon: "Usuario 8"
+    },
+    {
+        nombre: "Usuario 8",
+        tiempo: "25 minutos",
+        juegosRepetidos: "Pesca",
+        ultimaSesion: "16/09/2026",
+        jugoCon: "Usuario 7"
+    }
 ];
 
 
@@ -153,11 +201,7 @@ document.querySelectorAll("#btn-crear-cuenta-terapeuta").forEach (boton => {
     });
 })
 
-document.querySelectorAll(".usuario-item").forEach (boton => {
-    boton.addEventListener("click", () => {
-        cambiarPantalla("pantalla-informe-usuario");
-    });
-})
+
 
 document.querySelectorAll(".juego-card").forEach(card => {
     card.addEventListener("click", () => {
@@ -194,27 +238,48 @@ function mostrarJugadores() {
             const elemento = document.createElement("div");
 
             elemento.classList.add("jugador-item");
-            elemento.textContent = jugador;
+            elemento.textContent = jugador.nombre;
 
             lista.appendChild(elemento);
         });
     });
 
+const listaInformes = document.querySelector(".lista-usuarios");
 
-    const listaInformes = document.querySelector(".lista-usuarios");
+jugadores.forEach(jugador => {
 
-    jugadores.forEach(jugador => {
+    const elemento = document.createElement("div");
 
-        const elemento = document.createElement("div");
+    elemento.classList.add("usuario-item");
+    elemento.textContent = jugador.nombre;
 
-        elemento.classList.add("usuario-item");
-        elemento.textContent = jugador;
-
-        listaInformes.appendChild(elemento);
+    elemento.addEventListener("click", () => {
+        mostrarInforme(jugador);
     });
+
+    listaInformes.appendChild(elemento);
+});
 }
 
 mostrarJugadores();
+
+
+function mostrarInforme(jugador) {
+
+    document.getElementById("informe-nombre").textContent = jugador.nombre;
+
+    document.getElementById("informe-tiempo").textContent = jugador.tiempo;
+
+    document.getElementById("informe-juegos").textContent = jugador.juegosRepetidos;
+
+    document.getElementById("informe-ultima-sesion").textContent = jugador.ultimaSesion;
+
+    document.getElementById("informe-jugo-con").textContent = jugador.jugoCon;
+
+    cambiarPantalla("pantalla-informe-usuario");
+}
+
+
 
 //JUEGO 1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
 
