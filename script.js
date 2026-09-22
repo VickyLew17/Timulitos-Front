@@ -227,22 +227,73 @@ document.querySelectorAll(".juego-card").forEach(card => {
 
 
 //DATOS DINAMICOS
+let jugadorSeleccionado1 = null;
+let jugadorSeleccionado2 = null;
+
 
 function mostrarJugadores() {
 
-    const listasJugadores = document.querySelectorAll(".lista-jugadores");
+    const listaJugadores1 = document.getElementById("lista-jugadores1");
+    const listaJugadores2 = document.getElementById("lista-jugadores2");
 
-    listasJugadores.forEach(lista => {
-        jugadores.forEach(jugador => {
+    listaJugadores1.innerHTML = "";
+    listaJugadores2.innerHTML = "";
 
-            const elemento = document.createElement("div");
+    jugadores.forEach(jugador => {
 
-            elemento.classList.add("jugador-item");
-            elemento.textContent = jugador.nombre;
+        
+        const elemento1 = document.createElement("div");
 
-            lista.appendChild(elemento);
+        elemento1.classList.add("jugador-item");
+        elemento1.setAttribute("tabindex", "0");
+        elemento1.textContent = jugador.nombre;
+
+        elemento1.addEventListener("click", () => {
+
+            listaJugadores1.querySelectorAll(".jugador-item").forEach(item => {
+                item.classList.remove("seleccionado");
+            });
+
+            elemento1.classList.add("seleccionado");
+
+            jugadorSeleccionado1 = jugador;
+
+            console.log("Jugador 1:", jugadorSeleccionado1.nombre);
         });
+
+        listaJugadores1.appendChild(elemento1);
+
+
+        
+
+        
+        const elemento2 = document.createElement("div");
+
+        elemento2.classList.add("jugador-item");
+        elemento2.setAttribute("tabindex", "0");
+        elemento2.textContent = jugador.nombre;
+
+        elemento2.addEventListener("click", () => {
+
+            listaJugadores2.querySelectorAll(".jugador-item").forEach(item => {
+                item.classList.remove("seleccionado");
+            });
+
+            elemento2.classList.add("seleccionado");
+
+            jugadorSeleccionado2 = jugador;
+
+            console.log("Jugador 2:", jugadorSeleccionado2.nombre);
+        });
+
+        listaJugadores2.appendChild(elemento2);
+
     });
+}
+
+mostrarJugadores();
+
+
 
 const listaInformes = document.querySelector(".lista-usuarios");
 
@@ -259,7 +310,7 @@ jugadores.forEach(jugador => {
 
     listaInformes.appendChild(elemento);
 });
-}
+
 
 mostrarJugadores();
 

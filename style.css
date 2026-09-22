@@ -537,10 +537,12 @@
         font-weight: 500;
         }
 
-        .jugador-item:active , .jugador-item:hover {
-    color: #E90053;
-    border-color: #E90053;
+        .seleccionado{
+            color: #E90053;
+            border-color: #E90053;
         }
+
+     
 
         .btn-crear-jugador {
         font-family: Jua;
