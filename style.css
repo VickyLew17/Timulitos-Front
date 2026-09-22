@@ -464,7 +464,8 @@
         margin-bottom: 32px;
         margin-top: 50px;
 
-        width: 30vw;
+        width: 35vw;
+        height: 70vh;
         
         }
 
@@ -482,19 +483,22 @@
         
 
        .JugadoresAnteriores{
-        font-size: 2rem;
+        font-size: 1.5rem;
+        font-family: jua;
+        font-weight: 500;
     
         color: #1E1B4B;
-        margin-bottom: -20px;
-       
+        background-color: #F6EFFF;
 
-        width: 100%;
-        box-sizing: border-box;
-        margin: 0 auto;
-
-        border: #1E1B4B solid .2rem;
-        border-radius: 5px;
+        border: .2rem solid #1E1B4B;
+        border-radius: 30px;
+    
+        width: 60%;
         padding: 10px;
+
+        margin-bottom: 0;
+    
+    
         }   
 
         .lista-jugadores {
@@ -518,27 +522,33 @@
         }
 
        .jugador-item {
-    background: #ffffff;
-    border: .2rem solid #1E1B4B;
-    border-radius: 30px;
-    padding: 10px;
-    text-align: center;
-    cursor: pointer;
+        background-color: #F6EFFF;
 
-    color: #1E1B4B;
+        border: .2rem solid #1E1B4B;
+        border-radius: 30px;
+        padding: 10px;
+        text-align: center;
+        cursor: pointer;
 
-    font-family: Jua;
-    font-size: 1.3rem;
-    font-weight: 500;
-}
+        color: #1E1B4B;
+
+        font-family: Jua;
+        font-size: 1.3rem;
+        font-weight: 500;
+        }
+
+        .jugador-item:active , .jugador-item:hover {
+    color: #E90053;
+    border-color: #E90053;
+        }
 
         .btn-crear-jugador {
         font-family: Jua;
         font-size: 1rem;
         padding: 12px ;
         width: 70%;
-        border: .2rem solid #E90053;
-        color: #E90053;
+        border: .2rem solid #1E1B4B;
+        color: #1E1B4B;
         border-radius: 50px;
         background: #ffffff;
         cursor: pointer;
@@ -551,6 +561,11 @@
         margin-right: auto; 
 
         margin-bottom: 5px;
+        }
+
+        .btn-crear-jugador:active , .btn-crear-jugador:hover {
+            color: #E90053;
+            border-color: #E90053;
         }
         
         .btn-comenzar-jugar {

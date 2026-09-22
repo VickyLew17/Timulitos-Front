@@ -50,21 +50,21 @@ const jugadores = [
         tiempo: "15 minutos",
         juegosRepetidos: "Burbujas y Pesca",
         ultimaSesion: "18/09/2026",
-        jugoCon: "Cab.cata"
+        jugoCon: "Usuario 8"
     },
     {
         nombre: "Cab.cata",
         tiempo: "20 minutos",
         juegosRepetidos: "Banda Loca",
         ultimaSesion: "19/09/2026",
-        jugoCon: "Kiky"
+        jugoCon: "Fede_Don_Satur"
     },
     {
-        nombre: "Usuario 7",
-        tiempo: "10 minutos",
+        nombre: "Fede_Don_Satur",
+        tiempo: "67 minutos",
         juegosRepetidos: "Granja Sonora",
         ultimaSesion: "17/09/2026",
-        jugoCon: "Usuario 8"
+        jugoCon: "Cab.cata"
     },
     {
         nombre: "Usuario 8",
