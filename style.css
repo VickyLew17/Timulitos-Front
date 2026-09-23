@@ -137,6 +137,7 @@
 
         }
 
+        
         .como-jugar-hoy{
             margin-top: -40px;
             margin-bottom: 40px;
@@ -192,10 +193,11 @@
         .BotonSalir {
         position: fixed;
         top: 24px;
-        right: 24px;
+        left: 2vw;
         width: 50px;
         aspect-ratio: 1/1;
         border-radius: 50%;
+        transform: translate(180deg);
         background-color: #E9F6FF;
         border: 3.5px solid #E90053;
         color: #1E1B4B; 
@@ -208,7 +210,7 @@
         #btn-cerrar-popup-usuarios-jugadores, #btn-cerrar-popup-usuario1, #btn-cerrar-popup-usuario2, #btn-cerrar-popup-tutorial, #btn-cerrar-popup-video-tutorial {
         position: fixed;
         top: 24px;
-        right: 24px;
+        left: 2vw;
         width: 50px;
         aspect-ratio: 1/1;
         border-radius: 50%;
@@ -896,10 +898,10 @@
 
         #varita-magica {
          position: absolute;
-         width: 30vw;
+         width: 6vw;
          max-width: 280px;
          right: 15%;
-         top: 35%;
+         top: 25%;
          transform-origin: bottom center;
         }
 

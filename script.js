@@ -14,7 +14,7 @@ function cambiarPantalla(idPantalla) {
 cambiarPantalla("pantalla-inicio");
 
 
-//DATOS PARA NO HARDCODEAR 
+//DATOS PARA NO HARDCODEARRRRRRRRRRRRRRRRRR 😊😁😘😎😜
 
 const jugadores = [
     {
@@ -67,11 +67,18 @@ const jugadores = [
         jugoCon: "Cab.cata"
     },
     {
-        nombre: "Usuario 8",
+        nombre: "user 8",
         tiempo: "25 minutos",
         juegosRepetidos: "Pesca",
         ultimaSesion: "16/09/2026",
         jugoCon: "Usuario 7"
+    },
+    {
+        nombre: "user 9",
+        tiempo: "15 minutos",
+        juegosRepetidos: "Burbujas y Pesca",
+        ultimaSesion: "18/09/2026",
+        jugoCon: "Franchu"
     }
 ];
 
