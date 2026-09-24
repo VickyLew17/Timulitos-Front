@@ -403,52 +403,26 @@
  
 <!--AGREGAR USUARIOS TERAPEUTAS. DOS POPUPS, INICIR SECION/CREAR USUARIO-->
 
-<div class="pantalla"  id="UsuarioTerapeuta">
+<div class="pantalla" id="UsuarioTerapeuta">
+
+<section class="comenzar">
 
   <button class="BotonSalir" data-destino="pantalla-inicio">
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
   </button>
 
 
-  <div class="popup">
-     <h2>Acceso para terapeutas</h2>
+<div id="contenedor-usuario-terapeuta">
+  
+    <h2>Acceso a terapeutas</h2>
+    <p>Ingrese el ID del grupo de terapeutas para ver los avances de los chicos.</p>
 
+    <input type="text" placeholder="Escribe el ID..." class="input-cuenta" id="ID-terapeutas" />
 
-    <button class="btn-popup" id="btn-login-terapeuta">Iniciar sesión</button>
-    
-    <button class="btn-popup" id="btn-crear-terapeuta">Crear cuenta</button>
-    
-    <button class="btn-cerrar-popup">Cancelar</button>
-    </div>
+    <button class="btn-popup" id="btn-entrar-terapeuta">Comenzar</button>
+        </div>
+
 </div>
-
-<div id="LoginTerapeuta">
-    <div class="popup">
-        <h2>Iniciar sesión</h2>
-        <p>Ingresa tus datos</p>
-
-       <input type="text" placeholder="Nombre de usuario" class="input-cuenta" />
-       <input type="password" placeholder="Contraseña" class="input-cuenta" />
-
-        <button class="btn-popup" id="btn-ingresar-terapeuta" data-destino="pantalla-informes">Ingresar</button>
-        <button class="btn-cerrar-popup">Cancelar</button>    
-    </div>
-</div>
-
-<div id="CrearTerapeuta">
-    <div class="popup">
-        <h2>Crear cuenta de terapeuta</h2>
-        <p>Ingresa tus datos</p>
-
-       <input type="text" placeholder="Nombre de usuario" class="input-cuenta" />
-       <input type="password" placeholder="Contraseña" class="input-cuenta" />
-
-        <button class="btn-popup" id="btn-crear-cuenta-terapeuta" data-destino="pantalla-informes">Crear cuenta</button>
-        <button class="btn-cerrar-popup">Cancelar</button>    
-    </div>
-</div> 
-
-
 
 <div class="pantalla" id="pantalla-informes">
 

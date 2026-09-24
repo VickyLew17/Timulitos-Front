@@ -146,6 +146,34 @@
 
         /* POPUPS USUARIO TERAPEUTA*/
 
+
+        #UsuarioTerapeuta {
+            width: 100vw;
+            height: 100vh;
+            background-image: url('assets/fondos/terapeutas.png'); 
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 100vh;
+            margin: 0;
+    
+            overflow: hidden;
+        }
+        
+        #contenedor-usuario-terapeuta {
+            background-color: white;
+            width: 80%;
+            max-width: 600px;
+            padding: 40px;
+            border-radius: 25px;
+        
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
         #btn-login-terapeuta {
             border-color: #E90053;
             color: #E90053;     
@@ -192,8 +220,8 @@
 
         .BotonSalir {
         position: fixed;
-        top: 24px;
-        left: 2vw;
+        top: 2.5vh;
+        right: 2vw;
         width: 50px;
         aspect-ratio: 1/1;
         border-radius: 50%;
@@ -209,8 +237,8 @@
 
         #btn-cerrar-popup-usuarios-jugadores, #btn-cerrar-popup-usuario1, #btn-cerrar-popup-usuario2, #btn-cerrar-popup-tutorial, #btn-cerrar-popup-video-tutorial {
         position: fixed;
-        top: 24px;
-        left: 2vw;
+        top: 2.5vh;
+        right: 2vw;
         width: 50px;
         aspect-ratio: 1/1;
         border-radius: 50%;
@@ -397,7 +425,7 @@
 
 
        #Comenzar{ 
-        background-image: url('assets/fondos/Paisaje\ popups.png');
+        background-image: url('assets/fondos/comenzar.png');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -606,11 +634,11 @@
             overflow: hidden;
         }
         
-        #CrearUsuario1, #CrearUsuario2, #UsuarioTerapeuta, #LoginTerapeuta, #CrearTerapeuta, #elegir-usuarios, #Tutorial, #video-tutorial{
+        #CrearUsuario1, #CrearUsuario2, #LoginTerapeuta, #CrearTerapeuta, #elegir-usuarios, #Tutorial, #video-tutorial{
             display: none;
             position: fixed;
             inset: 0;
-            background: rgba(0,0,0,.4);
+       
             justify-content: center;
             align-items: center;
             z-index: 1000;

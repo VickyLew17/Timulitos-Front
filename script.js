@@ -90,19 +90,11 @@ const jugadores = [
 //BOTONES Y CAMBIO DE PANTALLAS
 
 document.getElementById("btnInformes").addEventListener("click", () => {
-    document.getElementById("UsuarioTerapeuta").style.display = "flex";
+    cambiarPantalla("UsuarioTerapeuta");
+    document.getElementById("contenedor-usuario-terapeuta").style.display = "flex";
 
 });
 
-document.getElementById("btn-login-terapeuta").addEventListener("click", () => {
-    document.getElementById("LoginTerapeuta").style.display = "flex";
-    document.getElementById("UsuarioTerapeuta").style.display = "none";
-});
-
-document.getElementById("btn-crear-terapeuta").addEventListener("click", () => {
-    document.getElementById("CrearTerapeuta").style.display = "flex";
-    document.getElementById("UsuarioTerapeuta").style.display = "none";
-});
 
 document.getElementById("btnAbout").addEventListener("click", () => {
     cambiarPantalla("pantalla-about");
@@ -111,8 +103,12 @@ document.getElementById("btnAbout").addEventListener("click", () => {
 document.getElementById("btnComenzar").addEventListener("click", () => {
     cambiarPantalla("Comenzar");
     document.getElementById("contenedor-comenzar").style.display = "flex";
-
 });
+
+document.getElementById("btn-cerrar-usuario-terapeuta").addEventListener("click", () => {
+    cambiarPantalla("pantalla-inicio");
+});
+
 
 document.querySelectorAll(".BotonSalir").forEach (boton => {
     boton.addEventListener("click", () => {
@@ -122,7 +118,7 @@ document.querySelectorAll(".BotonSalir").forEach (boton => {
 
 document.querySelectorAll(".btn-cerrar-popup").forEach (boton => {
     boton.addEventListener("click", () => {
-        boton.closest("#elegir-usuarios, #CrearUsuario1, #CrearUsuario2, #UsuarioTerapeuta, #LoginTerapeuta, #CrearTerapeuta, #Tutorial, #video-tutorial").style.display = "none";
+        boton.closest("#elegir-usuarios, #CrearUsuario1, #CrearUsuario2, #Tutorial, #video-tutorial").style.display = "none";
     });
 });
 
@@ -132,7 +128,7 @@ document.querySelectorAll("#btn-cerrar-popup-usuarios-jugadores, #btn-cerrar-pop
     document.getElementById("contenedor-comenzar").style.display = "flex";
         
     });
-})
+});
 
 document.getElementById("btn-sin-cuenta").addEventListener("click", () => {
      document.getElementById("Tutorial").style.display = "flex";
