@@ -105,11 +105,6 @@ document.getElementById("btnComenzar").addEventListener("click", () => {
     document.getElementById("contenedor-comenzar").style.display = "flex";
 });
 
-document.getElementById("btn-cerrar-usuario-terapeuta").addEventListener("click", () => {
-    cambiarPantalla("pantalla-inicio");
-});
-
-
 document.querySelectorAll(".BotonSalir").forEach (boton => {
     boton.addEventListener("click", () => {
         cambiarPantalla(boton.dataset.destino);
@@ -204,6 +199,9 @@ document.querySelectorAll("#btn-crear-cuenta-terapeuta").forEach (boton => {
     });
 })
 
+document.getElementById("btn-entrar-terapeuta").addEventListener("click", () => {
+    cambiarPantalla("pantalla-informes");
+})
 
 
 document.querySelectorAll(".juego-card").forEach(card => {
@@ -226,6 +224,8 @@ document.querySelectorAll(".juego-card").forEach(card => {
         }
     });
 });
+
+
 
 
 

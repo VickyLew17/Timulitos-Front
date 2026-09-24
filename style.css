@@ -163,26 +163,58 @@
         
         #contenedor-usuario-terapeuta {
             background-color: white;
-            width: 80%;
-            max-width: 600px;
-            padding: 40px;
+            width: 45%;
+
+            margin-top: 10vh;
+          
+            padding: 20px;
             border-radius: 25px;
+
+            border: .2rem solid #9E4EFF;
         
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
             gap: 20px;
+
+            h2{
+                font-size: 3rem;
+                color: #1E1B4B;
+
+                margin-top: 0;
+                margin-bottom: 20px;
+            }
+
+            p{
+                color: #1E1B4B;
+                font-size: 1.5rem;
+                text-align: center;
+
+                margin-top:-20px;
+            }
         }
 
-        #btn-login-terapeuta {
-            border-color: #E90053;
-            color: #E90053;     
+        #ID-terapeutas{
+            width: 35vw;
+            border-radius: 15px;
         }
 
-        #btn-crear-terapeuta {
-        border-color: #1E1B4B;
-        color: #1E1B4B;
-        }  
+        
+        #ID-terapeutas:focus{
+           border-color: #9E4EFF ;
+        }
+       
+
+
+        #btn-entrar-terapeuta {
+            background-color: #E90053;
+            color: #ffffff;
+            
+            width: 15vw;
+        }
+
+        
 
 
         #pantalla-informes h2 {
@@ -460,6 +492,8 @@
         .input-cuenta:focus {
         border-color: #E90053;
         }
+
+
      
         .popup p {
         font-size: 1.2rem;
