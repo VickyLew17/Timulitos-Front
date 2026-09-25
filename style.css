@@ -135,9 +135,23 @@
 
             margin-top: 4%;
 
+            position: relative;
+            z-index: 1;
+
         }
 
-        
+        #conejo-colgando{
+                position: absolute;
+                width: 200px;
+            
+                left: 63%;
+                top: calc(32.9% - 190px);
+            
+                transform: translateX(-50%);
+            
+                z-index: 2;
+        }
+            
         .como-jugar-hoy{
             margin-top: -40px;
             margin-bottom: 40px;
@@ -163,11 +177,13 @@
         
         #contenedor-usuario-terapeuta {
             background-color: white;
-            width: 45%;
+            width:40%;
 
-            margin-top: 10vh;
+     
+
+            margin-top: 1vh;
           
-            padding: 20px;
+            padding: 40px;
             border-radius: 25px;
 
             border: .2rem solid #9E4EFF;
@@ -176,7 +192,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 20px;
+            gap: 30px;
 
             h2{
                 font-size: 3rem;
@@ -192,6 +208,7 @@
                 text-align: center;
 
                 margin-top:-20px;
+                margin-bottom: 10px;
             }
         }
 
@@ -376,34 +393,13 @@
         }
        
         #btn-con-cuenta, #listos-para-tutorial {
-        border-color: #E90053;
-        color: #E90053;
+        background-color: #E90053;
+        color: #ffffff;
         font-size: 2.4rem;
         border: .3rem solid;
         }
 
-        #btn-ingresar-terapeuta {
-        border-color: #e90053;
-        color: #E90053;
-        font-size: 1.4rem;
-        border: .3rem solid;
-
-        width: 10rem;
-
-        margin-top: 15px;
-        }
-
-        #btn-crear-cuenta-terapeuta {
-        border-color: #1E1B4B;
-        color: #1E1B4B;
-        font-size: 1.4rem;
-        border: .3rem solid;
-
-        width: 15rem;
-
-        margin-top: 15px;
-        }
-
+       
         #popup-video-tutorial, #popup-tutorial {
             width: 75vw;
             height: 70vh;
@@ -467,6 +463,8 @@
 
         overflow: hidden;
 
+        position: relative;
+
         }
 
         .comenzar{
@@ -475,6 +473,7 @@
             
 
         margin-top: 20vh;
+        
 
         }
 
@@ -530,7 +529,26 @@
 
         width: 35vw;
         height: 70vh;
+
+        position: relative;
         
+        }
+
+        .contenedor-jugador{
+            position: relative;  
+            z-index: 1;
+
+            
+        }
+
+        .sonnys-arriba-usuario{
+            position: absolute;
+            width: 195px;
+            left: 24%;
+            top: -34.4%;
+
+            transform: translateX(-50%);
+            z-index: 2;
         }
 
         .jugador-seccion h2 {
@@ -541,7 +559,7 @@
 
         margin-top: 0;
         margin-bottom: 10px;
-
+        z-index: 100;
         }
 
         

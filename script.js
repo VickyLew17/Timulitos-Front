@@ -103,6 +103,8 @@ document.getElementById("btnAbout").addEventListener("click", () => {
 document.getElementById("btnComenzar").addEventListener("click", () => {
     cambiarPantalla("Comenzar");
     document.getElementById("contenedor-comenzar").style.display = "flex";
+    document.getElementById("conejo-colgando").style.display = "flex";
+
 });
 
 document.querySelectorAll(".BotonSalir").forEach (boton => {
@@ -121,7 +123,9 @@ document.querySelectorAll(".btn-cerrar-popup").forEach (boton => {
 document.querySelectorAll("#btn-cerrar-popup-usuarios-jugadores, #btn-cerrar-popup-usuario1, #btn-cerrar-popup-usuario2, #btn-cerrar-popup-tutorial, #btn-cerrar-popup-video-tutorial").forEach (boton => {
     boton.addEventListener("click", () => {
     document.getElementById("contenedor-comenzar").style.display = "flex";
-        
+    document.getElementById("conejo-colgando").style.display = "flex";
+    
+
     });
 });
 
@@ -129,6 +133,7 @@ document.getElementById("btn-sin-cuenta").addEventListener("click", () => {
      document.getElementById("Tutorial").style.display = "flex";
 
       document.getElementById("contenedor-comenzar").style.display = "none";
+      document.getElementById("conejo-colgando").style.display = "none";
 
 });
 
@@ -136,6 +141,9 @@ document.getElementById("btn-con-cuenta").addEventListener("click", () => {
   
     document.getElementById("elegir-usuarios").style.display = "flex";
     document.getElementById("contenedor-comenzar").style.display = "none";
+
+    document.getElementById("conejo-colgando").style.display = "none";
+
 
     
 });
