@@ -18,63 +18,67 @@
 
 <body>
 
+
 <div id="Comenzar" class="pantalla">
        
   <button class="BotonSalir" data-destino="pantalla-inicio">
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
   </button>
   
-
-
 <section class="comenzar">
 
-  <img class="sonnys-arriba-comenzar" id="conejo-colgando"  src="assets/arriba-popups/conejo-colgando.png">
   
   <div id="contenedor-comenzar">
-   <h2 class="como-jugar-hoy">¿Cómo vamos a jugar hoy?</h2>
-      <button class="btn-popup" id="btn-con-cuenta" data-destino="elegir-usuarios">Con cuenta</button>
-      <button class="btn-popup" id="btn-sin-cuenta" data-destino="cuadricula">Sin cuenta</button>
-    </div>
-  </section>
+
+    <img class="sonnys-arriba-comenzar" id="conejo-colgando"  src="assets/arriba-popups/conejo-colgando.png">
+
+    <h2 class="como-jugar-hoy">¿Cómo vamos a jugar hoy?</h2>
+    <button class="btn-popup" id="btn-con-cuenta" data-destino="elegir-usuarios">Con cuenta</button>
+    <button class="btn-popup" id="btn-sin-cuenta" data-destino="cuadricula">Sin cuenta</button>
+  </div>
+
+</section>
 
 </div>
 
 <div id="elegir-usuarios">
+
+<div class="elegir-usuarios">
+
+  <div class="jugador-seccion">
+
  
-
-  <div class="elegir-usuarios">
-
-    <div class="jugador-seccion">
-
       <img class="sonnys-arriba-usuario" id="pollo-colgando" src="assets/arriba-popups/pollo-colgando.png">
+      <img class="cartel-jugadores" id="cartel-J1" src="assets/arriba-popups/cartel-J1.png">
 
-      <div class="contenedor-jugador">
       <h2>¿Quién será Jugador 1?</h2>
       <p class="JugadoresAnteriores">Jugadores anteriores:</p>
     
       <div class="lista-jugadores" id="lista-jugadores1"></div>
 
-    <button class="btn-crear-jugador" id="btnCrearJugador1">Crear cuenta de J1</button>
-  </div> 
+      <button class="btn-crear-jugador" id="btnCrearJugador1">Crear cuenta de J1</button>
+  
 
-  </div>
+</div>
 
-    <div class="jugador-seccion">
+  <div class="jugador-seccion">
+
+    
       <img class="sonnys-arriba-usuario" id="cerdo-colgando" src="assets/arriba-popups/cerdo-colgando.png">
+      <img class="cartel-jugadores" id="cartel-J2" src="assets/arriba-popups/cartel-J2.png">
 
-      <div class="contenedor-jugador">
 
       <h2>¿Quién será Jugador 2?</h2>
     
       <p class="JugadoresAnteriores">Jugadores anteriores:</p>
       
-    <div class="lista-jugadores" id="lista-jugadores2"></div>
+      <div class="lista-jugadores" id="lista-jugadores2"></div>
 
-    <button class="btn-crear-jugador" id="btnCrearJugador2">Crear cuenta de J2</button>
-    </div>
+      <button class="btn-crear-jugador" id="btnCrearJugador2">Crear cuenta de J2</button>
 
-    </div>
+
   </div>
+</div>
   
   
 

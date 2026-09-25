@@ -504,7 +504,7 @@ function crearFuegoArtificial() {
         console.log("No se pudo reproducir el sonido:", error);
     });
 
-    const colores = ["red", "blue", "yellow", "green", "pink", "purple", "orange"];
+    const colores = ["red", "blue", "yellow", "green", "pink", "purple", "orange", "cyan", "magenta", "lime", "teal", "indigo", "violet", "gold", "silver", "coral", "salmon", "turquoise", "lavender", "peach", "mint", "plum", "navy", "maroon", "olive", "aqua", "fuchsia", "crimson", "khaki", "orchid"];
 
     const color = colores[Math.floor(Math.random() * colores.length)];
 

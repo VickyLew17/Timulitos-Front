@@ -141,15 +141,16 @@
         }
 
         #conejo-colgando{
-                position: absolute;
-                width: 200px;
-            
-                left: 63%;
-                top: calc(32.9% - 190px);
-            
-                transform: translateX(-50%);
-            
-                z-index: 2;
+        position: absolute;
+
+        width: 190px;
+
+        left: 80%;
+        top: 3.3%;
+
+        transform: translate(-50%, -85%);
+
+        z-index: 10;
         }
             
         .como-jugar-hoy{
@@ -518,7 +519,7 @@
         background: #ffffff;
 
        
-        border: .2rem solid #1E1B4B;
+        border: .3rem solid #1E1B4B;
         border-radius: 20px;
         padding: 28px;
         display: flex;
@@ -534,21 +535,31 @@
         
         }
 
-        .contenedor-jugador{
-            position: relative;  
-            z-index: 1;
-
-            
-        }
 
         .sonnys-arriba-usuario{
-            position: absolute;
-            width: 195px;
-            left: 24%;
-            top: -34.4%;
+        position: absolute;
 
-            transform: translateX(-50%);
-            z-index: 2;
+        width: 170px;
+
+        left: 23%;
+        top: 2.15%;
+
+        transform: translate(-50%, -85%);
+
+        z-index: 10;
+        }
+
+        .cartel-jugadores{
+        position: absolute;
+        width: 230px;
+
+        left: 72%;
+        top: 3%;
+
+        transform: translate(-50%, -85%);
+
+        z-index: -1;
+
         }
 
         .jugador-seccion h2 {
@@ -559,7 +570,7 @@
 
         margin-top: 0;
         margin-bottom: 10px;
-        z-index: 100;
+        z-index: 1000;
         }
 
         
@@ -1047,7 +1058,7 @@
 
         .anzuelo{
         position: absolute;
-        width: 10vw;
+        width: 5vw;
         max-width: 180px;
         top: 10%;
         }
