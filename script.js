@@ -166,10 +166,33 @@ document.getElementById("btnCrearJugador2").addEventListener("click", () => {
 
 document.querySelectorAll("#btn-jugar1, #btn-jugar2").forEach (boton => {
     boton.addEventListener("click", () => {
-        document.getElementById("Tutorial").style.display = "flex";
+       // document.getElementById("Tutorial").style.display = "flex";
 
+        document.getElementById("elegir-usuarios").style.display = "flex";
         document.getElementById("CrearUsuario1").style.display = "none";
         document.getElementById("CrearUsuario2").style.display = "none";
+
+        let nombre;
+
+        if (boton.id === "btn-jugar1") {
+            nombre = document.getElementById("nombre-usuario-jugador1").value;
+        } else {
+            nombre = document.getElementById("nombre-usuario-jugador2").value;
+        }
+
+        jugadores.push({
+            nombre: nombre,
+            tiempo: "---",
+            juegosRepetidos: "---",
+            ultimaSesion: "---",
+            jugoCon: "---"
+        });
+
+        mostrarJugadores();
+
+        console.log("Nuevo jugador:", nombre);
+        console.log(jugadores);
+
 
     });
 })
@@ -209,6 +232,7 @@ document.querySelectorAll("#btn-crear-cuenta-terapeuta").forEach (boton => {
 
 document.getElementById("btn-entrar-terapeuta").addEventListener("click", () => {
     cambiarPantalla("pantalla-informes");
+
 })
 
 

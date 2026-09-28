@@ -47,8 +47,10 @@
 
         .BotonesInicio {
         display: flex;
+        flex-direction: column;
         justify-content: center;
-        gap: 20px;
+        align-items: center;
+        gap: 10px;
         }
 
         .btnInicio {
@@ -56,24 +58,31 @@
         text-decoration: none;
         background-color: #ffff;
         color: #1E1B4B;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         font-weight: 550;
         padding: 14px 35px;
         border: .2rem solid #1E1B4B;
         border-radius: 50px;
         font-family: Jua;
         z-index: 1;
+
+        width: 30%;
+
         }
 
         #btnComenzar{
-            color: #E90053;
-            border: #E90053 solid .3rem;
-            font-weight: 575;
-            
+            background-color: #E90053;
+            color: #fff;
+            border: #E90053;
+            font-weight: 550;
+            font-size: 2rem;
+
+            width: 35%;
+
         }
 
         #slogan {
-            font-size: 2rem;
+            font-size: 2.5rem;
             text-align: center;
             margin-top: 0px;
             margin-bottom: 40px;
@@ -98,7 +107,7 @@
         }
 
         #LogoPrincipal{
-           margin-top: 5.5vh;
+           margin-top: .5vh;
             width: 43vw;
         }
 
@@ -270,8 +279,8 @@
 
         .BotonSalir {
         position: fixed;
-        top: 2.5vh;
-        right: 2vw;
+        top: 20px;
+        right: 20px;
         width: 50px;
         aspect-ratio: 1/1;
         border-radius: 50%;
@@ -287,8 +296,8 @@
 
         #btn-cerrar-popup-usuarios-jugadores, #btn-cerrar-popup-usuario1, #btn-cerrar-popup-usuario2, #btn-cerrar-popup-tutorial, #btn-cerrar-popup-video-tutorial {
         position: fixed;
-        top: 2.5vh;
-        right: 2vw;
+        top: 10px;
+        right: 20px;
         width: 50px;
         aspect-ratio: 1/1;
         border-radius: 50%;
