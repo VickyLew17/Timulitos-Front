@@ -189,7 +189,7 @@
             background-color: white;
             width:40%;
 
-     
+            position: relative;
 
             margin-top: 1vh;
           
@@ -220,6 +220,19 @@
                 margin-top:-20px;
                 margin-bottom: 10px;
             }
+        }
+
+        #icono-terapeutas{
+        position: absolute;
+
+        width: 80px;
+
+        left: 50%;
+        top: 3%;
+
+        transform: translate(-50%, -85%);
+
+        z-index: 10;
         }
 
         #ID-terapeutas{
