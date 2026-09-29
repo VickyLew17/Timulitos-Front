@@ -283,6 +283,10 @@ function mostrarJugadores() {
         elemento1.setAttribute("tabindex", "0");
         elemento1.textContent = jugador.nombre;
 
+        if (jugadorSeleccionado1 === jugador) {
+            elemento1.classList.add("seleccionado");
+        }
+
         elemento1.addEventListener("click", () => {
 
             listaJugadores1.querySelectorAll(".jugador-item").forEach(item => {
@@ -292,6 +296,8 @@ function mostrarJugadores() {
             elemento1.classList.add("seleccionado");
 
             jugadorSeleccionado1 = jugador;
+
+            comprobarSeleccion();
 
             console.log("Jugador 1:", jugadorSeleccionado1.nombre);
         });
@@ -308,6 +314,10 @@ function mostrarJugadores() {
         elemento2.setAttribute("tabindex", "0");
         elemento2.textContent = jugador.nombre;
 
+        if (jugadorSeleccionado2 === jugador) {
+            elemento2.classList.add("seleccionado");
+        }
+
         elemento2.addEventListener("click", () => {
 
             listaJugadores2.querySelectorAll(".jugador-item").forEach(item => {
@@ -317,6 +327,8 @@ function mostrarJugadores() {
             elemento2.classList.add("seleccionado");
 
             jugadorSeleccionado2 = jugador;
+
+            comprobarSeleccion();
 
             console.log("Jugador 2:", jugadorSeleccionado2.nombre);
         });
@@ -328,6 +340,27 @@ function mostrarJugadores() {
 
 mostrarJugadores();
 
+function comprobarSeleccion() {
+    if (jugadorSeleccionado1 !== null && jugadorSeleccionado2 !== null) {
+        
+        setTimeout(() => {
+            cambiarPantalla("cuadricula");
+            document.getElementById("elegir-usuarios").style.display = "none";
+        }, 300);
+    }
+};
+
+document.getElementById("btn-salir-cuadricula").addEventListener("click", () => {
+   jugadorSeleccionado1 = null;
+   jugadorSeleccionado2 = null;
+
+   document.querySelectorAll(".jugador-item").forEach(item => {
+                item.classList.remove("seleccionado");
+    });
+
+    console.log("SE BORRARON LOS JUGADORES");
+
+});
 
 
 const listaInformes = document.querySelector(".lista-usuarios");
@@ -351,6 +384,7 @@ mostrarJugadores();
 
 
 function mostrarInforme(jugador) {
+    
 
     document.getElementById("informe-nombre").textContent = jugador.nombre;
 
