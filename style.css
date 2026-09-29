@@ -307,7 +307,7 @@
         z-index: 100;
         }
 
-        #btn-cerrar-popup-usuarios-jugadores, #btn-cerrar-popup-usuario1, #btn-cerrar-popup-usuario2, #btn-cerrar-popup-tutorial, #btn-cerrar-popup-video-tutorial {
+        #btn-cerrar-popup-usuarios-jugadores, #btn-cerrar-popup-usuario1, #btn-cerrar-popup-usuario2, #btn-cerrar-popup-tutorial, #btn-cerrar-popup-video-tutorial, #btn-cerrar-popup-id-usuario {
         position: fixed;
         top: 10px;
         right: 20px;
@@ -684,6 +684,10 @@
             color: #E90053;
             border-color: #E90053;
         }
+
+        .crear-cuenta-texto{
+            margin-top: -10px;
+        }
         
         .btn-comenzar-jugar {
         font-family: Jua;
@@ -731,6 +735,33 @@
 
         #popup-usuario1, #popup-usuario2 {
             width: 600px;
+            position: relative;
+        }
+
+       .sonnys-arriba-usuario-crear {
+        position: absolute;
+
+        width: 170px;
+
+        left: 17%;
+        top: 3%;
+
+        transform: translate(-50%, -85%);
+
+        z-index: 10;
+        }
+
+        #sonnys-arriba-usuario-ID {
+        position: absolute;
+
+        width: 170px;
+
+        left: 17%;
+        top: 3%;
+
+        transform: translate(-50%, -85%);
+
+        z-index: 10;
         }
 
         #popup-id-usuario {
@@ -739,7 +770,7 @@
             z-index: 1000;
         
             width: 600px;
-            height: 300px;
+            height: 330px;
             
            
             padding: 35px;
@@ -755,6 +786,11 @@
             text-align: center;
 
             
+        }
+
+        #nombre-usuario-id{
+            font-size: 2rem;
+            margin-bottom: 10px;
         }
         
       

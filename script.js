@@ -145,6 +145,13 @@ document.querySelectorAll("#btn-cerrar-popup-usuarios-jugadores, #btn-cerrar-pop
     });
 });
 
+document.getElementById("btn-cerrar-popup-id-usuario").addEventListener("click", () => {
+     document.getElementById("popup-id-usuario").style.display = "none";
+
+    document.getElementById("elegir-usuarios").style.display = "flex";
+
+});
+
 document.getElementById("btn-sin-cuenta").addEventListener("click", () => {
      document.getElementById("Tutorial").style.display = "flex";
 
@@ -209,11 +216,20 @@ document.querySelectorAll("#btn-jugar1, #btn-jugar2").forEach (boton => {
             tiempo: "---",
             juegosRepetidos: "---",
             ultimaSesion: "---",
-            jugoCon: "---"
+            jugoCon: "---",
+           // NO FUNCIONAAAAAAAAAA id: document.getElementById("input-id-usuario").value
 
         });
 
+        if (boton.id === "btn-jugar1") {
+            jugadorSeleccionado1 = jugadores[jugadores.length - 1];
+        }
+        else {
+            jugadorSeleccionado2 = jugadores[jugadores.length - 1];
+        }
+        
         mostrarJugadores();
+        comprobarSeleccion();
 
         console.log("Nuevo jugador:", nombre);
         console.log(jugadores);
@@ -291,11 +307,7 @@ document.querySelectorAll(".juego-card").forEach(card => {
 
 
 
-document.getElementById("btn-cancelar-id").addEventListener("click", () => {
 
-    document.getElementById("popup-id-usuario").style.display = "none";
-
-});
 
 
 //DATOS DINAMICOS
@@ -337,6 +349,7 @@ function mostrarJugadores() {
             document.getElementById("input-id-usuario").value = "";
 
             document.getElementById("popup-id-usuario").style.display = "flex";
+            document.getElementById("elegir-usuarios").style.display = "none";
 
            // listaJugadores1.querySelectorAll(".jugador-item").forEach(item => {
            //     item.classList.remove("seleccionado");
@@ -377,6 +390,8 @@ function mostrarJugadores() {
             document.getElementById("input-id-usuario").value = "";
 
             document.getElementById("popup-id-usuario").style.display = "flex";
+            document.getElementById("elegir-usuarios").style.display = "none";
+
         });
 
         listaJugadores2.appendChild(elemento2);
@@ -397,6 +412,53 @@ function comprobarSeleccion() {
         }, 300);
     }
 };
+
+
+
+
+
+document.getElementById("btn-confirmar-id").addEventListener("click", () => {
+
+const idIngresado = document.getElementById("input-id-usuario").value;
+
+    if (idIngresado === jugadorProceso.id) {
+
+
+      if (jugadorProcesoNumero === 1) {
+        
+        jugadorSeleccionado1 = jugadorProceso;
+       
+        document.querySelectorAll("#lista-jugadores1 .jugador-item").forEach(item => {
+            if (item.textContent === jugadorProceso.nombre) {
+                item.classList.add("seleccionado");
+            }
+        });
+      } 
+      
+      else {
+
+        jugadorSeleccionado2 = jugadorProceso;
+
+        document.querySelectorAll("#lista-jugadores2 .jugador-item").forEach(item => {
+            if (item.textContent === jugadorProceso.nombre) {
+                item.classList.add("seleccionado");
+                
+            }
+        });
+      }
+
+        document.getElementById("popup-id-usuario").style.display = "none";
+        document.getElementById("elegir-usuarios").style.display = "flex";
+
+        comprobarSeleccion();
+
+    } 
+    
+    else {
+    alert("El ID ingresado no es correcto.");
+    }
+
+});
 
 document.getElementById("btn-salir-cuadricula").addEventListener("click", () => {
    jugadorSeleccionado1 = null;
