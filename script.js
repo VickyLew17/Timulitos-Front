@@ -22,66 +22,82 @@ const jugadores = [
         tiempo: "15 minutos",
         juegosRepetidos: "Burbujas y Pesca",
         ultimaSesion: "18/09/2026",
-        jugoCon: "Franchu"
+        jugoCon: "Franchu",
+        id: "0001"
     },
     {
         nombre: "Franchu",
         tiempo: "20 minutos",
         juegosRepetidos: "Banda Loca",
         ultimaSesion: "19/09/2026",
-        jugoCon: "Liam_cht"
+        jugoCon: "Liam_cht",
+        id: "0002"
+
     },
     {
         nombre: "Coco",
         tiempo: "10 minutos",
         juegosRepetidos: "Granja Sonora",
         ultimaSesion: "17/09/2026",
-        jugoCon: "Delfi.67"
+        jugoCon: "Delfi.67",
+        id: "0003"
+
     },
     {
         nombre: "Delfi.67",
         tiempo: "25 minutos",
         juegosRepetidos: "Pesca",
         ultimaSesion: "16/09/2026",
-        jugoCon: "Coco"
+        jugoCon: "Coco",
+        id: "0004"
+
     },
     {
         nombre: "Kiky",
         tiempo: "15 minutos",
         juegosRepetidos: "Burbujas y Pesca",
         ultimaSesion: "18/09/2026",
-        jugoCon: "Usuario 8"
+        jugoCon: "Usuario 8",
+        id: "0005"
+
     },
     {
         nombre: "Cab.cata",
         tiempo: "20 minutos",
         juegosRepetidos: "Banda Loca",
         ultimaSesion: "19/09/2026",
-        jugoCon: "Fede_Don_Satur"
+        jugoCon: "Fede_Don_Satur",
+        id: "0006"
+
     },
     {
         nombre: "Fede_Don_Satur",
         tiempo: "67 minutos",
         juegosRepetidos: "Granja Sonora",
         ultimaSesion: "17/09/2026",
-        jugoCon: "Cab.cata"
+        jugoCon: "Cab.cata",
+        id: "0007"
+
     },
     {
         nombre: "user 8",
         tiempo: "25 minutos",
         juegosRepetidos: "Pesca",
         ultimaSesion: "16/09/2026",
-        jugoCon: "Usuario 7"
+        jugoCon: "Usuario 7",
+        id: "0008"
+
     },
     {
         nombre: "user 9",
         tiempo: "15 minutos",
         juegosRepetidos: "Burbujas y Pesca",
         ultimaSesion: "18/09/2026",
-        jugoCon: "Franchu"
+        jugoCon: "Franchu",
+        id: "0009"
+
     }
 ];
-
 
 
 
@@ -153,6 +169,10 @@ document.getElementById("btnCrearJugador1").addEventListener("click", () => {
     document.getElementById("CrearUsuario1").style.display = "flex";
     document.getElementById("elegir-usuarios").style.display = "none";
 
+    document.getElementById("nombre-usuario-jugador1").value = "";
+    document.getElementById("ID-usuario-jugador1").value = "";
+
+
     
 });
 
@@ -160,6 +180,10 @@ document.getElementById("btnCrearJugador2").addEventListener("click", () => {
   
     document.getElementById("CrearUsuario2").style.display = "flex";
     document.getElementById("elegir-usuarios").style.display = "none";
+
+    
+    document.getElementById("nombre-usuario-jugador2").value = "";
+    document.getElementById("ID-usuario-jugador2").value = "";
 
     
 });
@@ -186,6 +210,7 @@ document.querySelectorAll("#btn-jugar1, #btn-jugar2").forEach (boton => {
             juegosRepetidos: "---",
             ultimaSesion: "---",
             jugoCon: "---"
+
         });
 
         mostrarJugadores();
@@ -261,9 +286,24 @@ document.querySelectorAll(".juego-card").forEach(card => {
 
 
 
+
+
+
+
+
+document.getElementById("btn-cancelar-id").addEventListener("click", () => {
+
+    document.getElementById("popup-id-usuario").style.display = "none";
+
+});
+
+
 //DATOS DINAMICOS
 let jugadorSeleccionado1 = null;
 let jugadorSeleccionado2 = null;
+
+let jugadorProceso = null;
+let jugadorProcesoNumero = null;
 
 
 function mostrarJugadores() {
@@ -289,17 +329,26 @@ function mostrarJugadores() {
 
         elemento1.addEventListener("click", () => {
 
-            listaJugadores1.querySelectorAll(".jugador-item").forEach(item => {
-                item.classList.remove("seleccionado");
-            });
+            jugadorProceso = jugador;
+            jugadorProcesoNumero = 1;
 
-            elemento1.classList.add("seleccionado");
+            document.getElementById("nombre-usuario-id").textContent = jugador.nombre;
 
-            jugadorSeleccionado1 = jugador;
+            document.getElementById("input-id-usuario").value = "";
 
-            comprobarSeleccion();
+            document.getElementById("popup-id-usuario").style.display = "flex";
 
-            console.log("Jugador 1:", jugadorSeleccionado1.nombre);
+           // listaJugadores1.querySelectorAll(".jugador-item").forEach(item => {
+           //     item.classList.remove("seleccionado");
+           // });
+
+           // elemento1.classList.add("seleccionado");
+
+           // jugadorSeleccionado1 = jugador;
+
+            // comprobarSeleccion();
+
+           // console.log("Jugador 1:", jugadorSeleccionado1.nombre);
         });
 
         listaJugadores1.appendChild(elemento1);
@@ -320,17 +369,14 @@ function mostrarJugadores() {
 
         elemento2.addEventListener("click", () => {
 
-            listaJugadores2.querySelectorAll(".jugador-item").forEach(item => {
-                item.classList.remove("seleccionado");
-            });
+            jugadorProceso = jugador;
+            jugadorProcesoNumero = 2;
 
-            elemento2.classList.add("seleccionado");
+            document.getElementById("nombre-usuario-id").textContent = jugador.nombre;
 
-            jugadorSeleccionado2 = jugador;
+            document.getElementById("input-id-usuario").value = "";
 
-            comprobarSeleccion();
-
-            console.log("Jugador 2:", jugadorSeleccionado2.nombre);
+            document.getElementById("popup-id-usuario").style.display = "flex";
         });
 
         listaJugadores2.appendChild(elemento2);
@@ -339,6 +385,8 @@ function mostrarJugadores() {
 }
 
 mostrarJugadores();
+
+
 
 function comprobarSeleccion() {
     if (jugadorSeleccionado1 !== null && jugadorSeleccionado2 !== null) {
