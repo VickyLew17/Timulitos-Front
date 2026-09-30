@@ -407,7 +407,7 @@ function comprobarSeleccion() {
     if (jugadorSeleccionado1 !== null && jugadorSeleccionado2 !== null) {
         
         setTimeout(() => {
-            cambiarPantalla("cuadricula");
+            document.getElementById("Tutorial").style.display = "flex";
             document.getElementById("elegir-usuarios").style.display = "none";
         }, 300);
     }
