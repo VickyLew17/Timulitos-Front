@@ -146,7 +146,7 @@ document.querySelectorAll("#btn-cerrar-popup-usuarios-jugadores, #btn-cerrar-pop
 });
 
 document.getElementById("btn-cerrar-popup-id-usuario").addEventListener("click", () => {
-     document.getElementById("popup-id-usuario").style.display = "none";
+     document.getElementById("IDUsuario").style.display = "none";
 
     document.getElementById("elegir-usuarios").style.display = "flex";
 
@@ -167,8 +167,9 @@ document.getElementById("btn-con-cuenta").addEventListener("click", () => {
 
     document.getElementById("conejo-colgando").style.display = "none";
 
-    querySelectorAll(".jugador-item").classList.remove("seleccionado");
-    
+    document.querySelectorAll('.jugador-item').forEach(function(elemento) {
+        elemento.classList.remove('seleccionado');
+    });    
 });
 
 document.getElementById("btnCrearJugador1").addEventListener("click", () => {
@@ -323,6 +324,10 @@ let jugadorSeleccionado2 = null;
 let jugadorProceso = null;
 let jugadorProcesoNumero = null;
 
+const animalArribaID = document.getElementById ("sonnys-arriba-usuario-ID");
+
+
+
 
 function mostrarJugadores() {
 
@@ -354,8 +359,11 @@ function mostrarJugadores() {
 
             document.getElementById("input-id-usuario").value = "";
 
-            document.getElementById("popup-id-usuario").style.display = "flex";
+            document.getElementById("IDUsuario").style.display = "flex";
             document.getElementById("elegir-usuarios").style.display = "none";
+
+            animalArribaID.src = "assets/arriba-popups/pollo-colgando.png"; 
+
 
            // listaJugadores1.querySelectorAll(".jugador-item").forEach(item => {
            //     item.classList.remove("seleccionado");
@@ -395,8 +403,10 @@ function mostrarJugadores() {
 
             document.getElementById("input-id-usuario").value = "";
 
-            document.getElementById("popup-id-usuario").style.display = "flex";
+            document.getElementById("IDUsuario").style.display = "flex";
             document.getElementById("elegir-usuarios").style.display = "none";
+
+            animalArribaID.src = "assets/arriba-popups/cerdo-colgando.png"; 
 
         });
 
@@ -412,10 +422,10 @@ mostrarJugadores();
 function comprobarSeleccion() {
     if (jugadorSeleccionado1 !== null && jugadorSeleccionado2 !== null) {
         
-        setTimeout(() => {
+      
             document.getElementById("Tutorial").style.display = "flex";
             document.getElementById("elegir-usuarios").style.display = "none";
-        }, 300);
+       
     }
 };
 
@@ -453,7 +463,7 @@ const idIngresado = document.getElementById("input-id-usuario").value;
         });
       }
 
-        document.getElementById("popup-id-usuario").style.display = "none";
+        document.getElementById("IDUsuario").style.display = "none";
         document.getElementById("elegir-usuarios").style.display = "flex";
 
         comprobarSeleccion();
@@ -896,7 +906,7 @@ const instrumentos = [
 
 let numero4 = 0;
 
-instrumento.src = instrumentos[numero4  ].imagen;
+instrumento.src = instrumentos[numero4].imagen;
 
 document.addEventListener("keydown", function(event) {
     if (event.code === "Space" || event.code === "Enter") {

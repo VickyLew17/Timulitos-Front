@@ -81,6 +81,10 @@
 
         }
 
+        #btnComenzar:hover, #btn-con-cuenta:hover, #listos-para-tutorial:hover{
+            background-color: #A5003B;
+        }
+
         #slogan {
             font-size: 2.5rem;
             text-align: center;
@@ -107,7 +111,7 @@
         }
 
         #LogoPrincipal{
-           margin-top: .5vh;
+           margin-top: .01vh;
             width: 43vw;
         }
 
@@ -419,7 +423,9 @@
         background-color: #E90053;
         color: #ffffff;
         font-size: 2.4rem;
-        border: .3rem solid;
+        border: 0;
+
+      
         }
 
        
@@ -465,13 +471,19 @@
         }
 
         #btn-jugar1, #btn-jugar2{
-        color: #E90053; 
-        border: .2rem solid #E90053;
+        color: #ffffff; 
+        
+        background-color: #E90053;
+        border: 0;
 
         padding: 14px;
         width: 60%;
         margin-bottom: -20px;
         margin-top: 10px;
+        }
+
+        #btn-jugar1:hover, #btn-jugar2:hover{
+            background-color: #A5003B;
         }
 
 
@@ -501,14 +513,16 @@
         }
 
         .input-cuenta {
-        font-family: Jua;
-        font-size: 1rem;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 1.7rem;
         padding: 14px 20px;
         border: 2px solid #000;
         border-radius: 50px;
-        width: 100%;
-        text-align: center;
+        width: 90%;
+        
         outline: none;
+
+
         }
 
         .input-cuenta:focus {
@@ -639,12 +653,13 @@
         }
 
        .jugador-item {
+        display: flex;
         background-color: #F6EFFF;
 
         border: .2rem solid #1E1B4B;
         border-radius: 30px;
         padding: 10px;
-        text-align: center;
+        
         cursor: pointer;
 
         color: #1E1B4B;
@@ -652,11 +667,21 @@
         font-family: Jua;
         font-size: 1.3rem;
         font-weight: 500;
+
+        justify-content: space-between;
+        align-items: center;
         }
 
         .seleccionado{
             color: #E90053;
             border-color: #E90053;
+
+        }
+
+        .seleccionado::after{
+            content: " ✓";
+            margin-right: 10px;
+            font-weight: 1000;
         }
 
      
@@ -666,14 +691,15 @@
         font-size: 1rem;
         padding: 12px ;
         width: 70%;
-        border: .2rem solid #1E1B4B;
-        color: #1E1B4B;
+       
+        border: 0px;
+        color: #ffffff;
         border-radius: 50px;
-        background: #ffffff;
+        background: #E90053 ;
         cursor: pointer;
         margin-top: 8px;
 
-        font-weight: 600;
+        font-weight: 500;
         font-size: 1.5rem;
 
         margin-left: auto;
@@ -683,8 +709,7 @@
         }
 
         .btn-crear-jugador:active , .btn-crear-jugador:hover {
-            color: #E90053;
-            border-color: #E90053;
+           background-color: #A5003B;
         }
 
         .crear-cuenta-texto{
@@ -725,7 +750,7 @@
             overflow: hidden;
         }
         
-        #CrearUsuario1, #CrearUsuario2, #LoginTerapeuta, #CrearTerapeuta, #elegir-usuarios, #Tutorial, #video-tutorial, #popup-id-usuario{
+        #CrearUsuario1, #CrearUsuario2, #LoginTerapeuta, #CrearTerapeuta, #elegir-usuarios, #Tutorial, #video-tutorial, #IDUsuarios{
             display: none;
             position: fixed;
             inset: 0;
@@ -746,7 +771,7 @@
         width: 170px;
 
         left: 17%;
-        top: 3%;
+        top: 2.7%;
 
         transform: translate(-50%, -85%);
 
@@ -759,7 +784,7 @@
         width: 170px;
 
         left: 17%;
-        top: 3%;
+        top: 2.6%;
 
         transform: translate(-50%, -85%);
 
