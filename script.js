@@ -167,7 +167,7 @@ document.getElementById("btn-con-cuenta").addEventListener("click", () => {
 
     document.getElementById("conejo-colgando").style.display = "none";
 
-
+    querySelectorAll(".jugador-item").classList.remove("seleccionado");
     
 });
 
@@ -207,8 +207,14 @@ document.querySelectorAll("#btn-jugar1, #btn-jugar2").forEach (boton => {
 
         if (boton.id === "btn-jugar1") {
             nombre = document.getElementById("nombre-usuario-jugador1").value;
-        } else {
+            idUsiario = document.getElementById("ID-usuario-jugador1").value;
+
+        } 
+        
+        else {
             nombre = document.getElementById("nombre-usuario-jugador2").value;
+            idUsiario = document.getElementById("ID-usuario-jugador2").value;
+
         }
 
         jugadores.push({
@@ -217,7 +223,7 @@ document.querySelectorAll("#btn-jugar1, #btn-jugar2").forEach (boton => {
             juegosRepetidos: "---",
             ultimaSesion: "---",
             jugoCon: "---",
-           // NO FUNCIONAAAAAAAAAA id: document.getElementById("input-id-usuario").value
+            id: idUsiario
 
         });
 

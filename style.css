@@ -112,11 +112,11 @@
         }
 
        .BotonInformes {
-        width: 60px;
-        height: 60px;
+        width: 74px;
+        height: 74px;
         border-radius: 50%;
         background-color: #E9F6FF;
-        border: 3px solid #E90053;
+        border: .2rem solid #E90053;
         color: #1E1B4B; 
         display: flex;
         align-items: center;
@@ -598,18 +598,20 @@
         
 
        .JugadoresAnteriores{
-        font-size: 1.5rem;
+        font-size: 1.7rem;
         font-family: jua;
         font-weight: 500;
     
         color: #1E1B4B;
-        background-color: #F6EFFF;
+        background-color: #ffffff;
 
         border: .2rem solid #1E1B4B;
-        border-radius: 30px;
+        border-radius: 20px;
     
         width: 60%;
         padding: 10px;
+
+        padding-left: 15px;
 
         margin-bottom: 0;
     
