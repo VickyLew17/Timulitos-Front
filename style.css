@@ -146,7 +146,7 @@
 
             font-weight: 700;
 
-            margin-top: 4%;
+            margin-top: 5%;
 
             position: relative;
             z-index: 1;
@@ -562,7 +562,7 @@
         flex-direction: column;
         gap: 12px;
         margin-bottom: 32px;
-        margin-top: 50px;
+        margin-top: 40px;
 
         width: 35vw;
         height: 70vh;
@@ -750,7 +750,7 @@
             overflow: hidden;
         }
         
-        #CrearUsuario1, #CrearUsuario2, #LoginTerapeuta, #CrearTerapeuta, #elegir-usuarios, #Tutorial, #video-tutorial, #IDUsuarios{
+        #CrearUsuario1, #CrearUsuario2, #LoginTerapeuta, #CrearTerapeuta, #elegir-usuarios, #Tutorial, #video-tutorial, #IDUsuario{
             display: none;
             position: fixed;
             inset: 0;
@@ -758,11 +758,14 @@
             justify-content: center;
             align-items: center;
             z-index: 1000;
+            
         } 
 
         #popup-usuario1, #popup-usuario2 {
             width: 600px;
             position: relative;
+
+            top: 7%;
         }
 
        .sonnys-arriba-usuario-crear {
@@ -792,7 +795,7 @@
         }
 
         #popup-id-usuario {
-            display: none;
+          
             position: fixed;
             z-index: 1000;
         
@@ -802,7 +805,7 @@
            
             padding: 35px;
         
-            top: 50%;
+            top: 55%;
             left: 50%;
             transform: translate(-50%, -50%);
         
@@ -813,6 +816,17 @@
             text-align: center;
 
             
+        }
+
+        #btn-confirmar-id{
+            color: #ffff;
+            background-color: #E90053;
+            border: 0;
+        }
+
+        #btn-confirmar-id:hover{
+            background-color: #A5003B;
+
         }
 
         #nombre-usuario-id{
@@ -928,6 +942,15 @@
 
 
 
+
+
+
+
+
+
+
+
+        
 
         /* Juego 1 */
 

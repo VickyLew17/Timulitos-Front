@@ -365,17 +365,6 @@ function mostrarJugadores() {
             animalArribaID.src = "assets/arriba-popups/pollo-colgando.png"; 
 
 
-           // listaJugadores1.querySelectorAll(".jugador-item").forEach(item => {
-           //     item.classList.remove("seleccionado");
-           // });
-
-           // elemento1.classList.add("seleccionado");
-
-           // jugadorSeleccionado1 = jugador;
-
-            // comprobarSeleccion();
-
-           // console.log("Jugador 1:", jugadorSeleccionado1.nombre);
         });
 
         listaJugadores1.appendChild(elemento1);
