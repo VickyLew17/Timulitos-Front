@@ -170,7 +170,6 @@ document.getElementById("btn-con-cuenta").addEventListener("click", () => {
     document.querySelectorAll('.jugador-item').forEach(function(elemento) {
         elemento.classList.remove('seleccionado');
 
-       // NO FUNCIONAAAA limpiarErrorID();
     });    
 });
 
@@ -354,6 +353,9 @@ function mostrarJugadores() {
 
         elemento1.addEventListener("click", () => {
 
+            document.getElementById("input-id-usuario").value = "";
+            limpiarErrorID();
+
             jugadorProceso = jugador;
             jugadorProcesoNumero = 1;
 
@@ -386,6 +388,9 @@ function mostrarJugadores() {
         }
 
         elemento2.addEventListener("click", () => {
+
+            document.getElementById("input-id-usuario").value = "";
+            limpiarErrorID();
 
             jugadorProceso = jugador;
             jugadorProcesoNumero = 2;
