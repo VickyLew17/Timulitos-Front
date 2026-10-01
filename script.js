@@ -169,6 +169,8 @@ document.getElementById("btn-con-cuenta").addEventListener("click", () => {
 
     document.querySelectorAll('.jugador-item').forEach(function(elemento) {
         elemento.classList.remove('seleccionado');
+
+       // NO FUNCIONAAAA limpiarErrorID();
     });    
 });
 
@@ -1199,13 +1201,11 @@ document.addEventListener("keydown", function(event) {
     if (juego7.style.display === "block") {
 
         if (event.code === "Space" && !pescando1) {
-            console.log("ESPACIO FUNCIONA")
 
             pescar(anzuelo1, 1);
         }
 
         if (event.code === "Enter" && !pescando2) {
-            console.log("ENTER FUNCIONA")
 
             pescar(anzuelo2, 2);
         }
@@ -1242,7 +1242,11 @@ function pescar(anzuelo, jugador) {
          
             pezPescado = pez;
 
-            pez.style.transform = "none";
+            if (pez === peces[0]) {
+                pez.style.transform = "rotate(90deg)";
+            } else if (pez === peces[2]) {
+                pez.style.transform = "rotate(-90deg)";
+            }
 
             subirAnzuelo();
         }
@@ -1255,7 +1259,8 @@ function pescar(anzuelo, jugador) {
         posicion -= 1;
     
         anzuelo.style.top = posicion + "%";
-        pez.style.top = (posicion + 5) + "%";
+        pez.style.top = (posicion + 15) + "%";
+        
     
         if (posicion > 10) {
             requestAnimationFrame(subirAnzuelo);
@@ -1263,7 +1268,7 @@ function pescar(anzuelo, jugador) {
         
         else {
             anzuelo.style.top = "10%";
-            pez.style.top = "15%";
+            pez.style.top = "24%";
 
 
             setTimeout(() =>  {
