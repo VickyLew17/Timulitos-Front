@@ -419,7 +419,26 @@ function comprobarSeleccion() {
 };
 
 
+const inputID = document.getElementById("input-id-usuario");
+const errorID = document.getElementById("error-id-usuario");
 
+function mostrarErrorID() {
+    inputID.classList.add("input-error");
+    errorID.classList.add("visible");
+    inputID.setAttribute("aria-invalid", "true");
+    inputID.focus();
+
+    document.getElementById("input-id-usuario").textContent = "";
+}
+
+function limpiarErrorID() {
+    inputID.classList.remove("input-error");
+    errorID.classList.remove("visible");
+    inputID.removeAttribute("aria-invalid");
+}
+
+
+inputID.addEventListener("input", limpiarErrorID);
 
 
 document.getElementById("btn-confirmar-id").addEventListener("click", () => {
@@ -460,7 +479,7 @@ const idIngresado = document.getElementById("input-id-usuario").value;
     } 
     
     else {
-    alert("El ID ingresado no es correcto.");
+        mostrarErrorID();
     }
 
 });
