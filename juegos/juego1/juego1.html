@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonnys</title>
+    <link rel="icon" href="../../assets/logos/logo-sonnys.png">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mooli&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../compartido/style.css">
+    <link rel="stylesheet" href="juegos/juego1/juego1.css">
+</head>
+
+<body>
+    <div class="pantalla" id="portada-juego1">
+        <a class="BotonSalir" href="../../cuadricula/cuadricula.html"><svg xmlns="http://www.w3.org/2000/svg" width="32"
+                height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-chevron-right-icon lucide-chevron-right">
+                <path d="m9 18 6-6-6-6" />
+            </svg>
+        </a>
+
+        <h1 class="titulo-juego" id="titulo-juego1">Burbujas</h1>
+
+        <div class="div-btn-comenzar-juego">
+            <button class="btn-comenzar-juego" id="btn-comenzar-juego1" data-destino="juego1">¡Comenzar!</button>
+        </div>
+    </div>
+
+    <div class="pantalla" id="juego1">
+        <a class="BotonSalir" href="../../cuadricula/cuadricula.html"><svg xmlns="http://www.w3.org/2000/svg" width="32"
+                height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-chevron-right-icon lucide-chevron-right">
+                <path d="m9 18 6-6-6-6" />
+            </svg>
+        </a>
+
+        <div id="fin-juego1">
+            <h2>¡BIEN HECHO!</h2>
+            <button id="btn-reiniciar-juego1">Jugar de nuevo</button>
+        </div>
+
+    </div>
+
+    <script src="../../compartido/main.js"></script>
+    <script src="/juegos/juego1/juego1.js"></script>
+</body>
+
+</html>

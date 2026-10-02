@@ -1,0 +1,121 @@
+    body {
+        padding: 0;
+        margin: 0;
+        min-height: 100vh;
+
+        background-color: #E9F6FF;
+        font-family: Mooli;
+    }
+
+    .pantalla {
+        display: none;
+    }
+
+    .BotonSalir {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 50px;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        transform: translate(180deg);
+        background-color: #E9F6FF;
+        border: 3.5px solid #E90053;
+        color: #1E1B4B;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 100;
+    }
+
+
+    .titulo-juego {
+        margin-top: 200px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 7rem;
+    }
+
+    .descripcion-juego {
+        margin-top: 200px;
+        text-align: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 2rem;
+    }
+
+    .div-btn-comenzar-juego {
+        display: flex;
+        justify-content: center;
+    }
+
+    .btn-comenzar-juego {
+        background-color: #E90053;
+        color: #000000;
+        font-size: 2rem;
+        font-weight: 400;
+        padding: 14px 35px;
+        border: 1px solid #000000;
+        border-radius: 50px;
+
+        font-family: Jua;
+    }
+
+    button:focus-visible,
+    .juego-card:focus-visible,
+    .usuario-item:focus-visible,
+    .jugador-item:focus-visible {
+        outline: 2px solid #000000;
+        outline-offset: 4px;
+    }
+
+    .btnInicio,
+    .btn-popup,
+    .btn-crear-jugador,
+    .btn-comenzar-juego,
+    .BotonInformes,
+    .BotonSalir,
+    .juego-card,
+    .usuario-item,
+    .jugador-item {
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    button {
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .juego-card:hover,
+    .btnInicio:hover,
+    .BotonInformes:hover,
+    .BotonSalir:hover,
+    .btn-popup:hover,
+    .jugador-item:hover,
+    .usuario-item:hover,
+    .btn-crear-jugador:hover,
+    .btn-comenzar-juego:hover,
+    .btn-comenzar-jugar:hover {
+        box-shadow: 0 5px 10px rgba(107, 140, 255, 0.18);
+        transform: translateY(-2px);
+    }
+
+    .btn-cerrar-popup:hover {
+        color: #000;
+    }
+
+    .juego-card:active,
+    .btnInicio:active,
+    .BotonInformes:active,
+    .BotonSalir:active,
+    .btn-popup:active,
+    .juego-card:active,
+    .jugador-item:active,
+    .usuario-item:active,
+    .btn-cerrar-popup:active,
+    .btn-crear-jugador:active,
+    .btn-comenzar-juego:active,
+    .btn-comenzar-jugar:active {
+        box-shadow: 0 2px 5px rgba(107, 140, 255, 0.18);
+        transform: translateY(0);
+    }

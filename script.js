@@ -123,58 +123,58 @@ document.getElementById("btnComenzar").addEventListener("click", () => {
 
 });
 
-document.querySelectorAll(".BotonSalir").forEach (boton => {
+document.querySelectorAll(".BotonSalir").forEach(boton => {
     boton.addEventListener("click", () => {
         cambiarPantalla(boton.dataset.destino);
     });
 });
 
-document.querySelectorAll(".btn-cerrar-popup").forEach (boton => {
+document.querySelectorAll(".btn-cerrar-popup").forEach(boton => {
     boton.addEventListener("click", () => {
         boton.closest("#elegir-usuarios, #CrearUsuario1, #CrearUsuario2, #Tutorial, #video-tutorial").style.display = "none";
     });
 });
 
 
-document.querySelectorAll("#btn-cerrar-popup-usuarios-jugadores, #btn-cerrar-popup-usuario1, #btn-cerrar-popup-usuario2, #btn-cerrar-popup-tutorial, #btn-cerrar-popup-video-tutorial").forEach (boton => {
+document.querySelectorAll("#btn-cerrar-popup-usuarios-jugadores, #btn-cerrar-popup-usuario1, #btn-cerrar-popup-usuario2, #btn-cerrar-popup-tutorial, #btn-cerrar-popup-video-tutorial").forEach(boton => {
     boton.addEventListener("click", () => {
-    document.getElementById("contenedor-comenzar").style.display = "flex";
-    document.getElementById("conejo-colgando").style.display = "flex";
-    
+        document.getElementById("contenedor-comenzar").style.display = "flex";
+        document.getElementById("conejo-colgando").style.display = "flex";
+
 
     });
 });
 
 document.getElementById("btn-cerrar-popup-id-usuario").addEventListener("click", () => {
-     document.getElementById("IDUsuario").style.display = "none";
+    document.getElementById("IDUsuario").style.display = "none";
 
     document.getElementById("elegir-usuarios").style.display = "flex";
 
 });
 
 document.getElementById("btn-sin-cuenta").addEventListener("click", () => {
-     document.getElementById("Tutorial").style.display = "flex";
+    document.getElementById("Tutorial").style.display = "flex";
 
-      document.getElementById("contenedor-comenzar").style.display = "none";
-      document.getElementById("conejo-colgando").style.display = "none";
+    document.getElementById("contenedor-comenzar").style.display = "none";
+    document.getElementById("conejo-colgando").style.display = "none";
 
 });
 
 document.getElementById("btn-con-cuenta").addEventListener("click", () => {
-  
+
     document.getElementById("elegir-usuarios").style.display = "flex";
     document.getElementById("contenedor-comenzar").style.display = "none";
 
     document.getElementById("conejo-colgando").style.display = "none";
 
-    document.querySelectorAll('.jugador-item').forEach(function(elemento) {
+    document.querySelectorAll('.jugador-item').forEach(function (elemento) {
         elemento.classList.remove('seleccionado');
 
-    });    
+    });
 });
 
 document.getElementById("btnCrearJugador1").addEventListener("click", () => {
-  
+
     document.getElementById("CrearUsuario1").style.display = "flex";
     document.getElementById("elegir-usuarios").style.display = "none";
 
@@ -182,24 +182,24 @@ document.getElementById("btnCrearJugador1").addEventListener("click", () => {
     document.getElementById("ID-usuario-jugador1").value = "";
 
 
-    
+
 });
 
 document.getElementById("btnCrearJugador2").addEventListener("click", () => {
-  
+
     document.getElementById("CrearUsuario2").style.display = "flex";
     document.getElementById("elegir-usuarios").style.display = "none";
 
-    
+
     document.getElementById("nombre-usuario-jugador2").value = "";
     document.getElementById("ID-usuario-jugador2").value = "";
 
-    
+
 });
 
-document.querySelectorAll("#btn-jugar1, #btn-jugar2").forEach (boton => {
+document.querySelectorAll("#btn-jugar1, #btn-jugar2").forEach(boton => {
     boton.addEventListener("click", () => {
-       // document.getElementById("Tutorial").style.display = "flex";
+        // document.getElementById("Tutorial").style.display = "flex";
 
         document.getElementById("elegir-usuarios").style.display = "flex";
         document.getElementById("CrearUsuario1").style.display = "none";
@@ -211,8 +211,8 @@ document.querySelectorAll("#btn-jugar1, #btn-jugar2").forEach (boton => {
             nombre = document.getElementById("nombre-usuario-jugador1").value;
             idUsiario = document.getElementById("ID-usuario-jugador1").value;
 
-        } 
-        
+        }
+
         else {
             nombre = document.getElementById("nombre-usuario-jugador2").value;
             idUsiario = document.getElementById("ID-usuario-jugador2").value;
@@ -235,7 +235,7 @@ document.querySelectorAll("#btn-jugar1, #btn-jugar2").forEach (boton => {
         else {
             jugadorSeleccionado2 = jugadores[jugadores.length - 1];
         }
-        
+
         mostrarJugadores();
         comprobarSeleccion();
 
@@ -265,14 +265,14 @@ document.getElementById("btn-listo-video-tutorial").addEventListener("click", ()
 
 });
 
-document.querySelectorAll("#btn-ingresar-terapeuta").forEach (boton => {
+document.querySelectorAll("#btn-ingresar-terapeuta").forEach(boton => {
     boton.addEventListener("click", () => {
         cambiarPantalla(boton.dataset.destino);
         document.getElementById("LoginTerapeuta").style.display = "none";
     });
 })
 
-document.querySelectorAll("#btn-crear-cuenta-terapeuta").forEach (boton => {
+document.querySelectorAll("#btn-crear-cuenta-terapeuta").forEach(boton => {
     boton.addEventListener("click", () => {
         cambiarPantalla(boton.dataset.destino);
         document.getElementById("CrearTerapeuta").style.display = "none";
@@ -298,7 +298,7 @@ document.querySelectorAll(".btn-comenzar-juego").forEach(card => {
 });
 
 document.querySelectorAll(".juego-card").forEach(card => {
-    card.addEventListener("keydown", function(event) {
+    card.addEventListener("keydown", function (event) {
         if (event.code === "Enter" || event.code === "Space") {
             event.preventDefault();
             card.click();
@@ -325,7 +325,7 @@ let jugadorSeleccionado2 = null;
 let jugadorProceso = null;
 let jugadorProcesoNumero = null;
 
-const animalArribaID = document.getElementById ("sonnys-arriba-usuario-ID");
+const animalArribaID = document.getElementById("sonnys-arriba-usuario-ID");
 
 
 
@@ -340,7 +340,7 @@ function mostrarJugadores() {
 
     jugadores.forEach(jugador => {
 
-        
+
         const elemento1 = document.createElement("div");
 
         elemento1.classList.add("jugador-item");
@@ -366,7 +366,7 @@ function mostrarJugadores() {
             document.getElementById("IDUsuario").style.display = "flex";
             document.getElementById("elegir-usuarios").style.display = "none";
 
-            animalArribaID.src = "assets/arriba-popups/pollo-colgando.png"; 
+            animalArribaID.src = "assets/arriba-popups/pollo-colgando.png";
 
 
         });
@@ -374,9 +374,9 @@ function mostrarJugadores() {
         listaJugadores1.appendChild(elemento1);
 
 
-        
 
-        
+
+
         const elemento2 = document.createElement("div");
 
         elemento2.classList.add("jugador-item");
@@ -402,7 +402,7 @@ function mostrarJugadores() {
             document.getElementById("IDUsuario").style.display = "flex";
             document.getElementById("elegir-usuarios").style.display = "none";
 
-            animalArribaID.src = "assets/arriba-popups/cerdo-colgando.png"; 
+            animalArribaID.src = "assets/arriba-popups/cerdo-colgando.png";
 
         });
 
@@ -417,11 +417,11 @@ mostrarJugadores();
 
 function comprobarSeleccion() {
     if (jugadorSeleccionado1 !== null && jugadorSeleccionado2 !== null) {
-        
-      
-            document.getElementById("Tutorial").style.display = "flex";
-            document.getElementById("elegir-usuarios").style.display = "none";
-       
+
+
+        document.getElementById("Tutorial").style.display = "flex";
+        document.getElementById("elegir-usuarios").style.display = "none";
+
     }
 };
 
@@ -450,41 +450,41 @@ inputID.addEventListener("input", limpiarErrorID);
 
 document.getElementById("btn-confirmar-id").addEventListener("click", () => {
 
-const idIngresado = document.getElementById("input-id-usuario").value;
+    const idIngresado = document.getElementById("input-id-usuario").value;
 
     if (idIngresado === jugadorProceso.id) {
 
 
-      if (jugadorProcesoNumero === 1) {
-        
-        jugadorSeleccionado1 = jugadorProceso;
-       
-        document.querySelectorAll("#lista-jugadores1 .jugador-item").forEach(item => {
-            if (item.textContent === jugadorProceso.nombre) {
-                item.classList.add("seleccionado");
-            }
-        });
-      } 
-      
-      else {
+        if (jugadorProcesoNumero === 1) {
 
-        jugadorSeleccionado2 = jugadorProceso;
+            jugadorSeleccionado1 = jugadorProceso;
 
-        document.querySelectorAll("#lista-jugadores2 .jugador-item").forEach(item => {
-            if (item.textContent === jugadorProceso.nombre) {
-                item.classList.add("seleccionado");
-                
-            }
-        });
-      }
+            document.querySelectorAll("#lista-jugadores1 .jugador-item").forEach(item => {
+                if (item.textContent === jugadorProceso.nombre) {
+                    item.classList.add("seleccionado");
+                }
+            });
+        }
+
+        else {
+
+            jugadorSeleccionado2 = jugadorProceso;
+
+            document.querySelectorAll("#lista-jugadores2 .jugador-item").forEach(item => {
+                if (item.textContent === jugadorProceso.nombre) {
+                    item.classList.add("seleccionado");
+
+                }
+            });
+        }
 
         document.getElementById("IDUsuario").style.display = "none";
         document.getElementById("elegir-usuarios").style.display = "flex";
 
         comprobarSeleccion();
 
-    } 
-    
+    }
+
     else {
         mostrarErrorID();
     }
@@ -492,11 +492,11 @@ const idIngresado = document.getElementById("input-id-usuario").value;
 });
 
 document.getElementById("btn-salir-cuadricula").addEventListener("click", () => {
-   jugadorSeleccionado1 = null;
-   jugadorSeleccionado2 = null;
+    jugadorSeleccionado1 = null;
+    jugadorSeleccionado2 = null;
 
-   document.querySelectorAll(".jugador-item").forEach(item => {
-                item.classList.remove("seleccionado");
+    document.querySelectorAll(".jugador-item").forEach(item => {
+        item.classList.remove("seleccionado");
     });
 
     console.log("SE BORRARON LOS JUGADORES");
@@ -525,7 +525,7 @@ mostrarJugadores();
 
 
 function mostrarInforme(jugador) {
-    
+
 
     document.getElementById("informe-nombre").textContent = jugador.nombre;
 
@@ -554,31 +554,31 @@ sonidoPop.preload = "auto";
 
 function crearBurbujas() {
 
-for (let i = 0; i < 30; i++) {
+    for (let i = 0; i < 30; i++) {
 
-    const burbuja = document.createElement("div");
+        const burbuja = document.createElement("div");
 
-    burbuja.classList.add("burbuja");
+        burbuja.classList.add("burbuja");
 
-    const tamaño = Math.random() * 200 + 60;
+        const tamaño = Math.random() * 200 + 60;
 
-    burbuja.style.width = tamaño + "px";
-    burbuja.style.height = tamaño + "px";
+        burbuja.style.width = tamaño + "px";
+        burbuja.style.height = tamaño + "px";
 
-    burbuja.style.left =
-        Math.random() * (window.innerWidth - tamaño) + "px";
+        burbuja.style.left =
+            Math.random() * (window.innerWidth - tamaño) + "px";
 
-    burbuja.style.top =
-        Math.random() * (window.innerHeight - tamaño) + "px";
+        burbuja.style.top =
+            Math.random() * (window.innerHeight - tamaño) + "px";
 
         burbuja.dx = (Math.random() * 2 - 1) * 1;
         burbuja.dy = (Math.random() * 2 - 1) * 1;
-    
 
-    juego1.appendChild(burbuja);
 
-    burbujas.push(burbuja);
-} 
+        juego1.appendChild(burbuja);
+
+        burbujas.push(burbuja);
+    }
 }
 
 crearBurbujas();
@@ -612,34 +612,34 @@ function moverBurbujas() {
 
 moverBurbujas();
 
-document.addEventListener("keydown", function(event) {
+document.addEventListener("keydown", function (event) {
 
-    if(event.code === "Space" || event.code === "Enter") {
-    
+    if (event.code === "Space" || event.code === "Enter") {
+
         if (document.getElementById("juego1").style.display === "block") {
 
 
-        const numero = Math.floor(Math.random() * burbujas.length);
+            const numero = Math.floor(Math.random() * burbujas.length);
 
-        const burbuja = burbujas[numero];
+            const burbuja = burbujas[numero];
 
-        burbuja.remove();
-        
-        burbujas.splice(numero, 1);
+            burbuja.remove();
 
-        sonidoPop.pause();
-        sonidoPop.currentTime = 0;
-        sonidoPop.play().catch(error => {
-            console.log("No se pudo reproducir el sonido:", error);
-        });
+            burbujas.splice(numero, 1);
 
-        console.log("explotaste una burbuja");
+            sonidoPop.pause();
+            sonidoPop.currentTime = 0;
+            sonidoPop.play().catch(error => {
+                console.log("No se pudo reproducir el sonido:", error);
+            });
 
-        if (burbujas.length === 0){
-            document.getElementById("fin-juego1").style.display = "block";
+            console.log("explotaste una burbuja");
+
+            if (burbujas.length === 0) {
+                document.getElementById("fin-juego1").style.display = "block";
+            }
         }
     }
-  }
 });
 
 juego1.querySelector(".BotonSalir").addEventListener("click", () => {
@@ -652,10 +652,10 @@ juego1.querySelector(".BotonSalir").addEventListener("click", () => {
     document.getElementById("fin-juego1").style.display = "none";
 
     crearBurbujas();
-    
+
 });
 
-document.getElementById("btn-reiniciar-juego1").addEventListener("click", function() {
+document.getElementById("btn-reiniciar-juego1").addEventListener("click", function () {
 
     burbujas.length = 0;
 
@@ -674,17 +674,17 @@ const juego2 = document.getElementById("juego2");
 const sonido2 = new Audio("assets/sonidos/fuego-artificial.mp3");
 sonido2.preload = "auto";
 
-document.addEventListener("keydown", function(event) {
+document.addEventListener("keydown", function (event) {
 
     if (event.code === "Space" || event.code === "Enter") {
 
         if (document.getElementById("juego2").style.display === "block") {
-        
+
             console.log("creando fuego artificial");
 
-        crearFuegoArtificial();
+            crearFuegoArtificial();
 
-    }
+        }
     }
 });
 
@@ -692,7 +692,7 @@ function crearFuegoArtificial() {
 
     const particulas = [];
 
-   
+
     const xInicial = Math.random() * window.innerWidth;
     const yInicial = Math.random() * window.innerHeight;
 
@@ -714,7 +714,7 @@ function crearFuegoArtificial() {
 
         particula.classList.add("particula");
 
-      
+
         particula.style.left = xInicial + "px";
         particula.style.top = yInicial + "px";
 
@@ -723,7 +723,7 @@ function crearFuegoArtificial() {
 
         particula.style.opacity = 1;
 
-      
+
         particula.dx = (Math.random() * 2 - 1) * 4;
         particula.dy = (Math.random() * 2 - 1) * 4;
 
@@ -737,7 +737,7 @@ function crearFuegoArtificial() {
 
 function moverParticulas(particulas) {
 
-    particulas.forEach(function(particula) {
+    particulas.forEach(function (particula) {
 
         let x = parseFloat(particula.style.left);
         let y = parseFloat(particula.style.top);
@@ -760,7 +760,7 @@ function moverParticulas(particulas) {
 
     });
 
-    requestAnimationFrame(function() {
+    requestAnimationFrame(function () {
         moverParticulas(particulas);
     });
 
@@ -773,7 +773,7 @@ const juego3 = document.getElementById("juego3");
 
 let puntaje3 = 0;
 
-document.addEventListener("keydown", function(event) {
+document.addEventListener("keydown", function (event) {
 
     if (event.code === "Space" || event.code === "Enter") {
 
@@ -781,9 +781,11 @@ document.addEventListener("keydown", function(event) {
 
             const aro = document.getElementById("aro");
             const pelota = document.getElementById("pelota-basket");
-            
+
             tirarPelota(pelota, aro);
-}}});
+        }
+    }
+});
 
 function tirarPelota(pelota, aro) {
 
@@ -799,8 +801,8 @@ function tirarPelota(pelota, aro) {
 
         if (numero === 0) {
             y = 10 + (250 * tiempo) - (210 * tiempo * tiempo);
-        } 
-        
+        }
+
         else {
             y = 10 + (160 * tiempo) - (165 * tiempo * tiempo);
         }
@@ -808,13 +810,13 @@ function tirarPelota(pelota, aro) {
         pelota.style.left = x + "%";
         pelota.style.bottom = y + "%";
 
-        if (tiempo < 1 ) {
+        if (tiempo < 1) {
             requestAnimationFrame(animarPelota);
-        } 
-        
+        }
+
         else if (numero === 0) {
             console.log("¡Encestaste!");
-            puntaje3 ++;
+            puntaje3++;
             document.getElementById("puntaje-juego3").textContent = "Puntaje: " + puntaje3;
 
             pelota.style.left = x + "%";
@@ -822,7 +824,7 @@ function tirarPelota(pelota, aro) {
 
             let tiempoCaida = 0;
 
-            function caerPelota () {
+            function caerPelota() {
                 tiempoCaida += 0.02;
 
                 pelota.style.left = x + "%";
@@ -830,37 +832,37 @@ function tirarPelota(pelota, aro) {
                 let nuevaY = y - (80 * tiempoCaida);
 
                 pelota.style.bottom = nuevaY + "%";
-                
+
 
                 if (nuevaY > 10) {
                     requestAnimationFrame(caerPelota);
                 } else {
                     pelota.style.bottom = "10%";
 
-                setTimeout(() =>  {
-                    pelota.style.left = "70%";
-                    pelota.style.bottom = "10%";
-                }, 500);
+                    setTimeout(() => {
+                        pelota.style.left = "70%";
+                        pelota.style.bottom = "10%";
+                    }, 500);
                 }
             }
 
-                caerPelota();
+            caerPelota();
 
-        } 
+        }
 
-        
+
         else {
             console.log("Fallaste");
-            
 
-            
-            setTimeout(() =>  {
+
+
+            setTimeout(() => {
                 pelota.style.left = "70%";
                 pelota.style.bottom = "10%";
             }, 500);
         }
     }
-    
+
     animarPelota();
 }
 
@@ -871,8 +873,8 @@ juego3.querySelector(".BotonSalir").addEventListener("click", () => {
 
 //JUEGO 444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444
 
-const juego4 = document.getElementById ("juego4");
-const instrumento = document.getElementById ("instrumento-juego4");
+const juego4 = document.getElementById("juego4");
+const instrumento = document.getElementById("instrumento-juego4");
 
 let sonido4 = new Audio();
 
@@ -885,8 +887,8 @@ const instrumentos = [
     {
         imagen: "assets/personajes/instrumentos/violin.png",
         sonido: "assets/sonidos/violin.mp3"
-    }, 
-    
+    },
+
     {
         imagen: "assets/personajes/instrumentos/guitarra.png",
         sonido: "assets/sonidos/guitarra.mp3"
@@ -923,22 +925,22 @@ let numero4 = 0;
 
 instrumento.src = instrumentos[numero4].imagen;
 
-document.addEventListener("keydown", function(event) {
+document.addEventListener("keydown", function (event) {
     if (event.code === "Space" || event.code === "Enter") {
         if (juego4.style.display === "block") {
-       
-        numero4++;
 
-        if (numero4 >= instrumentos.length) {
-            numero4 = 0;
-        }
+            numero4++;
 
-        instrumento.src = instrumentos[numero4].imagen;
+            if (numero4 >= instrumentos.length) {
+                numero4 = 0;
+            }
 
-        sonido4.pause();
-        sonido4.currentTime = 0;
-        sonido4.src = instrumentos[numero4].sonido;
-        sonido4.play();
+            instrumento.src = instrumentos[numero4].imagen;
+
+            sonido4.pause();
+            sonido4.currentTime = 0;
+            sonido4.src = instrumentos[numero4].sonido;
+            sonido4.play();
         }
     }
 
@@ -946,8 +948,8 @@ document.addEventListener("keydown", function(event) {
 
 //JUEGO 5555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555
 
-const juego5 = document.getElementById ("juego5");
-const animal = document.getElementById ("animal-juego5");
+const juego5 = document.getElementById("juego5");
+const animal = document.getElementById("animal-juego5");
 
 let sonido5 = new Audio();
 
@@ -997,22 +999,22 @@ let numero5 = 0;
 
 animal.src = animales[numero5].imagen;
 
-document.addEventListener("keydown", function(event) {
+document.addEventListener("keydown", function (event) {
     if (event.code === "Space" || event.code === "Enter") {
         if (juego5.style.display === "block") {
-        
-        numero5++;
 
-        if (numero5 >= animales.length) {
-            numero5 = 0;
-        }
+            numero5++;
 
-        animal.src = animales[numero5].imagen;
+            if (numero5 >= animales.length) {
+                numero5 = 0;
+            }
 
-        sonido5.pause();
-        sonido5.currentTime = 0;
-        sonido5.src = animales[numero5].sonido;
-        sonido5.play();
+            animal.src = animales[numero5].imagen;
+
+            sonido5.pause();
+            sonido5.currentTime = 0;
+            sonido5.src = animales[numero5].sonido;
+            sonido5.play();
         }
     }
 
@@ -1020,9 +1022,9 @@ document.addEventListener("keydown", function(event) {
 
 //JUEGO 6666666666666666666666666666666666666666666666666666666666666
 
-const juego6 = document.getElementById ("juego6");
-const objeto = document.getElementById ("objeto-juego6");
-const varita = document.getElementById ("varita-magica");
+const juego6 = document.getElementById("juego6");
+const objeto = document.getElementById("objeto-juego6");
+const varita = document.getElementById("varita-magica");
 
 const objetos = [
     {
@@ -1031,12 +1033,12 @@ const objetos = [
 
     {
         imagen: "assets/personajes/paloma.webp"
-    }, 
-    
+    },
+
     {
         imagen: "assets/personajes/pañuelo-colores.PNG"
     },
-    
+
     {
         imagen: "assets/personajes/zapato.jfif"
     }
@@ -1046,13 +1048,13 @@ let numero6 = 0;
 
 objeto.style.opacity = 0;
 
-document.addEventListener("keydown", function(event) {
+document.addEventListener("keydown", function (event) {
     if (event.code === "Space" || event.code === "Enter") {
         if (juego6.style.display === "block") {
 
             moverVarita();
-            
-            setTimeout(() =>  {
+
+            setTimeout(() => {
                 sacarObjeto();
             }, 500);
         }
@@ -1072,7 +1074,7 @@ function moverVarita() {
 
         if (tiempo < 0.5) {
             rotacion = -20 * (tiempo / 0.5);
-        } 
+        }
         else {
             rotacion = -20 + (20 * ((tiempo - 0.5) / 0.5));
         }
@@ -1081,8 +1083,8 @@ function moverVarita() {
 
         if (tiempo < 1) {
             requestAnimationFrame(animarVarita);
-        } 
-        
+        }
+
         else {
             varita.style.transform = "rotate(0deg)";
         }
@@ -1113,13 +1115,13 @@ function sacarObjeto() {
 
         if (tiempo < .8) {
             requestAnimationFrame(animarObjeto);
-        } 
-       
-       
+        }
+
+
     }
 
     animarObjeto();
-    
+
 
     numero6++;
 
@@ -1127,11 +1129,11 @@ function sacarObjeto() {
         numero6 = 0;
     }
 
-    setTimeout(() =>  {
-        
-        objeto.style.opacity=0;
-         
-     }, 2000);
+    setTimeout(() => {
+
+        objeto.style.opacity = 0;
+
+    }, 2000);
 }
 
 //JUEGO 7777777777777777777777777777777777777777777777777777777777777777777777777
@@ -1174,7 +1176,7 @@ function moverPeces() {
 
     if (pezPescado !== peces[2]) {
         peces[2].style.transform =
-            `translateX(${Math.sin(movimientoPeces + 2) *30}px)`;
+            `translateX(${Math.sin(movimientoPeces + 2) * 30}px)`;
     }
 
     if (pezPescado !== peces[3]) {
@@ -1182,16 +1184,16 @@ function moverPeces() {
             `translateX(${Math.sin(movimientoPeces + 3) * 30}px)`;
     }
 
-     if (pezPescado !== peces[4]) {
+    if (pezPescado !== peces[4]) {
         peces[4].style.transform =
             `translateX(${Math.sin(movimientoPeces + 4) * 30}px)`;
     }
 
-     if (pezPescado !== peces[5]) {
+    if (pezPescado !== peces[5]) {
         peces[5].style.transform =
             `translateX(${Math.sin(movimientoPeces + 5) * 30}px)`;
     }
-     if (pezPescado !== peces[6]) {
+    if (pezPescado !== peces[6]) {
         peces[6].style.transform =
             `translateX(${Math.sin(movimientoPeces + 6) * 30}px)`;
     }
@@ -1199,9 +1201,9 @@ function moverPeces() {
     requestAnimationFrame(moverPeces);
 }
 
-moverPeces();   
+moverPeces();
 
-document.addEventListener("keydown", function(event) {
+document.addEventListener("keydown", function (event) {
 
     if (juego7.style.display === "block") {
 
@@ -1226,7 +1228,7 @@ function pescar(anzuelo, jugador) {
     if (jugador === 1) {
         pez = peces[0];
     }
-    
+
     else {
         pez = peces[2];
     }
@@ -1241,10 +1243,10 @@ function pescar(anzuelo, jugador) {
 
         if (posicion < 55) {
             requestAnimationFrame(bajarAnzuelo);
-        } 
-        
+        }
+
         else {
-         
+
             pezPescado = pez;
 
             if (pez === peces[0]) {
@@ -1256,36 +1258,36 @@ function pescar(anzuelo, jugador) {
             subirAnzuelo();
         }
 
-        
+
     }
 
     function subirAnzuelo() {
 
         posicion -= 1;
-    
+
         anzuelo.style.top = posicion + "%";
         pez.style.top = (posicion + 15) + "%";
-        
-    
+
+
         if (posicion > 10) {
             requestAnimationFrame(subirAnzuelo);
-        } 
-        
+        }
+
         else {
             anzuelo.style.top = "10%";
             pez.style.top = "24%";
 
 
-            setTimeout(() =>  {
-               if (jugador === 1){
-                pez.style.top = "55%";
-               }
-               else {
-                pez.style.top = "55%";      
+            setTimeout(() => {
+                if (jugador === 1) {
+                    pez.style.top = "55%";
+                }
+                else {
+                    pez.style.top = "55%";
                 }
 
                 pezPescado = null;
-                
+
             }, 500);
         }
     }
@@ -1327,7 +1329,7 @@ function mostrarTopo() {
 
 mostrarTopo();
 
-document.addEventListener("keydown", function(event) {
+document.addEventListener("keydown", function (event) {
 
     if (juego8.style.display === "block") {
 
