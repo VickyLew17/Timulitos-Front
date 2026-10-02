@@ -1,0 +1,36 @@
+
+#juego3 {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+#pelota-basket {
+    width: 8vw;
+    aspect-ratio: 1/1;
+    position: absolute;
+    left: 70%;
+    bottom: 10%;
+}
+
+#aro {
+    width: 27vw;
+    position: absolute;
+    bottom: 1%;
+    left: 6%;
+}
+
+#puntaje-juego3 {
+    position: absolute;
+    top: 1vh;
+    right: 7vw;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000000;
+    padding: 10px 20px;
+    background-color: #e2faff;
+    border-radius: 12px;
+    border: 4px solid #E90053;
+}
+

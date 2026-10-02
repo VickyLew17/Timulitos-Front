@@ -1,0 +1,16 @@
+#juego2 {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background-color: #000000;
+}
+
+.particula {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: absolute;
+}
