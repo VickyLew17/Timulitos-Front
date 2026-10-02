@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonnys</title>
+    <link rel="icon" href="../assets/logos/logo-sonnys.png">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mooli&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../compartido/styles.css">
+    <link rel="stylesheet" href="./terapeutas.css">
+</head>
+
+<body>
+
+    <div class="pantalla" id="UsuarioTerapeuta">
+
+        <section class="comenzar">
+
+            <a class="BotonSalir" href="../inicio/inicio.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m9 18 6-6-6-6" />
+                </svg>
+            </a>
+
+
+            <div id="contenedor-usuario-terapeuta">
+                <img id="icono-terapeutas" src="../assets/arriba-popups/icono-terapeutas.png">
+
+
+                <h2>Acceso a terapeutas</h2>
+                <p>Ingrese el ID del grupo de terapeutas para ver los avances de los chicos.</p>
+
+                <input type="text" placeholder="Escribe el ID..." class="input-cuenta" id="ID-terapeutas" />
+
+                <button class="btn-popup" id="btn-entrar-terapeuta">Comenzar</button>
+            </div>
+
+        </section>
+    </div>
+
+    <div class="pantalla" id="pantalla-informes">
+
+        <div class="encabezado-pantalla">
+
+            <div class="circulito-informes" id="circulo-titulo-informes"></div>
+
+            <h2>Análisis diario</h2>
+            <p>Conocé la actividad de cada usuario</p>
+
+            <a class="BotonSalir" href="../inicio/inicio.html"><svg xmlns="http://www.w3.org/2000/svg" width="32"
+                    height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-chevron-right-icon lucide-chevron-right">
+                    <path d="m9 18 6-6-6-6" />
+                </svg>
+            </a>
+        </div>
+
+        <p>Seleccioná un usuario para ver su análisis</p>
+        <div class="lista-usuarios"></div>
+    </div>
+
+    <div class="pantalla" id="pantalla-informe-usuario">
+
+        <div class="encabezado-pantalla">
+
+            <h2 id="informe-nombre"></h2>
+
+            <button class="BotonSalir" id="btn-volver-lista" data-destino="pantalla-informes"><svg xmlns="http://www.w3.org/2000/svg"
+                    width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-chevron-right-icon lucide-chevron-right">
+                    <path d="m9 18 6-6-6-6" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="informe-contenido">
+
+            <div class="informe-fila titulo">
+                Cuánto tiempo jugó en su última sesión
+            </div>
+
+            <div class="informe-fila dato" id="informe-tiempo"></div>
+
+
+            <div class="informe-fila titulo">
+                Cuáles juegos repitió
+            </div>
+
+            <div class="informe-fila dato" id="informe-juegos"></div>
+
+
+            <div class="informe-fila titulo">
+                Cuándo fue su última sesión
+            </div>
+
+            <div class="informe-fila dato" id="informe-ultima-sesion"></div>
+
+
+            <div class="informe-fila titulo">
+                Con quién fue su último juego
+            </div>
+
+            <div class="informe-fila dato" id="informe-jugo-con"></div>
+
+        </div>
+
+    </div>
+
+    <script src="../compartido/main.js"></script>
+    <script src="../compartido/jugadores.js"></script>
+    <script src="./terapeutas.js"></script>
+</body>
+
+</html>

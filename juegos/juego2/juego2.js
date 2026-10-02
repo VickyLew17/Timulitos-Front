@@ -6,7 +6,7 @@ document.getElementById("btn-comenzar-juego2").addEventListener("click", functio
 
 
 const juego2 = document.getElementById("juego2");
-const sonido2 = new Audio("assets/sonidos/fuego-artificial.mp3");
+const sonido2 = new Audio("../../assets/sonidos/fuego-artificial.mp3");
 sonido2.preload = "auto";
 
 document.addEventListener("keydown", function (event) {

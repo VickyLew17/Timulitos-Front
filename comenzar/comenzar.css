@@ -1,0 +1,496 @@
+#contenedor-comenzar {
+    background: #ffff;
+    border: .3rem solid #1E1B4B;
+    border-radius: 24px;
+    padding: 30px 40px;
+    text-align: center;
+    width: 550px;
+    height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 700;
+
+    margin-top: 5%;
+
+    position: relative;
+    z-index: 1;
+
+}
+
+#conejo-colgando {
+    position: absolute;
+
+    width: 190px;
+
+    left: 80%;
+    top: 3.3%;
+
+    transform: translate(-50%, -85%);
+
+    z-index: 10;
+}
+
+.como-jugar-hoy {
+    margin-top: -40px;
+    margin-bottom: 40px;
+    font-size: 2.4rem;
+}
+
+#btn-cerrar-popup-usuarios-jugadores,
+#btn-cerrar-popup-usuario1,
+#btn-cerrar-popup-usuario2,
+#btn-cerrar-popup-tutorial,
+#btn-cerrar-popup-video-tutorial,
+#btn-cerrar-popup-id-usuario {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    width: 55px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: #E9F6FF;
+    border: 3.5px solid #E90053;
+    color: #1E1B4B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+
+.popup h2 {
+    font-size: 2.4rem;
+    font-family: mooli;
+}
+
+.popup {
+    background: #ffff;
+    border: .3rem solid #1E1B4B;
+    border-radius: 24px;
+    padding: 48px 40px;
+    text-align: center;
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+#btn-con-cuenta,
+#listos-para-tutorial {
+    background-color: #E90053;
+    color: #ffffff;
+    font-size: 2.4rem;
+    border: 0;
+
+
+}
+
+
+#popup-video-tutorial,
+#popup-tutorial {
+    width: 75vw;
+    height: 70vh;
+}
+
+#btn-listo-video-tutorial {
+    border-color: #E90053;
+    color: #E90053;
+    font-size: 1.2rem;
+    border: .3rem solid;
+
+    width: 10rem;
+    margin-top: 20px;
+    margin-bottom: -20px;
+}
+
+
+#video {
+    background-color: #555;
+    width: 500px;
+    ;
+    height: 500px;
+}
+
+#btn-sin-cuenta,
+#sin-tutorial {
+    border-color: #1E1B4B;
+    color: #1E1B4B;
+    margin-bottom: -30px;
+}
+
+.btn-cerrar-popup {
+    background: none;
+    border: none;
+    color: #aaa;
+    font-size: 0.9rem;
+    cursor: pointer;
+    font-family: 'Jua', sans-serif;
+
+    width: 55px;
+
+    margin-bottom: -20px;
+    margin-top: 10px;
+}
+
+#btn-jugar1,
+#btn-jugar2 {
+    color: #ffffff;
+
+    background-color: #E90053;
+    border: 0;
+
+    padding: 14px;
+    width: 60%;
+    margin-bottom: -20px;
+    margin-top: 10px;
+}
+
+#btn-jugar1:hover,
+#btn-jugar2:hover {
+    background-color: #A5003B;
+}
+
+#Comenzar {
+    background-image: url('../assets/fondos/comenzar.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
+
+    overflow: hidden;
+
+    position: relative;
+
+}
+
+.popup .mensaje-error {
+    display: none;
+    color: #E53935;
+    font-size: 1.4rem;
+    margin-top: -10px;
+}
+
+.popup .mensaje-error.visible {
+    display: block;
+}
+
+.popup p {
+    font-size: 1.2rem;
+    margin-top: -20px;
+}
+
+
+#elegir-usuarios {
+    overflow: hidden;
+}
+
+
+.elegir-usuarios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    padding: 0 32px;
+    margin-top: 90px;
+}
+
+
+
+.jugador-seccion {
+    background: #ffffff;
+
+
+    border: .3rem solid #1E1B4B;
+    border-radius: 20px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 32px;
+    margin-top: 40px;
+
+    width: 35vw;
+    height: 70vh;
+
+    position: relative;
+
+}
+
+
+.sonnys-arriba-usuario {
+    position: absolute;
+
+    width: 170px;
+
+    left: 23%;
+    top: 2.15%;
+
+    transform: translate(-50%, -85%);
+
+    z-index: 10;
+}
+
+.cartel-jugadores {
+    position: absolute;
+    width: 230px;
+
+    left: 72%;
+    top: 3%;
+
+    transform: translate(-50%, -85%);
+
+    z-index: -1;
+
+}
+
+.jugador-seccion h2 {
+    font-size: 2.3rem;
+    color: #1E1B4B;
+
+    text-align: center;
+
+    margin-top: 0;
+    margin-bottom: 10px;
+    z-index: 1000;
+}
+
+
+
+.JugadoresAnteriores {
+    font-size: 1.7rem;
+    font-family: jua;
+    font-weight: 500;
+
+    color: #1E1B4B;
+    background-color: #ffffff;
+
+    border: .2rem solid #1E1B4B;
+    border-radius: 20px;
+
+    width: 60%;
+    padding: 10px;
+
+    padding-left: 15px;
+
+    margin-bottom: 0;
+
+
+}
+
+.lista-jugadores {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+
+
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+
+    border: #1E1B4B solid .2rem;
+    border-radius: 5px;
+    padding: 10px;
+
+
+
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.jugador-item {
+    display: flex;
+    background-color: #F6EFFF;
+
+    border: .2rem solid #1E1B4B;
+    border-radius: 30px;
+    padding: 10px;
+
+    cursor: pointer;
+
+    color: #1E1B4B;
+
+    font-family: Jua;
+    font-size: 1.3rem;
+    font-weight: 500;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+.seleccionado {
+    color: #E90053;
+    border-color: #E90053;
+
+}
+
+.seleccionado::after {
+    content: " ✓";
+    margin-right: 10px;
+    font-weight: 1000;
+}
+
+
+
+.btn-crear-jugador {
+    font-family: Jua;
+    font-size: 1rem;
+    padding: 12px;
+    width: 70%;
+
+    border: 0px;
+    color: #ffffff;
+    border-radius: 50px;
+    background: #E90053;
+    cursor: pointer;
+    margin-top: 8px;
+
+    font-weight: 500;
+    font-size: 1.5rem;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-bottom: 5px;
+}
+
+.btn-crear-jugador:active,
+.btn-crear-jugador:hover {
+    background-color: #A5003B;
+}
+
+.crear-cuenta-texto {
+    margin-top: -10px;
+}
+
+.btn-comenzar-jugar {
+    font-family: Jua;
+    font-size: 1.5rem;
+    padding: 14px 30px;
+    border: 2px solid #000;
+    border-radius: 50px;
+    background: #E90053;
+    cursor: pointer;
+
+    grid-column: 1 / -1;
+    justify-self: center;
+    margin-top: 0;
+}
+
+#CrearUsuario1,
+#CrearUsuario2,
+#LoginTerapeuta,
+#CrearTerapeuta,
+#elegir-usuarios,
+#Tutorial,
+#video-tutorial,
+#IDUsuario {
+    display: none;
+    position: fixed;
+    inset: 0;
+
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+
+}
+
+#popup-usuario1,
+#popup-usuario2 {
+    width: 600px;
+    position: relative;
+
+    top: 7%;
+}
+
+.sonnys-arriba-usuario-crear {
+    position: absolute;
+
+    width: 170px;
+
+    left: 17%;
+    top: 2.7%;
+
+    transform: translate(-50%, -85%);
+
+    z-index: 10;
+}
+
+#sonnys-arriba-usuario-ID {
+    position: absolute;
+
+    width: 170px;
+
+    left: 17%;
+    top: 2.6%;
+
+    transform: translate(-50%, -85%);
+
+    z-index: 10;
+}
+
+#popup-id-usuario {
+
+    position: fixed;
+    z-index: 1000;
+
+    width: 600px;
+    height: 350px;
+
+
+    padding: 35px;
+
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+    text-align: center;
+
+
+}
+
+#btn-confirmar-id {
+    color: #ffff;
+    background-color: #E90053;
+    border: 0;
+}
+
+#btn-confirmar-id:hover {
+    background-color: #A5003B;
+
+}
+
+#nombre-usuario-id {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+#btnComenzar:hover,
+#btn-con-cuenta:hover,
+#listos-para-tutorial:hover {
+    background-color: #A5003B;
+}
+
+#sin-tutorial {
+    text-decoration: none;
+    color: #1E1B4B;
+
+
+    padding: 14px 30px;
+}
+
+#btn-listo-video-tutorial {
+    text-decoration: none;
+    color: #E90053;
+}
