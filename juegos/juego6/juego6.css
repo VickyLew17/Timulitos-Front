@@ -1,0 +1,37 @@
+
+#juego6 {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+
+#sombrero-mago {
+    position: absolute;
+    width: 30vw;
+    left: 10%;
+    bottom: 5%;
+
+    z-index: 100;
+}
+
+
+#varita-magica {
+    position: absolute;
+    width: 6vw;
+    max-width: 280px;
+    right: 15%;
+    top: 25%;
+    transform-origin: bottom center;
+}
+
+
+#objeto-juego6 {
+    position: absolute;
+    width: 15vw;
+    max-width: 220px;
+    left: 20%;
+    bottom: 25%;
+    opacity: 0;
+}

@@ -7,4 +7,4 @@ function cambiarPantalla(idPantalla) {
     });
     document.getElementById(idPantalla).style.display = "block";
 
-}
+};

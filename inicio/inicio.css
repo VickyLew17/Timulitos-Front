@@ -1,0 +1,73 @@
+.BotonesInicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.btnInicio {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #ffff;
+    color: #1E1B4B;
+    font-size: 1.8rem;
+    font-weight: 550;
+    padding: 14px 35px;
+    border: .2rem solid #1E1B4B;
+    border-radius: 50px;
+    font-family: Jua;
+    z-index: 1;
+
+    width: 30%;
+
+}
+
+#btnComenzar {
+    background-color: #E90053;
+    color: #fff;
+    border: #E90053;
+    font-weight: 550;
+    font-size: 2rem;
+
+    width: 35%;
+
+}
+
+#btnComenzar:hover,
+#btn-con-cuenta:hover,
+#listos-para-tutorial:hover {
+    background-color: #A5003B;
+}
+
+#slogan {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 40px;
+    color: #1E1B4B;
+}
+
+#pantalla-inicio {
+    text-align: center;
+
+}
+
+#LogoPrincipal {
+    margin-top: .01vh;
+    width: 43vw;
+}
+
+.BotonInformes {
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+    background-color: #E9F6FF;
+    border: .2rem solid #E90053;
+    color: #1E1B4B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 24px;
+    margin-top: 24px;
+}

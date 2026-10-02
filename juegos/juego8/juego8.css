@@ -1,0 +1,99 @@
+#juego8 {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.martillo {
+    position: absolute;
+    width: 28vw;
+    z-index: 10;
+    transition: translate 0.25s ease-in;
+}
+
+#martillo-1 {
+    left: 25%;
+    top: 10%;
+
+    transform: rotate(90deg);
+}
+
+#martillo-2 {
+    right: 25%;
+    top: 10%;
+}
+
+
+.agujero {
+    position: absolute;
+    width: 20vw;
+}
+
+#agujero-1 {
+    left: 10%;
+    top: 40%;
+}
+
+#agujero-2 {
+    left: 43%;
+    top: 40%;
+}
+
+#agujero-3 {
+    right: 10%;
+    top: 40%;
+}
+
+#agujero-4 {
+    left: 10%;
+    top: 72%;
+}
+
+#agujero-5 {
+    left: 43%;
+    top: 72%;
+}
+
+#agujero-6 {
+    right: 10%;
+    top: 72%;
+}
+
+.topo {
+    position: absolute;
+    width: 10vw;
+    max-width: 130px;
+    z-index: 5;
+}
+
+#topo-1 {
+    left: 12%;
+    top: 43%;
+}
+
+#topo-2 {
+    left: 45%;
+    top: 43%;
+}
+
+#topo-3 {
+    right: 12%;
+    top: 43%;
+}
+
+#topo-4 {
+    left: 12%;
+    top: 65%;
+}
+
+#topo-5 {
+    left: 45%;
+    top: 65%;
+}
+
+#topo-6 {
+    right: 12%;
+    top: 65%;
+}
