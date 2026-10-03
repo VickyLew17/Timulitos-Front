@@ -162,7 +162,7 @@
     gap: 16px;
     margin-bottom: 36px;
 
-    width: 60%;
+    width: 100%;
 }
 
 .cartel-texto-contenedor {
@@ -205,7 +205,8 @@
     align-items: center;
     gap: 12px;
 
-    width: 30%;
+    width: 35%;
+    height: 65px;
     box-sizing: border-box;
 
     background-color: #E9F6FF;
@@ -250,7 +251,7 @@
     cursor: pointer;
 }
 
-.avatar-usuario {
+.personaje-usuario {
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -262,7 +263,7 @@
     flex-shrink: 0;
 }
 
-.avatar-usuario img {
+.personaje-usuario img {
     width: 70px;
 }
 
@@ -288,7 +289,7 @@
     border-color: #FF4FA7;
 }
 
-.usuario-item.rosa .avatar-usuario,
+.usuario-item.rosa .personaje-usuario,
 .usuario-item.rosa .btn-ver-analisis {
     background-color: #FFB3D6;
     border-color: #FF4FA7;
@@ -299,7 +300,7 @@
     border-color: #B57BFF;
 }
 
-.usuario-item.violeta .avatar-usuario,
+.usuario-item.violeta .personaje-usuario,
 .usuario-item.violeta .btn-ver-analisis {
     background-color: #D9C2FF;
     border-color: #B57BFF;
@@ -310,7 +311,7 @@
     border-color: #8CFF5E;
 }
 
-.usuario-item.verde .avatar-usuario,
+.usuario-item.verde .personaje-usuario,
 .usuario-item.verde .btn-ver-analisis {
     background-color: #B4FF94;
     border-color: #8CFF5E;
@@ -321,7 +322,7 @@
     border-color: #2FAAFF;
 }
 
-.usuario-item.celeste .avatar-usuario,
+.usuario-item.celeste .personaje-usuario,
 .usuario-item.celeste .btn-ver-analisis {
     background-color: #A3D9FF;
     border-color: #2FAAFF;

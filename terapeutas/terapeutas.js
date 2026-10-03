@@ -19,7 +19,7 @@ jugadores.forEach(jugador => {
     elemento.classList.add(jugador.color);
 
     elemento.innerHTML = `
-        <div class="avatar-usuario">
+        <div class="personaje-usuario">
             <img src="../assets/terapeutas/${jugador.animal}.png" alt="">
         </div>
         <div>
