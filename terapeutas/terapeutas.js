@@ -16,7 +16,19 @@ jugadores.forEach(jugador => {
     const elemento = document.createElement("div");
 
     elemento.classList.add("usuario-item");
-    elemento.textContent = jugador.nombre;
+    elemento.classList.add(jugador.color);
+
+    elemento.innerHTML = `
+        <div class="avatar-usuario">
+            <img src="../assets/terapeutas/${jugador.animal}.png" alt="">
+        </div>
+        <div>
+            <p class="nombre-usuario"></p>
+            <span class="btn-ver-analisis">Ver análisis →</span>
+        </div>
+    `;
+
+    elemento.querySelector(".nombre-usuario").textContent = jugador.nombre;
 
     elemento.addEventListener("click", () => {
         mostrarInforme(jugador);

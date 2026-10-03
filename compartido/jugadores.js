@@ -5,7 +5,9 @@ const jugadores = [
         juegosRepetidos: "Burbujas y Pesca",
         ultimaSesion: "18/09/2026",
         jugoCon: "Franchu",
-        id: "0001"
+        id: "0001",
+        animal: "pollito",
+        color: "rosa"
     },
     {
         nombre: "Franchu",
@@ -13,7 +15,9 @@ const jugadores = [
         juegosRepetidos: "Banda Loca",
         ultimaSesion: "19/09/2026",
         jugoCon: "Liam_cht",
-        id: "0002"
+        id: "0002",
+        animal: "conejo",
+        color: "violeta"
 
     },
     {
@@ -22,7 +26,9 @@ const jugadores = [
         juegosRepetidos: "Granja Sonora",
         ultimaSesion: "17/09/2026",
         jugoCon: "Delfi.67",
-        id: "0003"
+        id: "0003",
+        animal: "conejo",
+        color: "verde"
 
     },
     {
@@ -31,7 +37,9 @@ const jugadores = [
         juegosRepetidos: "Pesca",
         ultimaSesion: "16/09/2026",
         jugoCon: "Coco",
-        id: "0004"
+        id: "0004",
+        animal: "cerdo",
+        color: "celeste"
 
     },
     {
@@ -40,7 +48,9 @@ const jugadores = [
         juegosRepetidos: "Burbujas y Pesca",
         ultimaSesion: "18/09/2026",
         jugoCon: "Usuario 8",
-        id: "0005"
+        id: "0005",
+        animal: "pollito",
+        color: "violeta"
 
     },
     {
@@ -49,7 +59,9 @@ const jugadores = [
         juegosRepetidos: "Banda Loca",
         ultimaSesion: "19/09/2026",
         jugoCon: "Fede_Don_Satur",
-        id: "0006"
+        id: "0006",
+        animal: "cerdo",
+        color: "rosa"
 
     },
     {
@@ -58,7 +70,9 @@ const jugadores = [
         juegosRepetidos: "Granja Sonora",
         ultimaSesion: "17/09/2026",
         jugoCon: "Cab.cata",
-        id: "0007"
+        id: "0007", 
+        animal: "conejo",
+        color: "rosa"
 
     },
     {
@@ -67,7 +81,9 @@ const jugadores = [
         juegosRepetidos: "Pesca",
         ultimaSesion: "16/09/2026",
         jugoCon: "Usuario 7",
-        id: "0008"
+        id: "0008",
+        animal: "cerdo",
+        color: "verde"
 
     },
     {
@@ -76,7 +92,9 @@ const jugadores = [
         juegosRepetidos: "Burbujas y Pesca",
         ultimaSesion: "18/09/2026",
         jugoCon: "Franchu",
-        id: "0009"
+        id: "0009",
+        animal: "pollito",
+        color: "celeste"
 
     }
 ];

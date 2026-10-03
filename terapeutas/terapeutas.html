@@ -49,24 +49,59 @@
 
     <div class="pantalla" id="pantalla-informes">
 
-        <div class="encabezado-pantalla">
+        <a class="BotonSalir" href="../inicio/inicio.html"><svg xmlns="http://www.w3.org/2000/svg" width="32"
+                height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-chevron-right-icon lucide-chevron-right">
+                <path d="m9 18 6-6-6-6" />
+            </svg>
+        </a>
 
-            <div class="circulito-informes" id="circulo-titulo-informes"></div>
+        <div class="encabezado-informes">
 
-            <h2>Análisis diario</h2>
-            <p>Conocé la actividad de cada usuario</p>
-
-            <a class="BotonSalir" href="../inicio/inicio.html"><svg xmlns="http://www.w3.org/2000/svg" width="32"
-                    height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-chevron-right-icon lucide-chevron-right">
-                    <path d="m9 18 6-6-6-6" />
+            <div class="circulo-informes">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" x2="18" y1="20" y2="10" />
+                    <line x1="12" x2="12" y1="20" y2="4" />
+                    <line x1="6" x2="6" y1="20" y2="14" />
                 </svg>
-            </a>
+            </div>
+            <div class="titulos-informes">
+                <h2>Análisis diario</h2>
+                <p>Conocé la actividad de cada usuario.</p>
+            </div>
+
+
         </div>
 
-        <p>Seleccioná un usuario para ver su análisis</p>
-        <div class="lista-usuarios"></div>
+        <div class="caja-informes">
+
+            <div class="primera-fila-informes">
+
+                <div class="cartel-informes">
+                    <img src="../assets/terapeutas/lamparita.png" alt="Icono de lamparita">
+
+                    <div class="cartel-texto-contenedor">
+                        <p class="cartel-titulo">Elegí un usuario para comenzar</p>
+                        <p class="cartel-texto">Podrás ver sus sesiones, juegos y progresos</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="buscador-informes">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8" />
+                    <path d="m21 21-4.3-4.3" />
+                </svg>
+
+                <input type="text" id="buscar-usuario" placeholder="Buscar usuario...">
+            </div>
+
+            <div class="lista-usuarios"></div>
+
+        </div>
     </div>
 
     <div class="pantalla" id="pantalla-informe-usuario">
@@ -75,9 +110,9 @@
 
             <h2 id="informe-nombre"></h2>
 
-            <button class="BotonSalir" id="btn-volver-lista" data-destino="pantalla-informes"><svg xmlns="http://www.w3.org/2000/svg"
-                    width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round"
+            <button class="BotonSalir" id="btn-volver-lista" data-destino="pantalla-informes"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="lucide lucide-chevron-right-icon lucide-chevron-right">
                     <path d="m9 18 6-6-6-6" />
                 </svg>
