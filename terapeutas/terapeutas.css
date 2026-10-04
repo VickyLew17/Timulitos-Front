@@ -251,6 +251,10 @@
     cursor: pointer;
 }
 
+.usuario-item:hover {
+    border-width: .3rem;
+}
+
 .personaje-usuario {
     width: 80px;
     height: 80px;
