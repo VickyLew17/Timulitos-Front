@@ -101,6 +101,13 @@ function pescar(anzuelo, jugador) {
 
     let posicion = 10;
 
+    if (jugador === 1) {
+        pescando11 = true;
+    } else {
+        pescando2 = true;
+    }
+
+
     function bajarAnzuelo() {
 
         posicion += 1;
@@ -143,6 +150,11 @@ function pescar(anzuelo, jugador) {
             anzuelo.style.top = "10%";
             pez.style.top = "24%";
 
+            if (jugador === 1) {
+                pescando1 = false;
+            } else {
+                pescando2 = false;
+            }
 
             setTimeout(() => {
                 if (jugador === 1) {

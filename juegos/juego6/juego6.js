@@ -52,15 +52,15 @@ function moverVarita() {
 
     function animarVarita() {
 
-        tiempo += 0.03;
+        tiempo += 0.02;
 
         let rotacion;
 
         if (tiempo < 0.5) {
-            rotacion = -20 * (tiempo / 0.5);
+            rotacion = 20 * (tiempo / 0.5);
         }
         else {
-            rotacion = -20 + (20 * ((tiempo - 0.5) / 0.5));
+            rotacion = 20 - (20 * ((tiempo - 0.5) / 0.5));
         }
 
         varita.style.transform = `rotate(${rotacion}deg)`;
@@ -90,14 +90,14 @@ function sacarObjeto() {
 
         tiempo += 0.01;
 
-        let x = 20 + (35 * tiempo);
+        let x = 40 + (35 * tiempo);
 
         let y = 10 + (180 * tiempo) - (180 * tiempo * tiempo);
 
         objeto.style.left = x + "%";
         objeto.style.bottom = y + "%";
 
-        if (tiempo < .8) {
+        if (tiempo < .7) {
             requestAnimationFrame(animarObjeto);
         }
 

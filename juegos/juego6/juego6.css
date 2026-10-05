@@ -10,7 +10,7 @@
 #sombrero-mago {
     position: absolute;
     width: 30vw;
-    left: 10%;
+    left: 30%;
     bottom: 5%;
 
     z-index: 100;
@@ -21,9 +21,9 @@
     position: absolute;
     width: 6vw;
     max-width: 280px;
-    right: 15%;
+    left: 15%;
     top: 25%;
-    transform-origin: bottom center;
+    transform-origin:bottom center;
 }
 
 

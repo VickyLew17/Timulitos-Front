@@ -75,6 +75,7 @@ const jugadores = [
         color: "rosa"
 
     },
+    
     {
         nombre: "user 8",
         tiempo: "25 minutos",
