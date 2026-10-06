@@ -13,12 +13,21 @@ document.querySelectorAll(".btn-cerrar-popup").forEach(boton => {
 });
 
 
-document.querySelectorAll("#btn-cerrar-popup-usuarios-jugadores, #btn-cerrar-popup-usuario1, #btn-cerrar-popup-usuario2, #btn-cerrar-popup-tutorial, #btn-cerrar-popup-video-tutorial").forEach(boton => {
+document.querySelectorAll("#btn-cerrar-popup-usuarios-jugadores, #btn-cerrar-popup-tutorial, #btn-cerrar-popup-video-tutorial").forEach(boton => {
     boton.addEventListener("click", () => {
+
         document.getElementById("contenedor-comenzar").style.display = "flex";
         document.getElementById("conejo-colgando").style.display = "flex";
 
 
+    });
+});
+
+document.querySelectorAll("#btn-cerrar-popup-usuario1, #btn-cerrar-popup-usuario2").forEach(boton => {
+    boton.addEventListener("click", () => {
+        document.getElementById("elegir-usuarios").style.display = "flex";
+        document.getElementById("CrearUsuario1").style.display = "none";
+        document.getElementById("CrearUsuario2").style.display = "none";
     });
 });
 
