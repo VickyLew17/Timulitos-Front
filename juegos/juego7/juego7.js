@@ -102,7 +102,7 @@ function pescar(anzuelo, jugador) {
     let posicion = 10;
 
     if (jugador === 1) {
-        pescando11 = true;
+        pescando1 = true;
     } else {
         pescando2 = true;
     }

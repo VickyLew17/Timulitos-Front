@@ -1,4 +1,11 @@
 
+
+let jugadorSeleccionado1 = null;
+let jugadorSeleccionado2 = null;
+
+
+
+
 document.querySelectorAll(".btn-cerrar-popup").forEach(boton => {
     boton.addEventListener("click", () => {
         boton.closest("#elegir-usuarios, #CrearUsuario1, #CrearUsuario2, #Tutorial, #video-tutorial, #IDUsuario").style.display = "none";
@@ -28,6 +35,9 @@ document.getElementById("btn-sin-cuenta").addEventListener("click", () => {
     document.getElementById("contenedor-comenzar").style.display = "none";
     document.getElementById("conejo-colgando").style.display = "none";
 
+    jugadorSeleccionado1 = null
+    jugadorSeleccionado2 = null
+
 });
 
 document.getElementById("btn-con-cuenta").addEventListener("click", () => {
@@ -41,6 +51,9 @@ document.getElementById("btn-con-cuenta").addEventListener("click", () => {
         elemento.classList.remove('seleccionado');
 
     });
+
+    jugadorSeleccionado1 = null
+    jugadorSeleccionado2 = null
 });
 
 document.getElementById("btnCrearJugador1").addEventListener("click", () => {
@@ -51,6 +64,8 @@ document.getElementById("btnCrearJugador1").addEventListener("click", () => {
     document.getElementById("nombre-usuario-jugador1").value = "";
     document.getElementById("ID-usuario-jugador1").value = "";
 
+    document.getElementById("nombre-usuario-jugador1").classList.remove("input-error");
+    document.getElementById("ID-usuario-jugador1").classList.remove("input-error");
 });
 
 document.getElementById("btnCrearJugador2").addEventListener("click", () => {
@@ -62,29 +77,53 @@ document.getElementById("btnCrearJugador2").addEventListener("click", () => {
     document.getElementById("nombre-usuario-jugador2").value = "";
     document.getElementById("ID-usuario-jugador2").value = "";
 
+    document.getElementById("nombre-usuario-jugador2").classList.remove("input-error");
+    document.getElementById("ID-usuario-jugador2").classList.remove("input-error");
 
 });
 
 document.querySelectorAll("#btn-jugar1, #btn-jugar2").forEach(boton => {
     boton.addEventListener("click", () => {
 
-        document.getElementById("elegir-usuarios").style.display = "flex";
-        document.getElementById("CrearUsuario1").style.display = "none";
-        document.getElementById("CrearUsuario2").style.display = "none";
-
-        let nombre;
+        let nombreIngresado;
+        let IDIngresado;
 
         if (boton.id === "btn-jugar1") {
-            nombre = document.getElementById("nombre-usuario-jugador1").value;
-            idUsiario = document.getElementById("ID-usuario-jugador1").value;
+            nombreIngresado = document.getElementById("nombre-usuario-jugador1");
+            IDIngresado = document.getElementById("ID-usuario-jugador1");
 
         }
 
         else {
-            nombre = document.getElementById("nombre-usuario-jugador2").value;
-            idUsiario = document.getElementById("ID-usuario-jugador2").value;
+            nombreIngresado = document.getElementById("nombre-usuario-jugador2");
+            IDIngresado = document.getElementById("ID-usuario-jugador2");
 
         }
+
+        const nombre = nombreIngresado.value.trim();
+        const idUsuario = IDIngresado.value.trim();
+
+        nombreIngresado.classList.remove("input-error");
+        IDIngresado.classList.remove("input-error");
+
+        if (nombre === "") {
+            nombreIngresado.classList.add("input-error");
+
+            
+        }
+
+        if (idUsuario === "") {
+            IDIngresado.classList.add("input-error");
+        
+        }
+
+        if (nombre === "" || idUsuario === "") {
+            return;
+        }
+
+        document.getElementById("elegir-usuarios").style.display = "flex";
+        document.getElementById("CrearUsuario1").style.display = "none";
+        document.getElementById("CrearUsuario2").style.display = "none";
 
         jugadores.push({
             nombre: nombre,
@@ -92,9 +131,10 @@ document.querySelectorAll("#btn-jugar1, #btn-jugar2").forEach(boton => {
             juegosRepetidos: "---",
             ultimaSesion: "---",
             jugoCon: "---",
-            id: idUsiario
+            id: idUsuario
 
         });
+
 
         if (boton.id === "btn-jugar1") {
             jugadorSeleccionado1 = jugadores[jugadores.length - 1];
@@ -122,8 +162,7 @@ document.getElementById("listos-para-tutorial").addEventListener("click", () => 
 });
 
 
-let jugadorSeleccionado1 = null;
-let jugadorSeleccionado2 = null;
+
 
 let jugadorProceso = null;
 let jugadorProcesoNumero = null;
@@ -263,6 +302,12 @@ document.getElementById("btn-confirmar-id").addEventListener("click", () => {
             jugadorSeleccionado1 = jugadorProceso;
 
             document.querySelectorAll("#lista-jugadores1 .jugador-item").forEach(item => {
+
+                item.classList.remove("seleccionado");
+
+            });
+
+            document.querySelectorAll("#lista-jugadores1 .jugador-item").forEach(item => {
                 if (item.textContent === jugadorProceso.nombre) {
                     item.classList.add("seleccionado");
                 }
@@ -272,6 +317,12 @@ document.getElementById("btn-confirmar-id").addEventListener("click", () => {
         else {
 
             jugadorSeleccionado2 = jugadorProceso;
+
+            document.querySelectorAll("#lista-jugadores2 .jugador-item").forEach(item => {
+
+                item.classList.remove("seleccionado");
+
+            });
 
             document.querySelectorAll("#lista-jugadores2 .jugador-item").forEach(item => {
                 if (item.textContent === jugadorProceso.nombre) {
