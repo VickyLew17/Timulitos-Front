@@ -75,6 +75,11 @@ document.getElementById("btnCrearJugador1").addEventListener("click", () => {
 
     document.getElementById("nombre-usuario-jugador1").classList.remove("input-error");
     document.getElementById("ID-usuario-jugador1").classList.remove("input-error");
+   
+    document.getElementById("completar-nombre-usuario").classList.remove("visible");
+    document.getElementById("completar-id-usuario").classList.remove("visible");
+
+    
 });
 
 document.getElementById("btnCrearJugador2").addEventListener("click", () => {
@@ -88,6 +93,8 @@ document.getElementById("btnCrearJugador2").addEventListener("click", () => {
 
     document.getElementById("nombre-usuario-jugador2").classList.remove("input-error");
     document.getElementById("ID-usuario-jugador2").classList.remove("input-error");
+
+    
 
 });
 
@@ -111,18 +118,19 @@ document.querySelectorAll("#btn-jugar1, #btn-jugar2").forEach(boton => {
 
         const nombre = nombreIngresado.value.trim();
         const idUsuario = IDIngresado.value.trim();
-
+        
         nombreIngresado.classList.remove("input-error");
         IDIngresado.classList.remove("input-error");
 
         if (nombre === "") {
             nombreIngresado.classList.add("input-error");
-
+            document.getElementById("completar-nombre-usuario").classList.add("visible");
             
         }
 
         if (idUsuario === "") {
             IDIngresado.classList.add("input-error");
+            document.getElementById("completar-id-usuario").classList.add("visible");
         
         }
 
@@ -276,7 +284,6 @@ mostrarJugadores();
 
 function comprobarSeleccion() {
     if (jugadorSeleccionado1 !== null && jugadorSeleccionado2 !== null) {
-
 
         document.getElementById("Tutorial").style.display = "flex";
         document.getElementById("elegir-usuarios").style.display = "none";

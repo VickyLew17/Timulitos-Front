@@ -1,3 +1,18 @@
+/* fetch('RUTA DEL JSON')                         // Ruta al archivo JSON
+  .then(response => response.json())        // Convertir la respuesta en JSON
+  .then(datata => {              // Aquí tienes acceso al JSON en formato de objeto JS
+    console.log('Jugadores cargados desde JSON:');
+    console.log(data);
+    jugadores = data;                    // Asignar el JSON a la variable comidas
+  })
+  .catch(error => {                 // Manejo de errores al leer el archivo JSON
+    console.error('Error al leer el archivo JSON:', error);
+  });
+
+
+const jugadores = [];*/
+
+
 const jugadores = [
     {
         nombre: "Liam_cht",
@@ -77,7 +92,7 @@ const jugadores = [
     },
     
     {
-        nombre: "user 8",
+        nombre: "Jochu",
         tiempo: "25 minutos",
         juegosRepetidos: "Pesca",
         ultimaSesion: "16/09/2026",
