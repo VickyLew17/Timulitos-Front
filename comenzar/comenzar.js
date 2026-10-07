@@ -204,6 +204,10 @@ function mostrarJugadores() {
 
         elemento1.addEventListener("click", () => {
 
+            if (jugador === jugadorSeleccionado2) {
+                return;
+            }
+
             document.getElementById("input-id-usuario").value = "";
             limpiarErrorID();
 
@@ -239,6 +243,10 @@ function mostrarJugadores() {
         }
 
         elemento2.addEventListener("click", () => {
+
+            if (jugador === jugadorSeleccionado1) {
+                return;
+            }
 
             document.getElementById("input-id-usuario").value = "";
             limpiarErrorID();
