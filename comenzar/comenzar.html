@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sonnys</title>
     <link rel="icon" href="../assets/logos/logo-sonnys.png">
 
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mooli&display=swap" rel="stylesheet">
 
+
     <link rel="stylesheet" href="../compartido/styles.css">
     <link rel="stylesheet" href="./comenzar.css">
 </head>
 
+
 <body>
 
+
     <div id="Comenzar">
+
 
         <a class="BotonSalir" href="../inicio/inicio.html">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
@@ -29,61 +36,90 @@
             </svg>
         </a>
 
+
         <section class="comenzar">
+
+
 
 
             <div id="contenedor-comenzar">
 
+
                 <img class="sonnys-arriba-comenzar" id="conejo-colgando"
                     src="../assets/arriba-popups/conejo-colgando.png">
+
 
                 <h2 class="como-jugar-hoy">¿Cómo vamos a jugar hoy?</h2>
                 <button class="btn-popup" id="btn-con-cuenta" data-destino="elegir-usuarios">Con cuenta</button>
                 <button class="btn-popup" id="btn-sin-cuenta" data-destino="tutorial">Sin cuenta</button>
             </div>
 
+
         </section>
+
 
     </div>
 
+
     <div id="elegir-usuarios">
+
 
         <div class="elegir-usuarios">
 
+
             <div class="jugador-seccion">
+
+
 
 
                 <img class="sonnys-arriba-usuario" id="pollo-colgando" src="../assets/arriba-popups/pollo-colgando.png">
                 <img class="cartel-jugadores" id="cartel-J1" src="../assets/arriba-popups/cartel-J1.png">
 
+
                 <h2>¿Quién será Jugador 1?</h2>
                 <p class="JugadoresAnteriores">Jugadores anteriores:</p>
 
+
                 <div class="lista-jugadores" id="lista-jugadores1"></div>
+
 
                 <button class="btn-crear-jugador" id="btnCrearJugador1">Crear cuenta de J1</button>
 
 
+
+
             </div>
 
+
             <div class="jugador-seccion">
+
+
 
 
                 <img class="sonnys-arriba-usuario" id="cerdo-colgando" src="../assets/arriba-popups/cerdo-colgando.png">
                 <img class="cartel-jugadores" id="cartel-J2" src="../assets/arriba-popups/cartel-J2.png">
 
 
+
+
                 <h2>¿Quién será Jugador 2?</h2>
+
 
                 <p class="JugadoresAnteriores">Jugadores anteriores:</p>
 
+
                 <div class="lista-jugadores" id="lista-jugadores2"></div>
+
 
                 <button class="btn-crear-jugador" id="btnCrearJugador2">Crear cuenta de J2</button>
 
 
+
+
             </div>
         </div>
+
+
 
 
         <button class="btn-cerrar-popup" id="btn-cerrar-popup-usuarios-jugadores">
@@ -94,22 +130,30 @@
             </svg>
         </button>
 
+
     </div>
+
 
     <div id="IDUsuario">
         <div class="popup" id="popup-id-usuario">
 
+
             <img id="sonnys-arriba-usuario-ID">
+
 
             <h2>Ingresá el ID del usuario</h2>
 
+
             <p id="nombre-usuario-id"></p>
+
 
             <input type="text" id="input-id-usuario" class="input-cuenta" placeholder="🔒︎ Escribe el ID...">
             <span class="mensaje-error" id="error-id-usuario" role="alert">El ID es incorrecto, vuelva a ingresarlo
                 correctamente</span>
 
+
             <button id="btn-confirmar-id" class="btn-popup"> Confirmar </button>
+
 
         </div>
         <button class="btn-cerrar-popup" id="btn-cerrar-popup-id-usuario">
@@ -121,25 +165,33 @@
         </button>
     </div>
 
+
     <div id="CrearUsuario1">
         <div class="popup" id="popup-usuario1">
             <img class="sonnys-arriba-usuario-crear" src="../assets/arriba-popups/pollo-colgando.png">
 
 
+
+
             <h2 class="crear-cuenta-texto">Crear cuenta del jugador 1</h2>
+
+
 
 
             <input type="text" placeholder="👤 Escribe el nombre de tu jugador..." class="input-cuenta"
                 id="nombre-usuario-jugador1" />
-            <span class="mensaje-error" id="completar-nombre-usuario" role="alert">Por favor, completa el nombre del
+            <span class="mensaje-error" id="completar-nombre-usuario1" role="alert">Por favor, completa el nombre del
                 jugador</span>
 
+
             <input type="text" placeholder="🔒︎ Escribe el ID..." class="input-cuenta" id="ID-usuario-jugador1" />
-            <span class="mensaje-error" id="completar-id-usuario" role="alert">Por favor, completa el ID del
+            <span class="mensaje-error" id="completar-id-usuario1" role="alert">Por favor, completa el ID del
                 jugador</span>
+
 
             <button class="btn-popup" id="btn-jugar1">Guardar y seguir</button>
         </div>
+
 
         <button class="btn-cerrar-popup" id="btn-cerrar-popup-usuario1">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
@@ -149,24 +201,34 @@
             </svg>
         </button>
 
+
     </div>
+
 
     <div id="CrearUsuario2">
         <div class="popup" id="popup-usuario2">
             <img class="sonnys-arriba-usuario-crear" src="../assets/arriba-popups/cerdo-colgando.png">
 
+
             <h2 class="crear-cuenta-texto">Crear cuenta del jugador 2</h2>
+
+
 
 
             <input type="text" placeholder="👤 Escribe el nombre de tu jugador..." class="input-cuenta"
                 id="nombre-usuario-jugador2" />
-            <span class="mensaje-error" id="completar-nombre-usuario" role="alert">Por favor, completa el nombre del jugador</span>
+            <span class="mensaje-error" id="completar-nombre-usuario2" role="alert">Por favor, completa el nombre del
+                jugador</span>
+
 
             <input type="text" placeholder="🔒︎ Escribe el ID..." class="input-cuenta" id="ID-usuario-jugador2" />
-            <span class="mensaje-error" id="completar-id-usuario" role="alert">Por favor, completa el ID del jugador</span>
+            <span class="mensaje-error" id="completar-id-usuario2" role="alert">Por favor, completa el ID del
+                jugador</span>
+
 
             <button class="btn-popup" id="btn-jugar2">Guardar y seguir</button>
         </div>
+
 
         <button class="btn-cerrar-popup" id="btn-cerrar-popup-usuario2">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
@@ -177,14 +239,18 @@
         </button>
     </div>
 
+
     <div id="Tutorial">
         <div class="popup" id="popup-tutorial">
             <h2 id="titulo-tutorial">¿Listos para el tutorial?</h2>
 
+
             <button class="btn-popup" id="listos-para-tutorial">¡Listos!</button>
             <a class="btn-popup" id="sin-tutorial" href="../cuadricula/cuadricula.html">Saltar tutorial</a>
 
+
         </div>
+
 
         <button class="btn-cerrar-popup" id="btn-cerrar-popup-tutorial">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
@@ -195,18 +261,24 @@
         </button>
     </div>
 
+
     <div id="video-tutorial">
         <div class="popup" id="popup-video-tutorial">
 
+
             <div id="video"></div>
+
 
             <!--<video id="video" controls>
         <source src="..." type=".../mp4">
       </video> -->
 
+
             <a class="btn-popup" id="btn-listo-video-tutorial" href="../cuadricula/cuadricula.html">Ir a jugar</a>
 
+
         </div>
+
 
         <button class="btn-cerrar-popup" id="btn-cerrar-popup-video-tutorial">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
@@ -216,10 +288,13 @@
             </svg>
         </button>
 
+
     </div>
+
 
     <script src="../compartido/jugadores.js"></script>
     <script src="./comenzar.js"></script>
 </body>
+
 
 </html>
