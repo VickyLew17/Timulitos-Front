@@ -43,8 +43,11 @@ document.getElementById("btn-cerrar-popup-id-usuario").addEventListener("click",
 
 
 document.getElementById("btn-sin-cuenta").addEventListener("click", () => {
+
     document.getElementById("Tutorial").style.display = "flex";
 
+    const titulo = document.getElementById("titulo-tutorial");
+    titulo.textContent = "¿Listos para el tutorial?";
 
     document.getElementById("contenedor-comenzar").style.display = "none";
     document.getElementById("conejo-colgando").style.display = "none";
@@ -443,7 +446,19 @@ function comprobarSeleccion() {
     if (jugadorSeleccionado1 !== null && jugadorSeleccionado2 !== null) {
 
 
+        const titulo = document.getElementById("titulo-tutorial");
+
+        if (jugadorSeleccionado1 && jugadorSeleccionado2) {
+            titulo.textContent =
+                `¿Listos para el tutorial ${jugadorSeleccionado1.nombre} y ${jugadorSeleccionado2.nombre}?`;
+        }
+        else {
+            titulo.textContent = "¿Listos para el tutorial?";
+        }
+
+
         document.getElementById("Tutorial").style.display = "flex";
+
         document.getElementById("elegir-usuarios").style.display = "none";
 
 
