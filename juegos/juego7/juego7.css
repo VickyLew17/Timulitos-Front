@@ -3,12 +3,16 @@
     height: 100vh;
     position: relative;
     overflow: hidden;
+
+    background-image: url("../../assets/fondos/fondo7.png");
+      background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .pez {
     position: absolute;
     width: 12vw;
-    max-width: 180px;
 }
 
 #pez-1 {
@@ -48,9 +52,9 @@
 
 .anzuelo {
     position: absolute;
-    width: 5vw;
-    max-width: 180px;
-    top: 10%;
+    width: 5%;
+    top: 25%;
+    transform: translateY(-100%);
 }
 
 #anzuelo-1 {
@@ -59,5 +63,5 @@
 
 #anzuelo-2 {
     right: 15%;
-    transform: scaleX(-1);
+    transform: translateY(-100%) scaleX(-1);
 }

@@ -77,7 +77,6 @@ document.addEventListener("keydown", function (event) {
 
             const imagen = imagenes4[numero4];
 
-            // 3. Calcular cuánto hay que moverlo para llegar al centro
             const caja = imagen.getBoundingClientRect();
 
             const moverX = window.innerWidth / 2 - (caja.left + caja.width / 2);

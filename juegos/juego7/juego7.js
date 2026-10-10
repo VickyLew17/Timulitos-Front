@@ -99,7 +99,7 @@ function pescar(anzuelo, jugador) {
         pez = peces[2];
     }
 
-    let posicion = 10;
+    let posicion = 25;
 
     if (jugador === 1) {
         pescando1 = true;
@@ -114,7 +114,7 @@ function pescar(anzuelo, jugador) {
 
         anzuelo.style.top = posicion + "%";
 
-        if (posicion < 55) {
+        if (posicion < 60) {
             requestAnimationFrame(bajarAnzuelo);
         }
 
@@ -139,16 +139,16 @@ function pescar(anzuelo, jugador) {
         posicion -= 1;
 
         anzuelo.style.top = posicion + "%";
-        pez.style.top = (posicion + 15) + "%";
+        pez.style.top = (posicion - 5) + "%";
 
 
-        if (posicion > 10) {
+        if (posicion > 25) {
             requestAnimationFrame(subirAnzuelo);
         }
 
         else {
-            anzuelo.style.top = "10%";
-            pez.style.top = "24%";
+            anzuelo.style.top = "25%";
+            pez.style.top = "20%";
 
             if (jugador === 1) {
                 pescando1 = false;
