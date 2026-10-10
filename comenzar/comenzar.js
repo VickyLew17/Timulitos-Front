@@ -224,10 +224,12 @@ document.querySelectorAll("#btn-jugar1, #btn-jugar2").forEach(boton => {
             juegosRepetidos: "---",
             ultimaSesion: "---",
             jugoCon: "---",
-            id: idUsuario
-
-
+            id: idUsuario,
+            animal: "pollito",
+            color: "rosa"
         });
+
+        guardarJugadores();
 
 
 
@@ -271,12 +273,12 @@ document.getElementById("nombre-usuario-jugador2").addEventListener("input", lim
 
 
 function limpiarErrorCompletarID() {
-    document.getElementById("ID-usuario-jugador2").classList.remove("input-error");
+    document.getElementById("ID-usuario-jugador1").classList.remove("input-error");
     document.getElementById("ID-usuario-jugador2").classList.remove("input-error");
 
 
-    document.getElementById("completar-id-usuario1").classList.remove("visible");
-    document.getElementById("completar-id-usuario2").classList.remove("visible");
+    document.getElementById("ID-usuario-jugador1").classList.remove("visible");
+    document.getElementById("ID-usuario-jugador2").classList.remove("visible");
 }
 
 

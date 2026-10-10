@@ -13,7 +13,7 @@
 const jugadores = [];*/
 
 
-const jugadores = [
+const jugadoresIniciales = [
     {
         nombre: "Liam_cht",
         tiempo: "15 minutos",
@@ -114,3 +114,17 @@ const jugadores = [
 
     }
 ];
+
+const jugadoresGuardados = localStorage.getItem('jugadores');
+
+let jugadores;
+
+if (jugadoresGuardados === null) {
+    jugadores = jugadoresIniciales;
+} else {
+    jugadores = JSON.parse(jugadoresGuardados);
+}
+
+function guardarJugadores() {
+    localStorage.setItem('jugadores', JSON.stringify(jugadores));
+}
