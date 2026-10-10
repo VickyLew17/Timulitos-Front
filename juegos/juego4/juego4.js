@@ -7,7 +7,6 @@ document.getElementById("btn-comenzar-juego4").addEventListener("click", functio
 
 
 const juego4 = document.getElementById("juego4");
-const instrumento = document.getElementById("instrumento-juego4");
 
 let sonido4 = new Audio();
 
@@ -33,11 +32,6 @@ const instrumentos = [
     },
 
     {
-        imagen: "../../assets/personajes/instrumentos/maracas.jfif",
-        sonido: "../../assets/sonidos/maracas.mp3"
-    },
-
-    {
         imagen: "../../assets/personajes/instrumentos/bateria.webp",
         sonido: "../../assets/sonidos/bateria.mp3"
     },
@@ -45,22 +39,35 @@ const instrumentos = [
     {
         imagen: "../../assets/personajes/instrumentos/arpa.avif",
         sonido: "../../assets/sonidos/arpa.mp3"
-    },
-
-    {
-        imagen: "../../assets/personajes/instrumentos/saxo.webp",
-        sonido: "../../assets/sonidos/saxo.mp3"
     }
-
 ]
 
-let numero4 = 0;
+const fila4 = document.getElementById("fila-juego4");
+const imagenes4 = [];
 
-instrumento.src = instrumentos[numero4].imagen;
+instrumentos.forEach(dato => {
+
+    const imagen = document.createElement("img");
+
+    imagen.src = dato.imagen;
+    imagen.classList.add("personaje");
+
+    fila4.appendChild(imagen);
+    imagenes4.push(imagen);
+});
+
+let numero4 = -1;
+
 
 document.addEventListener("keydown", function (event) {
     if (event.code === "Space" || event.code === "Enter") {
         if (juego4.style.display === "block") {
+            
+            if (numero4 >= 0) {
+                imagenes4[numero4].classList.remove("activo");
+                imagenes4[numero4].style.transform = "";
+            }
+
 
             numero4++;
 
@@ -68,8 +75,19 @@ document.addEventListener("keydown", function (event) {
                 numero4 = 0;
             }
 
-            instrumento.src = instrumentos[numero4].imagen;
+            const imagen = imagenes4[numero4];
 
+            // 3. Calcular cuánto hay que moverlo para llegar al centro
+            const caja = imagen.getBoundingClientRect();
+
+            const moverX = window.innerWidth / 2 - (caja.left + caja.width / 2);
+            const moverY = window.innerHeight / 2 - (caja.top + caja.height / 2);
+
+            
+            imagen.style.transform = `translate(${moverX}px, ${moverY}px) scale(3.2)`;
+            imagen.classList.add("activo");
+
+            
             sonido4.pause();
             sonido4.currentTime = 0;
             sonido4.src = instrumentos[numero4].sonido;

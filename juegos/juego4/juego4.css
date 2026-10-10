@@ -9,9 +9,28 @@
     align-items: center;
 }
 
-#instrumento-juego4 {
+.fila-personajes {
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    bottom: 20%;
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 3vw;
+}
+
+.personaje {
+    width: 12vw;
+    height: 12vw;
+    object-fit: contain;
+
+    position: relative;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.personaje.activo {
+    z-index: 10;
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.6));
 }
