@@ -32,12 +32,12 @@ const instrumentos = [
     },
 
     {
-        imagen: "../../assets/personajes/instrumentos/bateria.webp",
+        imagen: "../../assets/personajes/instrumentos/bateria.png",
         sonido: "../../assets/sonidos/bateria.mp3"
     },
 
     {
-        imagen: "../../assets/personajes/instrumentos/arpa.avif",
+        imagen: "../../assets/personajes/instrumentos/arpa.png",
         sonido: "../../assets/sonidos/arpa.mp3"
     }
 ]
