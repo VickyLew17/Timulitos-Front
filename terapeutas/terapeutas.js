@@ -9,6 +9,7 @@ document.getElementById("btn-volver-lista").addEventListener("click", () => {
     cambiarPantalla("pantalla-informes");
 });
 
+
 const listaInformes = document.querySelector(".lista-usuarios");
 
 jugadores.forEach(jugador => {
@@ -37,17 +38,54 @@ jugadores.forEach(jugador => {
     listaInformes.appendChild(elemento);
 });
 
+
 function mostrarInforme(jugador) {
 
+    cambiarPantalla("pantalla-informe-usuario");
+
     document.getElementById("informe-nombre").textContent = jugador.nombre;
+    document.getElementById("informe-animal").src = "../assets/terapeutas/" + jugador.animal + ".png";
 
-    document.getElementById("informe-tiempo").textContent = jugador.tiempo;
-
-    document.getElementById("informe-juegos").textContent = jugador.juegosRepetidos;
+    document.getElementById("informe-usuario").textContent = jugador.nombre;
+    document.getElementById("informe-id").textContent = jugador.id;
+    document.getElementById("informe-tiempo-total").textContent = jugador.tiempoTotal || "---";
 
     document.getElementById("informe-ultima-sesion").textContent = jugador.ultimaSesion;
-
     document.getElementById("informe-jugo-con").textContent = jugador.jugoCon;
+    document.getElementById("informe-puntos").textContent = jugador.puntos || 0;
 
-    cambiarPantalla("pantalla-informe-usuario");
+    const actividad = jugador.actividad || [];
+    const listaActividad = document.getElementById("informe-actividad");
+
+    listaActividad.innerHTML = "";
+
+    actividad.forEach(dato => {
+        const item = document.createElement("p");
+
+        item.classList.add("item-actividad");
+        item.textContent = dato.juego + "  ▶ " + dato.veces;
+
+        listaActividad.appendChild(item);
+    });
+
+
+    let masJugado = null;
+
+    actividad.forEach(dato => {
+        masJugado = dato;
+
+    });
+
+    if (masJugado !== null) {
+        document.getElementById("informe-mas-jugado-juego").textContent = masJugado.juego;
+        document.getElementById("informe-mas-jugado-veces").textContent = masJugado.veces + " veces";
+        document.getElementById("informe-mas-jugado-minutos").textContent = masJugado.minutos + " minutos";
+    }
+
+    else {
+        document.getElementById("informe-mas-jugado-juego").textContent = "---";
+        document.getElementById("informe-mas-jugado-veces").textContent = "";
+        document.getElementById("informe-mas-jugado-minutos").textContent = "";
+    }
+
 }

@@ -16,7 +16,7 @@
     background-color: white;
     width: 40%;
 
-    position: relative; 
+    position: relative;
 
     margin-top: 1vh;
 
@@ -330,4 +330,146 @@
 .usuario-item.celeste .btn-ver-analisis {
     background-color: #A3D9FF;
     border-color: #2FAAFF;
+}
+
+
+
+
+
+.encabezado-informe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+
+    padding-top: 40px;
+    color: #1E1B4B;
+}
+
+.titulo-informe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+
+    border: .3rem solid #B57BFF;
+    border-radius: 90px;
+    padding: 10px 40px;
+}
+
+.titulo-informe img {
+    width: 80px;
+}
+
+.titulo-informe h2 {
+    font-size: 3rem;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 0;
+
+
+    text-align: center;
+}
+
+.encabezado-informe p {
+    font-size: 2rem;
+    font-weight: 600;
+
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+.contenido-informe {
+    width: 85%;
+    margin: 30px;
+    padding-bottom: 40px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.fila-informe {
+    display: flex;
+    gap: 28px;
+}
+
+.tarjeta-informe {
+    flex: 1;
+
+    border: .3rem solid;
+    border-radius: 26px;
+    padding: 24px;
+    box-sizing: border-box;
+
+    color: #1E1B4B;
+
+    margin-bottom: 15px;
+}
+
+.tarjeta-informe.ancha {
+    flex: 2;
+}
+
+.tarjeta-informe.lila {
+    background-color: #E9D8FD;
+    border-color: #9E4EFF;
+}
+
+.tarjeta-informe.verde {
+    background-color: #C9FFC4;
+    border-color: #3CC13B;
+}
+
+.tarjeta-informe.turquesa {
+    background-color: #B3FFE6;
+    border-color: #00D08F;
+}
+
+.tarjeta-titulo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.tarjeta-titulo img {
+    width: 50px;
+}
+
+.tarjeta-titulo h3 {
+    font-size: 2.3rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.renglon-informe {
+    background-color: #ffffff;
+    border: .15rem solid #B57BFF;
+    border-radius: 50px;
+    padding: 10px 24px;
+
+    font-size: 1.6rem;
+    margin: 0 0 20px 0;
+}
+
+.renglon-informe:last-child {
+    margin-bottom: 0;
+}
+
+.lista-actividad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    padding-left: 8px;
+}
+
+.item-actividad {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.dato-mas-jugado {
+    font-size: 1.8rem;
+    margin: 0 0 18px 8px;
 }
