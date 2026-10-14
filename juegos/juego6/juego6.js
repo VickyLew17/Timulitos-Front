@@ -12,19 +12,19 @@ const varita = document.getElementById("varita-magica");
 
 const objetos = [
     {
-        imagen: "../../assets/personajes/naipes.jpg"
+        imagen: "../../assets/personajes/naipes.png"
     },
 
     {
-        imagen: "../../assets/personajes/paloma.webp"
+        imagen: "../../assets/personajes/paloma.png"
     },
 
     {
-        imagen: "../../assets/personajes/pañuelo-colores.PNG"
+        imagen: "../../assets/personajes/pañuelo-colores.png"
     },
 
     {
-        imagen: "../../assets/personajes/zapato.jfif"
+        imagen: "../../assets/personajes/papel-higenico.png"
     }
 ]
 

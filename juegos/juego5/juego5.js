@@ -13,17 +13,17 @@ let sonido5 = new Audio();
 
 const animales = [
     {
-        imagen: "../../assets/personajes/animales/pollito.png",
-        sonido: "../../assets/sonidos/pollito.mp3"
+        imagen: "../../assets/personajes/animales/pato.png",
+        sonido: "../../assets/sonidos/pato.mp3"
     },
 
     {
-        imagen: "../../assets/personajes/animales/vaca.jpg",
-        sonido: "../../assets/sonidos/vaca.mp3"
+        imagen: "../../assets/personajes/animales/conejo.png",
+        sonido: "../../assets/sonidos/conejo.mp3"
     },
 
     {
-        imagen: "../../assets/personajes/animales/cerdo.jpg",
+        imagen: "../../assets/personajes/animales/cerdo.png",
         sonido: "../../assets/sonidos/cerdo.mp3"
     },
 
@@ -33,8 +33,8 @@ const animales = [
     },
 
     {
-        imagen: "../../assets/personajes/animales/oveja.jpg",
-        sonido: "../../assets/sonidos/oveja.mp3"
+        imagen: "../../assets/personajes/animales/leon.png",
+        sonido: "../../assets/sonidos/leon.mp3"
     },
 
     {

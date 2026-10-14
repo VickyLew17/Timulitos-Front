@@ -27,8 +27,8 @@ const instrumentos = [
     },
 
     {
-        imagen: "../../assets/personajes/instrumentos/flauta.webp",
-        sonido: "../../assets/sonidos/flauta.mp3"
+        imagen: "../../assets/personajes/instrumentos/trompeta.png",
+        sonido: "../../assets/sonidos/trompeta.mp3"
     },
 
     {
