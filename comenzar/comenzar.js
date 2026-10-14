@@ -217,6 +217,12 @@ document.querySelectorAll("#btn-jugar1, #btn-jugar2").forEach(boton => {
         document.getElementById("CrearUsuario1").style.display = "none";
         document.getElementById("CrearUsuario2").style.display = "none";
 
+        const colores = ["rosa", "violeta", "verde", "celeste"];
+        const animales = ["conejo", "pollito", "cerdo"];
+
+        const color = colores[Math.floor(Math.random() * colores.length)];
+        const animal = animales[Math.floor(Math.random() * animales.length)];
+
 
         jugadores.push({
             nombre: nombre,
@@ -225,8 +231,8 @@ document.querySelectorAll("#btn-jugar1, #btn-jugar2").forEach(boton => {
             ultimaSesion: "---",
             jugoCon: "---",
             id: idUsuario,
-            animal: "pollito",
-            color: "rosa"
+            animal: animal,
+            color: color
         });
 
         guardarJugadores();

@@ -22,7 +22,25 @@ const jugadoresIniciales = [
         jugoCon: "Franchu",
         id: "0001",
         animal: "pollito",
-        color: "rosa"
+        color: "rosa",
+        puntos: 222,
+        tiempoTotal: "2 horas y  30 minutos"   ,
+        actividad: [
+            { juego: "Burbujas", veces: 1, minutos: 4 },
+            { juego: "Banda Loca", veces: 6, minutos: 15 },
+            { juego: "Pesca", veces: 4, minutos: 10 },
+            { juego: "Tiro Libre", veces: 1, minutos: 4 },
+            { juego: "Granja Sonora", veces: 6, minutos: 15 },
+            { juego: "Fiesta de Colores", veces: 4, minutos: 10 },
+            { juego: "Magia", veces: 1, minutos: 4 }            
+        ],
+        progreso: [
+            { fecha: "Septiembre 10", minutos: 30 },
+            { fecha: "Septiembre 17", minutos: 15 },
+            { fecha: "Septiembre 21", minutos: 40 },
+            { fecha: "Octubre 04", minutos: 25 },
+            { fecha: "Octubre 20", minutos: 30 }
+        ]
     },
     {
         nombre: "Franchu",
@@ -85,12 +103,12 @@ const jugadoresIniciales = [
         juegosRepetidos: "Granja Sonora",
         ultimaSesion: "17/09/2026",
         jugoCon: "Cab.cata",
-        id: "0007", 
+        id: "0007",
         animal: "conejo",
         color: "rosa"
 
     },
-    
+
     {
         nombre: "Jochu",
         tiempo: "25 minutos",
@@ -99,7 +117,25 @@ const jugadoresIniciales = [
         jugoCon: "Usuario 7",
         id: "0008",
         animal: "cerdo",
-        color: "verde"
+        color: "verde",
+        puntos: 15,
+        tiempoTotal: "1 hora y  30 minutos"   ,
+        actividad: [
+            { juego: "Burbujas", veces: 1, minutos: 4 },
+            { juego: "Banda Loca", veces: 6, minutos: 15 },
+            { juego: "Pesca", veces: 4, minutos: 10 },
+            { juego: "Tiro Libre", veces: 1, minutos: 4 },
+            { juego: "Granja Sonora", veces: 6, minutos: 15 },
+            { juego: "Fiesta de Colores", veces: 4, minutos: 10 },
+            { juego: "Magia", veces: 1, minutos: 4 }
+        ],
+        progreso: [
+            { fecha: "Septiembre 10", minutos: 30 },
+            { fecha: "Septiembre 17", minutos: 15 },
+            { fecha: "Septiembre 21", minutos: 40 },
+            { fecha: "Octubre 04", minutos: 25 },
+            { fecha: "Octubre 20", minutos: 30 }
+        ]
 
     },
     {
@@ -110,7 +146,25 @@ const jugadoresIniciales = [
         jugoCon: "Franchu",
         id: "0009",
         animal: "pollito",
-        color: "celeste"
+        color: "celeste",
+        puntos: 178,
+        tiempoTotal: "2 horas y  30 minutos"   ,
+        actividad: [
+            { juego: "Burbujas", veces: 1, minutos: 4 },
+            { juego: "Banda Loca", veces: 6, minutos: 15 },
+            { juego: "Pesca", veces: 4, minutos: 10 },
+            { juego: "Tiro Libre", veces: 1, minutos: 4 },
+            { juego: "Granja Sonora", veces: 6, minutos: 15 },
+            { juego: "Fiesta de Colores", veces: 4, minutos: 10 },
+            { juego: "Magia", veces: 1, minutos: 4 }
+        ],
+        progreso: [
+            { fecha: "Septiembre 10", minutos: 30 },
+            { fecha: "Septiembre 17", minutos: 15 },
+            { fecha: "Septiembre 21", minutos: 40 },
+            { fecha: "Octubre 04", minutos: 25 },
+            { fecha: "Octubre 20", minutos: 30 }
+        ]
 
     }
 ];

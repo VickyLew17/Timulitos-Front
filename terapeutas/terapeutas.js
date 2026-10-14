@@ -60,10 +60,13 @@ function mostrarInforme(jugador) {
     listaActividad.innerHTML = "";
 
     actividad.forEach(dato => {
+
+        console.log(dato);
+
         const item = document.createElement("p");
 
         item.classList.add("item-actividad");
-        item.textContent = dato.juego + "  ▶ " + dato.veces;
+        item.textContent = dato.juego + "    ▶   " + dato.veces;
 
         listaActividad.appendChild(item);
     });
@@ -72,20 +75,16 @@ function mostrarInforme(jugador) {
     let masJugado = null;
 
     actividad.forEach(dato => {
-        masJugado = dato;
-
+        if (masJugado === null || dato.veces > masJugado.veces) {
+            masJugado = dato;
+        }
     });
+    
 
     if (masJugado !== null) {
         document.getElementById("informe-mas-jugado-juego").textContent = masJugado.juego;
         document.getElementById("informe-mas-jugado-veces").textContent = masJugado.veces + " veces";
         document.getElementById("informe-mas-jugado-minutos").textContent = masJugado.minutos + " minutos";
-    }
-
-    else {
-        document.getElementById("informe-mas-jugado-juego").textContent = "---";
-        document.getElementById("informe-mas-jugado-veces").textContent = "";
-        document.getElementById("informe-mas-jugado-minutos").textContent = "";
     }
 
 }
