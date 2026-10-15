@@ -8,23 +8,39 @@ document.getElementById("btn-comenzar-juego3").addEventListener("click", functio
 const juego3 = document.getElementById("juego3");
 
 let puntaje3 = 0;
-
+/*
 const aros = [
     { imagen: "../../assets/personajes/aro-azul.png" },
     { imagen: "../../assets/personajes/aro-rojo.png" }
 ]
 
-numeroaro = 0
+numeroaro = 0*/
 
-aro.src = aros[numeroaro].imagen;
+aro.src = "../../assets/personajes/aro-azul.png";
 
-document.addEventListener("keydown", function (event)  {
-    setTimeout(() => {
-    numeroaro = numeroaro + 1
 
-    aro.src = aros[numeroaro].imagen;
+document.addEventListener("keydown", function (event) {
 
-}, 3000);
+    if (event.code === "Space") {
+        setTimeout(() => {
+           
+            aro.src = "../../assets/personajes/aro-rojo.png";
+
+        }, 3000);
+    }
+
+})
+
+document.addEventListener("keydown", function (event) {
+
+    if (event.code === "Enter") {
+        setTimeout(() => {
+           
+            aro.src = "../../assets/personajes/aro-azul.png";
+
+        }, 3000);
+    }
+
 })
 
 //OKEY ME QUEDE SIN TIEMPO PERO AHORA EN PROYECTO TENGO QUE HACER Q CUANDOO TOCAS ENTER CAMBIE A AZUL  Y CUANDO TOCAS ESPACIO CAMBIE A ROJO
