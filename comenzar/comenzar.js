@@ -84,7 +84,6 @@ document.getElementById("btn-con-cuenta").addEventListener("click", () => {
 
 document.getElementById("btnCrearJugador1").addEventListener("click", () => {
 
-
     document.getElementById("CrearUsuario1").style.display = "flex";
     document.getElementById("elegir-usuarios").style.display = "none";
 
@@ -96,29 +95,16 @@ document.getElementById("btnCrearJugador1").addEventListener("click", () => {
     document.getElementById("nombre-usuario-jugador1").classList.remove("input-error");
     document.getElementById("ID-usuario-jugador1").classList.remove("input-error");
 
-
-
-
-
-
     document.getElementById("completar-nombre-usuario1").classList.remove("visible");
     document.getElementById("completar-id-usuario1").classList.remove("visible");
-
-
-
-
-
 
 });
 
 
 document.getElementById("btnCrearJugador2").addEventListener("click", () => {
 
-
     document.getElementById("CrearUsuario2").style.display = "flex";
     document.getElementById("elegir-usuarios").style.display = "none";
-
-
 
 
     document.getElementById("nombre-usuario-jugador2").value = "";
@@ -283,13 +269,13 @@ function limpiarErrorCompletarID() {
     document.getElementById("ID-usuario-jugador2").classList.remove("input-error");
 
 
-    document.getElementById("ID-usuario-jugador1").classList.remove("visible");
-    document.getElementById("ID-usuario-jugador2").classList.remove("visible");
+    document.getElementById("completar-id-usuario1").classList.remove("visible");
+    document.getElementById("completar-id-usuario2").classList.remove("visible");
 }
 
 
-document.getElementById("nombre-usuario-jugador1").addEventListener("input", limpiarErrorCompletarID);
-document.getElementById("nombre-usuario-jugador2").addEventListener("input", limpiarErrorCompletarID);
+document.getElementById("ID-usuario-jugador1").addEventListener("input", limpiarErrorCompletarID);
+document.getElementById("ID-usuario-jugador2").addEventListener("input", limpiarErrorCompletarID);
 
 
 

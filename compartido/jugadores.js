@@ -50,7 +50,25 @@ const jugadoresIniciales = [
         jugoCon: "Liam_cht",
         id: "0002",
         animal: "conejo",
-        color: "violeta"
+        color: "violeta",
+        puntos: 456,
+        tiempoTotal: "32 minutos"   ,
+        actividad: [
+            { juego: "Burbujas", veces: 8, minutos: 40 },
+            { juego: "Banda Loca", veces: 6, minutos: 15 },
+            { juego: "Pesca", veces: 2, minutos: 10 },
+            { juego: "Tiro Libre", veces: 4, minutos: 14 },
+            { juego: "Granja Sonora", veces: 3, minutos: 25 },
+            { juego: "Fiesta de Colores", veces: 6, minutos: 12 },
+            { juego: "Magia", veces: 1, minutos: 4 }            
+        ],
+        progreso: [
+            { fecha: "Septiembre 10", minutos: 30 },
+            { fecha: "Septiembre 17", minutos: 15 },
+            { fecha: "Septiembre 21", minutos: 40 },
+            { fecha: "Octubre 04", minutos: 25 },
+            { fecha: "Octubre 20", minutos: 30 }
+        ]
 
     },
     {
@@ -61,7 +79,25 @@ const jugadoresIniciales = [
         jugoCon: "Delfi.67",
         id: "0003",
         animal: "conejo",
-        color: "verde"
+        color: "verde",
+        puntos: 67,
+        tiempoTotal: "2 horas y  30 minutos"   ,
+        actividad: [
+            { juego: "Burbujas", veces: 1, minutos: 7 },
+            { juego: "Banda Loca", veces: 6, minutos: 23 },
+            { juego: "Pesca", veces: 2, minutos: 53 },
+            { juego: "Tiro Libre", veces: 16, minutos: 43 },
+            { juego: "Granja Sonora", veces: 4, minutos: 15 },
+            { juego: "Fiesta de Colores", veces: 2, minutos: 10 },
+            { juego: "Magia", veces: 9, minutos: 4 }            
+        ],
+        progreso: [
+            { fecha: "Septiembre 10", minutos: 30 },
+            { fecha: "Septiembre 17", minutos: 15 },
+            { fecha: "Septiembre 21", minutos: 40 },
+            { fecha: "Octubre 04", minutos: 25 },
+            { fecha: "Octubre 20", minutos: 30 }
+        ]
 
     },
     {

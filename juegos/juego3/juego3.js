@@ -23,7 +23,7 @@ document.addEventListener("keydown", function (event) {
 
     if (event.code === "Space") {
         setTimeout(() => {
-           
+
             aro.src = "../../assets/personajes/aro-rojo.png";
 
         }, 3000);
@@ -35,7 +35,7 @@ document.addEventListener("keydown", function (event) {
 
     if (event.code === "Enter") {
         setTimeout(() => {
-           
+
             aro.src = "../../assets/personajes/aro-azul.png";
 
         }, 3000);
@@ -93,7 +93,18 @@ function tirarPelota(pelota, aro) {
         else if (numero === 0) {
             console.log("¡Encestaste!");
             puntaje3++;
-            document.getElementById("puntaje-juego3").textContent = "Puntaje: " + puntaje3;
+
+        /*  document.addEventListener("keydown", function (event) {
+            if (event.code === "Space") {
+                document.getElementById("puntaje-juego3-J1").textContent = "Puntaje: " + puntaje3;
+            }
+        });
+        document.addEventListener("keydown", function (event) {
+
+            if (event.code === "Enter") {
+                document.getElementById("puntaje-juego3-J2").textContent = "Puntaje: " + puntaje3;
+            }
+        }); NO FUNCIONA EL CONTADOR DE PUNTOS SEPARADO ME MATO*/
 
             pelota.style.left = x + "%";
             pelota.style.bottom = y + "%";

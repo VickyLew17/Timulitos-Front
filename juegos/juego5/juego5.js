@@ -38,7 +38,7 @@ const animales = [
     },
 
     {
-        imagen: "../../assets/personajes/animales/perro.jpg",
+        imagen: "../../assets/personajes/animales/buho.png",
         sonido: "../../assets/sonidos/perro.mp3"
     }
 ]
