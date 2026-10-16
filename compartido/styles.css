@@ -51,14 +51,19 @@
 
     .btn-comenzar-juego {
         background-color: #E90053;
-        color: #000000;
+        color: #ffffff;
         font-size: 2rem;
         font-weight: 400;
         padding: 14px 35px;
-        border: 1px solid #000000;
+        border: 1px solid #E90053;
         border-radius: 50px;
 
         font-family: Jua;
+    }
+
+    .btn-comenzar-juego:hover{
+        background-color: #a5003b;
+        border: 1px solid #a5003b;
     }
 
     button:focus-visible,
@@ -86,7 +91,6 @@
         user-select: none;
     }
 
-    .juego-card:hover,
     .btnInicio:hover,
     .BotonInformes:hover,
     .BotonSalir:hover,
@@ -97,6 +101,10 @@
     .btn-comenzar-juego:hover,
     .btn-comenzar-jugar:hover {
         box-shadow: 0 5px 10px rgba(107, 140, 255, 0.18);
+        transform: translateY(-2px);
+    }
+
+    .juego-card:hover{
         transform: translateY(-2px);
     }
 

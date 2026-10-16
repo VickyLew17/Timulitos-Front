@@ -28,7 +28,7 @@ const animales = [
     },
 
     {
-        imagen: "../../assets/personajes/animales/gato.jpg",
+        imagen: "../../assets/personajes/animales/gato.png",
         sonido: "../../assets/sonidos/gato.mp3"
     },
 
