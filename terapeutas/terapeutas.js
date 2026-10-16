@@ -1,9 +1,32 @@
 cambiarPantalla("UsuarioTerapeuta");
 
-document.getElementById("btn-entrar-terapeuta").addEventListener("click", () => {
-    cambiarPantalla("pantalla-informes");
+const ID_TERAPEUTAS = "Sonnys2026";
 
+document.getElementById("btn-entrar-terapeuta").addEventListener("click", () => {
+
+    const input = document.getElementById("ID-terapeutas");
+    const error = document.getElementById("error-id-terapeutas");
+
+    if (input.value.trim() === ID_TERAPEUTAS) {
+        input.classList.remove("input-error");
+        error.classList.remove("visible");
+
+        cambiarPantalla("pantalla-informes");
+    }
+
+    else {
+        input.classList.add("input-error");
+        error.classList.add("visible");
+    }
 });
+
+const input = document.getElementById("ID-terapeutas");
+document.getElementById("ID-terapeutas").addEventListener("input", () => {
+    document.getElementById("error-id-terapeutas").classList.remove("visible");
+    input.classList.remove("input-error");
+});
+
+
 
 document.getElementById("btn-volver-lista").addEventListener("click", () => {
     cambiarPantalla("pantalla-informes");
@@ -79,7 +102,7 @@ function mostrarInforme(jugador) {
             masJugado = dato;
         }
     });
-    
+
 
     if (masJugado !== null) {
         document.getElementById("informe-mas-jugado-juego").textContent = masJugado.juego;
