@@ -7,63 +7,55 @@ document.getElementById("btn-comenzar-juego3").addEventListener("click", functio
 
 const juego3 = document.getElementById("juego3");
 
-let puntaje3 = 0;
-/*
-const aros = [
-    { imagen: "../../assets/personajes/aro-azul.png" },
-    { imagen: "../../assets/personajes/aro-rojo.png" }
-]
+const aro = document.getElementById("aro");
+const pelota = document.getElementById("pelota-basket");
 
-numeroaro = 0*/
+let turno = 1;
+let puntajeJ1 = 0;
+let puntajeJ2 = 0;
+let tirando = false;
 
-aro.src = "../../assets/personajes/aro-azul.png";
+function cambiarAro() {
+    if (turno === 1) {
+        aro.src = "../../assets/personajes/aro-azul.png";
+    } else {
+        aro.src = "../../assets/personajes/aro-rojo.png";
+    }
+}
 
+cambiarAro();
+
+function cambiarTurno() {
+    tirando = false;
+
+    if (turno === 1) {
+        turno = 2;
+    } else {
+        turno = 1;
+    }
+
+    cambiarAro();
+}
 
 document.addEventListener("keydown", function (event) {
 
-    if (event.code === "Space") {
-        setTimeout(() => {
+    if (juego3.style.display !== "block" || tirando) {
+        return;
+    }
 
-            aro.src = "../../assets/personajes/aro-rojo.png";
+    if (turno === 1 && event.code === "Space") {
+        tirarPelota(pelota, aro);
+    }
 
-        }, 3000);
+    if (turno === 2 && event.code === "Enter") {
+        tirarPelota(pelota, aro);
     }
 
 })
 
-document.addEventListener("keydown", function (event) {
-
-    if (event.code === "Enter") {
-        setTimeout(() => {
-
-            aro.src = "../../assets/personajes/aro-azul.png";
-
-        }, 3000);
-    }
-
-})
-
-//OKEY ME QUEDE SIN TIEMPO PERO AHORA EN PROYECTO TENGO QUE HACER Q CUANDOO TOCAS ENTER CAMBIE A AZUL  Y CUANDO TOCAS ESPACIO CAMBIE A ROJO
-
-
-
-document.addEventListener("keydown", function (event) {
-
-    if (event.code === "Space" || event.code === "Enter") {
-
-        if (juego3.style.display === "block") {
-
-            const aro = document.getElementById("aro");
-            const pelota = document.getElementById("pelota-basket");
-
-
-            tirarPelota(pelota, aro);
-
-        }
-    }
-});
 
 function tirarPelota(pelota, aro) {
+    tirando = true;
 
     const numero = Math.floor(Math.random() * 2);
     let tiempo = 0;
@@ -91,23 +83,14 @@ function tirarPelota(pelota, aro) {
         }
 
         else if (numero === 0) {
-            console.log("¡Encestaste!");
-            puntaje3++;
 
-        /*  document.addEventListener("keydown", function (event) {
-            if (event.code === "Space") {
-                document.getElementById("puntaje-juego3-J1").textContent = "Puntaje: " + puntaje3;
+            if (turno === 1) {
+                puntajeJ1++;
+                document.getElementById("puntaje-juego3-J1").textContent = "Puntaje J1: " + puntajeJ1;
+            } else {
+                puntajeJ2++;
+                document.getElementById("puntaje-juego3-J2").textContent = "Puntaje J2: " + puntajeJ2;
             }
-        });
-        document.addEventListener("keydown", function (event) {
-
-            if (event.code === "Enter") {
-                document.getElementById("puntaje-juego3-J2").textContent = "Puntaje: " + puntaje3;
-            }
-        }); NO FUNCIONA EL CONTADOR DE PUNTOS SEPARADO ME MATO*/
-
-            pelota.style.left = x + "%";
-            pelota.style.bottom = y + "%";
 
             let tiempoCaida = 0;
 
@@ -123,12 +106,16 @@ function tirarPelota(pelota, aro) {
 
                 if (nuevaY > 10) {
                     requestAnimationFrame(caerPelota);
-                } else {
+                } 
+                
+                else {
                     pelota.style.bottom = "10%";
 
                     setTimeout(() => {
                         pelota.style.left = "70%";
                         pelota.style.bottom = "10%";
+
+                        cambiarTurno();
                     }, 500);
                 }
             }
@@ -139,13 +126,12 @@ function tirarPelota(pelota, aro) {
 
 
         else {
-            console.log("Fallaste");
-
-
-
+        
             setTimeout(() => {
                 pelota.style.left = "70%";
                 pelota.style.bottom = "10%";
+
+                cambiarTurno();
             }, 500);
         }
     }

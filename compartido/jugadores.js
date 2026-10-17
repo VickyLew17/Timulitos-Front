@@ -108,7 +108,24 @@ const jugadoresIniciales = [
         jugoCon: "Coco",
         id: "0004",
         animal: "cerdo",
-        color: "celeste"
+        color: "celeste",
+        tiempoTotal: "2 horas y  30 minutos"   ,
+        actividad: [
+            { juego: "Burbujas", veces: 1, minutos: 4 },
+            { juego: "Banda Loca", veces: 6, minutos: 15 },
+            { juego: "Pesca", veces: 4, minutos: 10 },
+            { juego: "Tiro Libre", veces: 1, minutos: 4 },
+            { juego: "Granja Sonora", veces: 6, minutos: 15 },
+            { juego: "Fiesta de Colores", veces: 4, minutos: 10 },
+            { juego: "Magia", veces: 1, minutos: 4 }
+        ],
+        progreso: [
+            { fecha: "Septiembre 10", minutos: 30 },
+            { fecha: "Septiembre 17", minutos: 15 },
+            { fecha: "Septiembre 21", minutos: 40 },
+            { fecha: "Octubre 04", minutos: 25 },
+            { fecha: "Octubre 20", minutos: 30 }
+        ]           
 
     },
     {
@@ -119,8 +136,24 @@ const jugadoresIniciales = [
         jugoCon: "Usuario 8",
         id: "0005",
         animal: "pollito",
-        color: "violeta"
-
+        color: "violeta",
+        tiempoTotal: "4 horas y  30 minutos",
+        actividad: [
+            { juego: "Burbujas", veces: 8, minutos: 40 },
+            { juego: "Banda Loca", veces: 6, minutos: 15 },
+            { juego: "Pesca", veces: 2, minutos: 10 },
+            { juego: "Tiro Libre", veces: 4, minutos: 14 },
+            { juego: "Granja Sonora", veces: 3, minutos: 25 },
+            { juego: "Fiesta de Colores", veces: 6, minutos: 12 },
+            { juego: "Magia", veces: 1, minutos: 4 }            
+        ],
+        progreso: [
+            { fecha: "Septiembre 10", minutos: 30 },
+            { fecha: "Septiembre 17", minutos: 15 },
+            { fecha: "Septiembre 21", minutos: 40 },
+            { fecha: "Octubre 04", minutos: 25 },
+            { fecha: "Octubre 20", minutos: 30 }
+        ]       
     },
     {
         nombre: "Cab.cata",
@@ -130,7 +163,24 @@ const jugadoresIniciales = [
         jugoCon: "Fede_Don_Satur",
         id: "0006",
         animal: "cerdo",
-        color: "rosa"
+        color: "rosa",
+        tiempoTotal: "1 hora y  30 minutos"   ,
+        actividad: [
+            { juego: "Burbujas", veces: 1, minutos: 4 },
+            { juego: "Banda Loca", veces: 6, minutos: 15 },
+            { juego: "Pesca", veces: 4, minutos: 10 },
+            { juego: "Tiro Libre", veces: 1, minutos: 4 },
+            { juego: "Granja Sonora", veces: 6, minutos: 15 },
+            { juego: "Fiesta de Colores", veces: 4, minutos: 10 },
+            { juego: "Magia", veces: 1, minutos: 4 }
+        ],
+        progreso: [
+            { fecha: "Septiembre 10", minutos: 30 },
+            { fecha: "Septiembre 17", minutos: 15 },
+            { fecha: "Septiembre 21", minutos: 40 },
+            { fecha: "Octubre   04", minutos: 25 },
+            { fecha: "Octubre 20", minutos: 30 }
+        ]           
 
     },
     {
@@ -141,7 +191,24 @@ const jugadoresIniciales = [
         jugoCon: "Cab.cata",
         id: "0007",
         animal: "conejo",
-        color: "rosa"
+        color: "rosa",
+        tiempoTotal: "2 horas y  30 minutos"   ,        
+        actividad: [
+            { juego: "Burbujas", veces: 1, minutos: 4 },
+            { juego: "Banda Loca", veces: 6, minutos: 15 },
+            { juego: "Pesca", veces: 4, minutos: 10 },
+            { juego: "Tiro Libre", veces: 1, minutos: 4 },
+            { juego: "Granja Sonora", veces: 6, minutos: 15 },
+            { juego: "Fiesta de Colores", veces: 4, minutos: 10 },
+            { juego: "Magia", veces: 1, minutos: 4 }
+        ],
+        progreso: [
+            { fecha: "Septiembre 10", minutos: 30 },
+            { fecha: "Septiembre 17", minutos: 15 },
+            { fecha: "Septiembre 21", minutos: 40 },
+            { fecha: "Octubre   04", minutos: 25 },
+            { fecha: "Octubre 20", minutos: 30 }
+        ]
 
     },
 
