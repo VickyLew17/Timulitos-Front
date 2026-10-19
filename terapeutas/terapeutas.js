@@ -111,3 +111,60 @@ function mostrarInforme(jugador) {
     }
 
 }
+
+const progreso = [
+    { fecha: "10/09", minutos: 30 },
+    { fecha: "17/09", minutos: 15 },
+    { fecha: "21/09", minutos: 40 },
+    { fecha: "04/10", minutos: 25 },
+    { fecha: "20/10", minutos: 30 }
+];
+
+const fechas = progreso.map(sesion => sesion.fecha);
+const minutos = progreso.map(sesion => sesion.minutos);
+
+const canvas = document.getElementById("graficoProgreso");
+
+new Chart(canvas, {
+    type: "bar",
+
+    data: {
+        labels: fechas,
+        datasets: [{
+            label: "Minutos jugados",
+            data: minutos,
+            backgroundColor: "#00D296",
+            borderRadius: 6,
+            barThickness: 60
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+
+        plugins: {
+            legend: {
+                display: false
+            }
+        },
+        scales: {
+            y: {
+                beginAtZero: true,
+                title: {
+                    display: true,
+                    text: "Minutos"
+                },
+                ticks: {
+                    stepSize: 10
+                }
+            },
+
+            x: {
+                title: {
+                    display: true,
+                    text: "Fecha"
+                }
+            }
+        }
+    }
+});
