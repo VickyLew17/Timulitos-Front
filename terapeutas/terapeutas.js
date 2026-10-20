@@ -35,14 +35,18 @@ document.getElementById("btn-volver-lista").addEventListener("click", () => {
 
 const listaInformes = document.querySelector(".lista-usuarios");
 
-jugadores.forEach(jugador => {
+function mostrarListaUsuarios() {
 
-    const elemento = document.createElement("div");
+    listaInformes.innerHTML = "";
 
-    elemento.classList.add("usuario-item");
-    elemento.classList.add(jugador.color);
+    jugadores.forEach(jugador => {
 
-    elemento.innerHTML = `
+        const elemento = document.createElement("div");
+
+        elemento.classList.add("usuario-item");
+        elemento.classList.add(jugador.color);
+
+        elemento.innerHTML = `
         <div class="personaje-usuario"> <img class="${jugador.animal}" src="../assets/terapeutas/${jugador.animal}.png" alt=""></div>
         <div>
             <p class="nombre-usuario"></p>
@@ -50,14 +54,17 @@ jugadores.forEach(jugador => {
         </div>
     `;
 
-    elemento.querySelector(".nombre-usuario").textContent = jugador.nombre;
+        elemento.querySelector(".nombre-usuario").textContent = jugador.nombre;
 
-    elemento.addEventListener("click", () => {
-        mostrarInforme(jugador);
+        elemento.addEventListener("click", () => {
+            mostrarInforme(jugador);
+        });
+
+        listaInformes.appendChild(elemento);
     });
+}
 
-    listaInformes.appendChild(elemento);
-});
+mostrarListaUsuarios();
 
 const buscador = document.getElementById("buscar-usuario");
 
@@ -68,14 +75,17 @@ buscador.addEventListener("input", () => {
 
     tarjetas.forEach(tarjeta => {
         const nombre = tarjeta.querySelector(".nombre-usuario").textContent.trim().toLowerCase();
-    
+
         tarjeta.style.display = nombre.includes(texto) ? "" : "none";
     });
 });
 
 let graficoProgreso = null;
+let jugadorActual = null;
 
 function mostrarInforme(jugador) {
+
+    jugadorActual = jugador;
 
     cambiarPantalla("pantalla-informe-usuario");
 
@@ -182,3 +192,21 @@ function mostrarInforme(jugador) {
     });
 
 }
+
+document.getElementById("btn-eliminar-usuario").addEventListener("click", () => {
+
+    const confirmado = confirm(`¿Estás seguro de que deseas eliminar al usuario "${jugadorActual.nombre}"? Esta acción no se puede deshacer.`);
+
+    if (!confirmado) {
+        return;
+    }
+
+    const posicion = jugadores.indexOf(jugadorActual);
+
+    jugadores.splice(posicion, 1);
+
+    guardarJugadores();
+    
+    mostrarListaUsuarios();
+    cambiarPantalla("pantalla-informes");
+});

@@ -499,3 +499,16 @@
     padding: 15px;
     box-sizing: border-box;
 }
+
+.btn-eliminar-usuario {
+    display: block;
+    
+    font-family: Jua;
+    font-size: 1.3rem;
+    padding: 8px 24px;
+
+    background-color: #ffffff;
+    color: #E53935;
+    border: .2rem solid #E53935;
+    border-radius: 50px;
+}
