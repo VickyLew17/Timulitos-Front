@@ -59,6 +59,20 @@ jugadores.forEach(jugador => {
     listaInformes.appendChild(elemento);
 });
 
+const buscador = document.getElementById("buscar-usuario");
+
+buscador.addEventListener("input", () => {
+    const texto = buscador.value.trim().toLowerCase();
+
+    const tarjetas = listaInformes.querySelectorAll(".usuario-item");
+
+    tarjetas.forEach(tarjeta => {
+        const nombre = tarjeta.querySelector(".nombre-usuario").textContent.trim().toLowerCase();
+    
+        tarjeta.style.display = nombre.includes(texto) ? "" : "none";
+    });
+});
+
 let graficoProgreso = null;
 
 function mostrarInforme(jugador) {

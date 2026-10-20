@@ -2,16 +2,11 @@ let jugadorSeleccionado1 = null;
 let jugadorSeleccionado2 = null;
 
 
-
-
 document.querySelectorAll(".btn-cerrar-popup").forEach(boton => {
     boton.addEventListener("click", () => {
         boton.closest("#elegir-usuarios, #CrearUsuario1, #CrearUsuario2, #Tutorial, #video-tutorial, #IDUsuario").style.display = "none";
     });
 });
-
-
-
 
 document.querySelectorAll("#btn-cerrar-popup-usuarios-jugadores, #btn-cerrar-popup-tutorial, #btn-cerrar-popup-video-tutorial").forEach(boton => {
     boton.addEventListener("click", () => {
@@ -22,7 +17,6 @@ document.querySelectorAll("#btn-cerrar-popup-usuarios-jugadores, #btn-cerrar-pop
     });
 });
 
-
 document.querySelectorAll("#btn-cerrar-popup-usuario1, #btn-cerrar-popup-usuario2").forEach(boton => {
     boton.addEventListener("click", () => {
         document.getElementById("elegir-usuarios").style.display = "flex";
@@ -30,7 +24,6 @@ document.querySelectorAll("#btn-cerrar-popup-usuario1, #btn-cerrar-popup-usuario
         document.getElementById("CrearUsuario2").style.display = "none";
     });
 });
-
 
 document.getElementById("btn-cerrar-popup-id-usuario").addEventListener("click", () => {
     document.getElementById("IDUsuario").style.display = "none";
@@ -40,7 +33,6 @@ document.getElementById("btn-cerrar-popup-id-usuario").addEventListener("click",
 
 
 });
-
 
 document.getElementById("btn-sin-cuenta").addEventListener("click", () => {
 
@@ -62,20 +54,13 @@ document.getElementById("btn-sin-cuenta").addEventListener("click", () => {
 
 document.getElementById("btn-con-cuenta").addEventListener("click", () => {
 
-
     document.getElementById("elegir-usuarios").style.display = "flex";
     document.getElementById("contenedor-comenzar").style.display = "none";
 
-
     document.getElementById("conejo-colgando").style.display = "none";
 
-
     document.querySelectorAll('.jugador-item').forEach(function (elemento) {
-        elemento.classList.remove('seleccionado');
-
-
-    });
-
+        elemento.classList.remove('seleccionado');    });
 
     jugadorSeleccionado1 = null
     jugadorSeleccionado2 = null
@@ -125,42 +110,31 @@ document.getElementById("btnCrearJugador2").addEventListener("click", () => {
 document.querySelectorAll("#btn-jugar1, #btn-jugar2").forEach(boton => {
     boton.addEventListener("click", () => {
 
-
         let nombreIngresado;
         let IDIngresado;
-
 
         if (boton.id === "btn-jugar1") {
             nombreIngresado = document.getElementById("nombre-usuario-jugador1");
             IDIngresado = document.getElementById("ID-usuario-jugador1");
 
-
         }
-
 
         else {
             nombreIngresado = document.getElementById("nombre-usuario-jugador2");
             IDIngresado = document.getElementById("ID-usuario-jugador2");
 
-
         }
-
 
         const nombre = nombreIngresado.value.trim();
         const idUsuario = IDIngresado.value.trim();
-
 
         nombreIngresado.classList.remove("input-error");
         IDIngresado.classList.remove("input-error");
 
 
 
-
-
-
         if (nombre === "") {
             nombreIngresado.classList.add("input-error");
-
 
             if (boton.id === "btn-jugar1") {
                 document.getElementById("completar-nombre-usuario1").classList.add("visible");
@@ -170,9 +144,6 @@ document.querySelectorAll("#btn-jugar1, #btn-jugar2").forEach(boton => {
                 document.getElementById("completar-nombre-usuario2").classList.add("visible");
                 document.getElementById("completar-nombre-usuario1").classList.remove("visible");
             }
-
-
-
 
         }
 
@@ -190,14 +161,11 @@ document.querySelectorAll("#btn-jugar1, #btn-jugar2").forEach(boton => {
                 document.getElementById("completar-id-usuario1").classList.remove("visible");
             }
 
-
         }
-
 
         if (nombre === "" || idUsuario === "") {
             return;
         }
-
 
         document.getElementById("elegir-usuarios").style.display = "flex";
         document.getElementById("CrearUsuario1").style.display = "none";
@@ -218,12 +186,12 @@ document.querySelectorAll("#btn-jugar1, #btn-jugar2").forEach(boton => {
             jugoCon: "---",
             id: idUsuario,
             animal: animal,
-            color: color
+            color: color,
+            progreso: [],
+            actividad: []
         });
 
         guardarJugadores();
-
-
 
 
         if (boton.id === "btn-jugar1") {
@@ -254,9 +222,6 @@ function limpiarErrorCompletarNombre() {
 document.getElementById("nombre-usuario-jugador1").addEventListener("input", limpiarErrorCompletarNombre);
 document.getElementById("nombre-usuario-jugador2").addEventListener("input", limpiarErrorCompletarNombre);
 
-
-
-
 function limpiarErrorCompletarID() {
     document.getElementById("ID-usuario-jugador1").classList.remove("input-error");
     document.getElementById("ID-usuario-jugador2").classList.remove("input-error");
@@ -271,24 +236,12 @@ document.getElementById("ID-usuario-jugador1").addEventListener("input", limpiar
 document.getElementById("ID-usuario-jugador2").addEventListener("input", limpiarErrorCompletarID);
 
 
-
-
-
-
 document.getElementById("listos-para-tutorial").addEventListener("click", () => {
     document.getElementById("video-tutorial").style.display = "flex";
 
-
     document.getElementById("Tutorial").style.display = "none";
 
-
 });;
-
-
-
-
-
-
 
 
 let jugadorProceso = null;
@@ -310,9 +263,6 @@ function mostrarJugadores() {
 
 
     jugadores.forEach(jugador => {
-
-
-
 
         const elemento1 = document.createElement("div");
 
