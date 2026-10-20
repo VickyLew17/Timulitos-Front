@@ -43,9 +43,7 @@ jugadores.forEach(jugador => {
     elemento.classList.add(jugador.color);
 
     elemento.innerHTML = `
-        <div class="personaje-usuario">
-            <img src="../assets/terapeutas/${jugador.animal}.png" alt="">
-        </div>
+        <div class="personaje-usuario"> <img class="${jugador.animal}" src="../assets/terapeutas/${jugador.animal}.png" alt=""></div>
         <div>
             <p class="nombre-usuario"></p>
             <span class="btn-ver-analisis">Ver análisis →</span>
@@ -125,7 +123,7 @@ function mostrarInforme(jugador) {
         graficoProgreso.destroy();
     }
 
-graficoProgreso = new Chart(document.getElementById("graficoProgreso"), {
+    graficoProgreso = new Chart(document.getElementById("graficoProgreso"), {
         type: "bar",
 
         data: {
