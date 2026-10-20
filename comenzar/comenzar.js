@@ -237,13 +237,6 @@ document.querySelectorAll("#btn-jugar1, #btn-jugar2").forEach(boton => {
         mostrarJugadores();
         comprobarSeleccion();
 
-
-        console.log("Nuevo jugador:", nombre);
-        console.log(jugadores);
-
-
-
-
     });
 });
 

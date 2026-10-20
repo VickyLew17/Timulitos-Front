@@ -15,8 +15,6 @@ document.addEventListener("keydown", function (event) {
 
         if (document.getElementById("juego2").style.display === "block") {
 
-            console.log("creando fuego artificial");
-
             crearFuegoArtificial();
 
         }

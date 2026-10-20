@@ -94,8 +94,6 @@ document.addEventListener("keydown", function (event) {
                 console.log("No se pudo reproducir el sonido:", error);
             });
 
-            console.log("explotaste una burbuja");
-
             if (burbujas.length === 0) {
                 document.getElementById("fin-juego1").style.display = "block";
             }

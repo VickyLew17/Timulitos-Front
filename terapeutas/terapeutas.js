@@ -61,6 +61,7 @@ jugadores.forEach(jugador => {
     listaInformes.appendChild(elemento);
 });
 
+let graficoProgreso = null;
 
 function mostrarInforme(jugador) {
 
@@ -109,62 +110,63 @@ function mostrarInforme(jugador) {
         document.getElementById("informe-mas-jugado-veces").textContent = masJugado.veces + " veces";
         document.getElementById("informe-mas-jugado-minutos").textContent = masJugado.minutos + " minutos";
     }
+    else {
+        document.getElementById("informe-mas-jugado-juego").textContent = "---";
+        document.getElementById("informe-mas-jugado-veces").textContent = "";
+        document.getElementById("informe-mas-jugado-minutos").textContent = "";
+    }
 
-}
+    const progreso = jugador.progreso || [];
 
-const progreso = [
-    { fecha: "10/09", minutos: 30 },
-    { fecha: "17/09", minutos: 15 },
-    { fecha: "21/09", minutos: 40 },
-    { fecha: "04/10", minutos: 25 },
-    { fecha: "20/10", minutos: 30 }
-];
+    const fechas = progreso.map(sesion => sesion.fecha);
+    const minutos = progreso.map(sesion => sesion.minutos);
 
-const fechas = progreso.map(sesion => sesion.fecha);
-const minutos = progreso.map(sesion => sesion.minutos);
+    if (graficoProgreso !== null) {
+        graficoProgreso.destroy();
+    }
 
-const canvas = document.getElementById("graficoProgreso");
+graficoProgreso = new Chart(document.getElementById("graficoProgreso"), {
+        type: "bar",
 
-new Chart(canvas, {
-    type: "bar",
-
-    data: {
-        labels: fechas,
-        datasets: [{
-            label: "Minutos jugados",
-            data: minutos,
-            backgroundColor: "#00D296",
-            borderRadius: 6,
-            barThickness: 60
-        }]
-    },
-    options: {
-        responsive: true,
-        maintainAspectRatio: false,
-
-        plugins: {
-            legend: {
-                display: false
-            }
+        data: {
+            labels: fechas,
+            datasets: [{
+                label: "Minutos jugados",
+                data: minutos,
+                backgroundColor: "#00D296",
+                borderRadius: 6,
+                barThickness: 60
+            }]
         },
-        scales: {
-            y: {
-                beginAtZero: true,
-                title: {
-                    display: true,
-                    text: "Minutos"
-                },
-                ticks: {
-                    stepSize: 10
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+
+            plugins: {
+                legend: {
+                    display: false
                 }
             },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: "Minutos"
+                    },
+                    ticks: {
+                        stepSize: 10
+                    }
+                },
 
-            x: {
-                title: {
-                    display: true,
-                    text: "Fecha"
+                x: {
+                    title: {
+                        display: true,
+                        text: "Fecha"
+                    }
                 }
             }
         }
-    }
-});
+    });
+
+}

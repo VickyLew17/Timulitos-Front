@@ -63,11 +63,11 @@ const jugadoresIniciales = [
             { juego: "Magia", veces: 1, minutos: 4 }            
         ],
         progreso: [
-            { fecha: "Septiembre 10", minutos: 30 },
+            { fecha: "Septiembre 10", minutos: 2 },
             { fecha: "Septiembre 17", minutos: 15 },
-            { fecha: "Septiembre 21", minutos: 40 },
-            { fecha: "Octubre 04", minutos: 25 },
-            { fecha: "Octubre 20", minutos: 30 }
+            { fecha: "Septiembre 21", minutos: 30 },
+            { fecha: "Octubre 04", minutos: 28 },
+            { fecha: "Octubre 20", minutos: 34 }
         ]
 
     },
@@ -92,10 +92,10 @@ const jugadoresIniciales = [
             { juego: "Magia", veces: 9, minutos: 4 }            
         ],
         progreso: [
-            { fecha: "Septiembre 10", minutos: 30 },
-            { fecha: "Septiembre 17", minutos: 15 },
-            { fecha: "Septiembre 21", minutos: 40 },
-            { fecha: "Octubre 04", minutos: 25 },
+            { fecha: "Septiembre 10", minutos: 20 },
+            { fecha: "Septiembre 17", minutos: 17 },
+            { fecha: "Septiembre 21", minutos: 41 },
+            { fecha: "Octubre 04", minutos: 53 },
             { fecha: "Octubre 20", minutos: 30 }
         ]
 
@@ -120,11 +120,11 @@ const jugadoresIniciales = [
             { juego: "Magia", veces: 1, minutos: 4 }
         ],
         progreso: [
-            { fecha: "Septiembre 10", minutos: 30 },
+            { fecha: "Septiembre 10", minutos: 15 },
             { fecha: "Septiembre 17", minutos: 15 },
-            { fecha: "Septiembre 21", minutos: 40 },
-            { fecha: "Octubre 04", minutos: 25 },
-            { fecha: "Octubre 20", minutos: 30 }
+            { fecha: "Septiembre 21", minutos: 56 },
+            { fecha: "Octubre 04", minutos: 31 },
+            { fecha: "Octubre 21", minutos: 42 }
         ]           
 
     },
