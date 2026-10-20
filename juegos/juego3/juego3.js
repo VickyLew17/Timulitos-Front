@@ -72,13 +72,13 @@ function tirarPelota(pelota, aro) {
         }
 
         else {
-            y = 10 + (160 * tiempo) - (165 * tiempo * tiempo);
+            y = 10 + (160 * tiempo) - (175 * tiempo * tiempo);
         }
 
         pelota.style.left = x + "%";
         pelota.style.bottom = y + "%";
 
-        if (tiempo < 1) {
+        if (tiempo < .95) {
             requestAnimationFrame(animarPelota);
         }
 
@@ -104,12 +104,12 @@ function tirarPelota(pelota, aro) {
                 pelota.style.bottom = nuevaY + "%";
 
 
-                if (nuevaY > 10) {
+                if (nuevaY > 5) {
                     requestAnimationFrame(caerPelota);
                 } 
                 
                 else {
-                    pelota.style.bottom = "10%";
+                    pelota.style.bottom = "5%";
 
                     setTimeout(() => {
                         pelota.style.left = "70%";
