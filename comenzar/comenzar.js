@@ -48,6 +48,7 @@ document.getElementById("btn-sin-cuenta").addEventListener("click", () => {
     jugadorSeleccionado1 = null
     jugadorSeleccionado2 = null
 
+    localStorage.removeItem("jugadoresActuales");
 
 });
 
@@ -253,7 +254,6 @@ const animalArribaID = document.getElementById("sonnys-arriba-usuario-ID");
 
 function mostrarJugadores() {
 
-
     const listaJugadores1 = document.getElementById("lista-jugadores1");
     const listaJugadores2 = document.getElementById("lista-jugadores2");
 
@@ -314,14 +314,6 @@ function mostrarJugadores() {
         listaJugadores1.appendChild(elemento1);
 
 
-
-
-
-
-
-
-
-
         const elemento2 = document.createElement("div");
 
 
@@ -377,11 +369,13 @@ function mostrarJugadores() {
 mostrarJugadores();
 
 
-
-
 function comprobarSeleccion() {
     if (jugadorSeleccionado1 !== null && jugadorSeleccionado2 !== null) {
 
+        localStorage.setItem("jugadoresActuales", JSON.stringify ({
+            jugador1: jugadorSeleccionado1,
+            jugador2: jugadorSeleccionado2
+        }))
 
         const titulo = document.getElementById("titulo-tutorial");
 
@@ -508,4 +502,3 @@ document.getElementById("btn-confirmar-id").addEventListener("click", () => {
 
 
 });
-
