@@ -32,8 +32,10 @@
     .titulo-juego {
         margin-top: 200px;
         text-align: center;
-        font-weight: 700;
+        font-weight: 500;
         font-size: 7rem;
+
+        font-family: jua;
     }
 
     .descripcion-juego {

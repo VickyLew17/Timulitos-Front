@@ -1,13 +1,23 @@
 cambiarPantalla("UsuarioTerapeuta");
 
-const ID_TERAPEUTAS = "Sonnys2026";
+const ID_INICIAL = "Sonnys2026";
+
+function leerIdTerapeutas() {
+    const guardado = localStorage.getItem("idTerapeutas");
+
+    if (guardado === null) {
+        return ID_INICIAL;
+    }
+
+    return guardado;
+}
 
 document.getElementById("btn-entrar-terapeuta").addEventListener("click", () => {
 
     const input = document.getElementById("ID-terapeutas");
     const error = document.getElementById("error-id-terapeutas");
 
-    if (input.value.trim() === ID_TERAPEUTAS) {
+    if (input.value.trim() === leerIdTerapeutas()) {
         input.classList.remove("input-error");
         error.classList.remove("visible");
 
@@ -209,4 +219,48 @@ document.getElementById("btn-eliminar-usuario").addEventListener("click", () => 
     
     mostrarListaUsuarios();
     cambiarPantalla("pantalla-informes");
+});
+
+
+
+const popupCambiarId = document.getElementById("popup-cambiar-id");
+const campoIdNuevo = document.getElementById("id-nuevo");
+const campoIdRepetido = document.getElementById("id-repetido");
+const mensajeCambiarId = document.getElementById("mensaje-cambiar-id");
+
+function cerrarCambiarId() {
+    popupCambiarId.classList.remove("visible");
+    
+    campoIdNuevo.value = "";
+    campoIdRepetido.value = "";
+
+    mensajeCambiarId.textContent = "";
+}
+
+document.getElementById("btn-abrir-cambiar-id").addEventListener("click", () => {
+    popupCambiarId.classList.add("visible");
+});
+
+document.getElementById("btn-cancelar-id").addEventListener("click", cerrarCambiarId);
+
+document.getElementById("btn-guardar-id").addEventListener("click", () => {
+
+    const nuevo = campoIdNuevo.value.trim();
+    const repetido = campoIdRepetido.value.trim();
+
+    if (nuevo === "") {
+        mensajeCambiarId.textContent = "Escribí el ID nuevo";
+
+        return;
+    }
+
+    if (nuevo !== repetido) {
+        mensajeCambiarId.textContent = "Los dos ID no coinciden";
+
+        return;
+    }
+
+    localStorage.setItem("idTerapeutas", nuevo);
+
+    cerrarCambiarId();
 });
