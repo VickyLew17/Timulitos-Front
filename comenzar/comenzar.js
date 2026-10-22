@@ -370,8 +370,8 @@ function comprobarSeleccion() {
     if (jugadorSeleccionado1 !== null && jugadorSeleccionado2 !== null) {
 
         localStorage.setItem("jugadoresActuales", JSON.stringify ({
-            jugador1: jugadorSeleccionado1,
-            jugador2: jugadorSeleccionado2
+            jugador1: jugadorSeleccionado1.nombre,
+            jugador2: jugadorSeleccionado2.nombre
         }))
 
         const titulo = document.getElementById("titulo-tutorial");
