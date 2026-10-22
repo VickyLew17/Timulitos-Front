@@ -28,10 +28,7 @@ document.querySelectorAll("#btn-cerrar-popup-usuario1, #btn-cerrar-popup-usuario
 document.getElementById("btn-cerrar-popup-id-usuario").addEventListener("click", () => {
     document.getElementById("IDUsuario").style.display = "none";
 
-
     document.getElementById("elegir-usuarios").style.display = "flex";
-
-
 });
 
 document.getElementById("btn-sin-cuenta").addEventListener("click", () => {
