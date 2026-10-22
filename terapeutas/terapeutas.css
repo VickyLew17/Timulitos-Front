@@ -579,3 +579,14 @@
     font-size: 1.1rem;
     color: #888;
 }
+
+#id-nuevo:focus,  #id-repetido:focus{
+    border-color: #9E4EFF;
+}
+
+#btn-guardar-id{
+    background-color: #9E4EFF;
+    border-color: #9E4EFF;
+    color: #ffffff;
+    width: 40%;
+}
