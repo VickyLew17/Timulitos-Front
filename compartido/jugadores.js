@@ -17,7 +17,7 @@ const jugadoresIniciales = [
     {
         nombre: "Liam_cht",
         tiempo: "15 minutos",
-        juegosRepetidos: "Burbujas y Pesca",
+        juegosRepetidos: "Burbujero y Splash!",
         ultimaSesion: "18/09/2026",
         jugoCon: "Franchu",
         id: "0001",
@@ -26,12 +26,12 @@ const jugadoresIniciales = [
         puntos: 222,
         tiempoTotal: "2 horas y  30 minutos"   ,
         actividad: [
-            { juego: "Burbujas", veces: 1, minutos: 4 },
+            { juego: "Burbujero", veces: 1, minutos: 4 },
             { juego: "Banda Loca", veces: 6, minutos: 15 },
-            { juego: "Pesca", veces: 4, minutos: 10 },
+            { juego: "Splash!", veces: 4, minutos: 10 },
             { juego: "Tiro Libre", veces: 1, minutos: 4 },
-            { juego: "Granja Sonora", veces: 6, minutos: 15 },
-            { juego: "Fiesta de Colores", veces: 4, minutos: 10 },
+            { juego: "Zoo", veces: 6, minutos: 15 },
+            { juego: "Destellos", veces: 4, minutos: 10 },
             { juego: "Magia", veces: 1, minutos: 4 }            
         ],
         progreso: [
@@ -54,12 +54,12 @@ const jugadoresIniciales = [
         puntos: 456,
         tiempoTotal: "32 minutos"   ,
         actividad: [
-            { juego: "Burbujas", veces: 8, minutos: 40 },
+            { juego: "Burbujero", veces: 8, minutos: 40 },
             { juego: "Banda Loca", veces: 6, minutos: 15 },
-            { juego: "Pesca", veces: 2, minutos: 10 },
+            { juego: "Splash!", veces: 2, minutos: 10 },
             { juego: "Tiro Libre", veces: 4, minutos: 14 },
-            { juego: "Granja Sonora", veces: 3, minutos: 25 },
-            { juego: "Fiesta de Colores", veces: 6, minutos: 12 },
+            { juego: "Zoo", veces: 3, minutos: 25 },
+            { juego: "Destellos", veces: 6, minutos: 12 },
             { juego: "Magia", veces: 1, minutos: 4 }            
         ],
         progreso: [
@@ -74,7 +74,7 @@ const jugadoresIniciales = [
     {
         nombre: "Coco",
         tiempo: "10 minutos",
-        juegosRepetidos: "Granja Sonora",
+        juegosRepetidos: "Zoo",
         ultimaSesion: "17/09/2026",
         jugoCon: "Delfi.67",
         id: "0003",
@@ -83,12 +83,12 @@ const jugadoresIniciales = [
         puntos: 67,
         tiempoTotal: "2 horas y  30 minutos"   ,
         actividad: [
-            { juego: "Burbujas", veces: 1, minutos: 7 },
+            { juego: "Burbujero", veces: 1, minutos: 7 },
             { juego: "Banda Loca", veces: 6, minutos: 23 },
-            { juego: "Pesca", veces: 2, minutos: 53 },
+            { juego: "Splash!", veces: 2, minutos: 53 },
             { juego: "Tiro Libre", veces: 16, minutos: 43 },
-            { juego: "Granja Sonora", veces: 4, minutos: 15 },
-            { juego: "Fiesta de Colores", veces: 2, minutos: 10 },
+            { juego: "Zoo", veces: 4, minutos: 15 },
+            { juego: "Destellos", veces: 2, minutos: 10 },
             { juego: "Magia", veces: 9, minutos: 4 }            
         ],
         progreso: [
@@ -103,7 +103,7 @@ const jugadoresIniciales = [
     {
         nombre: "Delfi.67",
         tiempo: "25 minutos",
-        juegosRepetidos: "Pesca",
+        juegosRepetidos: "Splash!",
         ultimaSesion: "16/09/2026",
         jugoCon: "Coco",
         id: "0004",
@@ -111,12 +111,12 @@ const jugadoresIniciales = [
         color: "celeste",
         tiempoTotal: "2 horas y  30 minutos"   ,
         actividad: [
-            { juego: "Burbujas", veces: 1, minutos: 4 },
+            { juego: "Burbujero", veces: 1, minutos: 4 },
             { juego: "Banda Loca", veces: 6, minutos: 15 },
-            { juego: "Pesca", veces: 4, minutos: 10 },
+            { juego: "Splash!", veces: 4, minutos: 10 },
             { juego: "Tiro Libre", veces: 1, minutos: 4 },
-            { juego: "Granja Sonora", veces: 6, minutos: 15 },
-            { juego: "Fiesta de Colores", veces: 4, minutos: 10 },
+            { juego: "Zoo", veces: 6, minutos: 15 },
+            { juego: "Destellos", veces: 4, minutos: 10 },
             { juego: "Magia", veces: 1, minutos: 4 }
         ],
         progreso: [
@@ -131,7 +131,7 @@ const jugadoresIniciales = [
     {
         nombre: "Kiky",
         tiempo: "15 minutos",
-        juegosRepetidos: "Burbujas y Pesca",
+        juegosRepetidos: "Burbujero y Splash!",
         ultimaSesion: "18/09/2026",
         jugoCon: "Usuario 8",
         id: "0005",
@@ -139,12 +139,12 @@ const jugadoresIniciales = [
         color: "violeta",
         tiempoTotal: "4 horas y  30 minutos",
         actividad: [
-            { juego: "Burbujas", veces: 8, minutos: 40 },
+            { juego: "Burbujero", veces: 8, minutos: 40 },
             { juego: "Banda Loca", veces: 6, minutos: 15 },
-            { juego: "Pesca", veces: 2, minutos: 10 },
+            { juego: "Splash!", veces: 2, minutos: 10 },
             { juego: "Tiro Libre", veces: 4, minutos: 14 },
-            { juego: "Granja Sonora", veces: 3, minutos: 25 },
-            { juego: "Fiesta de Colores", veces: 6, minutos: 12 },
+            { juego: "Zoo", veces: 3, minutos: 25 },
+            { juego: "Destellos", veces: 6, minutos: 12 },
             { juego: "Magia", veces: 1, minutos: 4 }            
         ],
         progreso: [
@@ -166,12 +166,12 @@ const jugadoresIniciales = [
         color: "rosa",
         tiempoTotal: "1 hora y  30 minutos"   ,
         actividad: [
-            { juego: "Burbujas", veces: 1, minutos: 4 },
+            { juego: "Burbujero", veces: 1, minutos: 4 },
             { juego: "Banda Loca", veces: 6, minutos: 15 },
-            { juego: "Pesca", veces: 4, minutos: 10 },
+            { juego: "Splash!", veces: 4, minutos: 10 },
             { juego: "Tiro Libre", veces: 1, minutos: 4 },
-            { juego: "Granja Sonora", veces: 6, minutos: 15 },
-            { juego: "Fiesta de Colores", veces: 4, minutos: 10 },
+            { juego: "Zoo", veces: 6, minutos: 15 },
+            { juego: "Destellos", veces: 4, minutos: 10 },
             { juego: "Magia", veces: 1, minutos: 4 }
         ],
         progreso: [
@@ -186,7 +186,7 @@ const jugadoresIniciales = [
     {
         nombre: "Fede_Don_Satur",
         tiempo: "67 minutos",
-        juegosRepetidos: "Granja Sonora",
+        juegosRepetidos: "Zoo",
         ultimaSesion: "17/09/2026",
         jugoCon: "Cab.cata",
         id: "0007",
@@ -194,12 +194,12 @@ const jugadoresIniciales = [
         color: "rosa",
         tiempoTotal: "2 horas y  30 minutos"   ,        
         actividad: [
-            { juego: "Burbujas", veces: 1, minutos: 4 },
+            { juego: "Burbujero", veces: 1, minutos: 4 },
             { juego: "Banda Loca", veces: 6, minutos: 15 },
-            { juego: "Pesca", veces: 4, minutos: 10 },
+            { juego: "Splash!", veces: 4, minutos: 10 },
             { juego: "Tiro Libre", veces: 1, minutos: 4 },
-            { juego: "Granja Sonora", veces: 6, minutos: 15 },
-            { juego: "Fiesta de Colores", veces: 4, minutos: 10 },
+            { juego: "Zoo", veces: 6, minutos: 15 },
+            { juego: "Destellos", veces: 4, minutos: 10 },
             { juego: "Magia", veces: 1, minutos: 4 }
         ],
         progreso: [
@@ -215,7 +215,7 @@ const jugadoresIniciales = [
     {
         nombre: "Jochu",
         tiempo: "25 minutos",
-        juegosRepetidos: "Pesca",
+        juegosRepetidos: "Splash!",
         ultimaSesion: "16/09/2026",
         jugoCon: "Usuario 7",
         id: "0008",
@@ -224,12 +224,12 @@ const jugadoresIniciales = [
         puntos: 15,
         tiempoTotal: "1 hora y  30 minutos"   ,
         actividad: [
-            { juego: "Burbujas", veces: 1, minutos: 4 },
+            { juego: "Burbujero", veces: 1, minutos: 4 },
             { juego: "Banda Loca", veces: 6, minutos: 15 },
-            { juego: "Pesca", veces: 4, minutos: 10 },
+            { juego: "Splash!", veces: 4, minutos: 10 },
             { juego: "Tiro Libre", veces: 1, minutos: 4 },
-            { juego: "Granja Sonora", veces: 6, minutos: 15 },
-            { juego: "Fiesta de Colores", veces: 4, minutos: 10 },
+            { juego: "Zoo", veces: 6, minutos: 15 },
+            { juego: "Destellos", veces: 4, minutos: 10 },
             { juego: "Magia", veces: 1, minutos: 4 }
         ],
         progreso: [
@@ -244,7 +244,7 @@ const jugadoresIniciales = [
     {
         nombre: "user 9",
         tiempo: "15 minutos",
-        juegosRepetidos: "Burbujas y Pesca",
+        juegosRepetidos: "Burbujero y Splash!",
         ultimaSesion: "18/09/2026",
         jugoCon: "Franchu",
         id: "0009",
@@ -253,12 +253,12 @@ const jugadoresIniciales = [
         puntos: 178,
         tiempoTotal: "2 horas y  30 minutos"   ,
         actividad: [
-            { juego: "Burbujas", veces: 1, minutos: 4 },
+            { juego: "Burbujero", veces: 1, minutos: 4 },
             { juego: "Banda Loca", veces: 6, minutos: 15 },
-            { juego: "Pesca", veces: 4, minutos: 10 },
+            { juego: "Splash!", veces: 4, minutos: 10 },
             { juego: "Tiro Libre", veces: 1, minutos: 4 },
-            { juego: "Granja Sonora", veces: 6, minutos: 15 },
-            { juego: "Fiesta de Colores", veces: 4, minutos: 10 },
+            { juego: "Zoo", veces: 6, minutos: 15 },
+            { juego: "Destellos", veces: 4, minutos: 10 },
             { juego: "Magia", veces: 1, minutos: 4 }
         ],
         progreso: [
