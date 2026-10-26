@@ -66,7 +66,7 @@ function golpear(martillo, angulo) {
     setTimeout(() => {
         topoActual.classList.remove("arriba");
         martillo.style.transform = "";
-    }, 1600);
+    }, 1400);
 
     setTimeout(() => {
         if (turno === 1) {

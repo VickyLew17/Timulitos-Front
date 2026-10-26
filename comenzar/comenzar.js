@@ -45,7 +45,7 @@ document.getElementById("btn-sin-cuenta").addEventListener("click", () => {
     jugadorSeleccionado1 = null
     jugadorSeleccionado2 = null
 
-    localStorage.removeItem("jugadoresActuales");
+    /*jugadores*/localStorage.removeItem("jugadoresActuales");
 
 });
 
@@ -303,8 +303,6 @@ function mostrarJugadores() {
             animalArribaID.src = "../assets/arriba-popups/pollo-colgando.png";
 
 
-
-
         });
 
 
@@ -369,7 +367,7 @@ mostrarJugadores();
 function comprobarSeleccion() {
     if (jugadorSeleccionado1 !== null && jugadorSeleccionado2 !== null) {
 
-        localStorage.setItem("jugadoresActuales", JSON.stringify ({
+       /*jugadores*/ localStorage.setItem("jugadoresActuales", JSON.stringify ({
             jugador1: jugadorSeleccionado1.nombre,
             jugador2: jugadorSeleccionado2.nombre
         }))

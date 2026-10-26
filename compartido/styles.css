@@ -61,6 +61,9 @@
         border-radius: 50px;
 
         font-family: Jua;
+
+        top: 50%;
+        bottom: 50%;
     }
 
     .btn-comenzar-juego:hover{
