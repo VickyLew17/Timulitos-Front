@@ -1,4 +1,4 @@
-fetch('')                         // Ruta al archivo JSON
+/*fetch('')                         // Ruta al archivo JSON
   .then(response => response.json())        // Convertir la respuesta en JSON
   .then(data => {              // Aquí tienes acceso al JSON en formato de objeto JS
     console.log('Jugadores cargados desde JSON:');
@@ -10,9 +10,9 @@ fetch('')                         // Ruta al archivo JSON
   });
 
 
-const jugadores = [];
+const jugadores = [];*/
 
-/*const jugadoresIniciales = [
+const jugadoresIniciales = [
     {
         nombre: "Liam_cht",
         tiempo: "15 minutos",
@@ -283,4 +283,4 @@ if (jugadoresGuardados === null) {
 
 function guardarJugadores() {
     localStorage.setItem('jugadores', JSON.stringify(jugadores));
-}*/
+}

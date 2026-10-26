@@ -1,4 +1,4 @@
-fetch('')                         // Ruta al archivo JSON
+/*fetch('')                         // Ruta al archivo JSON
   .then(response => response.json())        // Convertir la respuesta en JSON
   .then(data => {              // Aquí tienes acceso al JSON en formato de objeto JS
     console.log('Partida cargada:');
@@ -12,7 +12,7 @@ fetch('')                         // Ruta al archivo JSON
 
 
 
-const jugadores = [];
+const ALGO = [];*/
 
 
 

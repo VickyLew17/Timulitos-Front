@@ -1,5 +1,34 @@
-//HASTA TENER BACKKK PARA VER SI ESTA COSA FUNCIONA DECIME QUE SI PORFA
+
+const SERVIDOR = "http://localhost:3000";
+
+const rutasJuegos = {
+    "Burbujero": "burbujero",
+    "Destellos": "destellos",
+    "Tiro Libre": "tiro-libre",
+    "Banda Loca": "banda-loca",
+    "Zoo": "zoo",
+    "Magia": "magia",
+    "Splash!": "splash",
+    "Topito Cabezón": "topito-cabezon"
+};
+
 
 function registrarPartida(nombreJugador, nombreCompañero, juego, minutos, puntos) {
-    console.log("Partida:", nombreJugador, "jugó a", juego, "con", nombreCompañero, "-", minutos, "min -", puntos, "puntos");
+
+    const ruta = rutasJuegos[juego];
+
+    fetch(SERVIDOR + "/resultados/" + ruta, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+            usuario: nombreJugador,
+            contrincante: nombreCompañero,
+            tiempo: minutos,
+            puntos: puntos
+        }),
+        keepalive: true
+    })
+    .catch(error => {
+        console.log("No se pudo guardar la partida en el servidor:", error);
+    });
 }
