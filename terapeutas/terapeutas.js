@@ -93,9 +93,85 @@ buscador.addEventListener("input", () => {
 let graficoProgreso = null;
 let jugadorActual = null;
 
-function mostrarInforme(jugador) {
+function calcularInforme(jugador, partidas) {
+
+    const actividad = [];
+    const progreso = [];
+    let puntos = 0;
+    let minutosTotales = 0;
+
+    partidas.forEach(partida => {
+
+        let juego = actividad.find(item => item.juego === partida.juego);
+
+        if (juego === undefined) {
+            juego = { juego: partida.juego, veces: 0, minutos: 0 };
+
+            actividad.push(juego);
+        }
+
+        juego.veces++;
+        juego.minutos += partida.tiempo;
+
+
+        const fecha = partida.fecha.split(",")[0];
+
+        let dia = progreso.find(item => item.fecha === fecha);
+
+        if (dia === undefined) {
+            dia = { fecha: fecha, minutos: 0 };
+
+            progreso.push(dia);
+        }
+
+        dia.minutos += partida.tiempo;
+
+        puntos += partida.puntos;
+        minutosTotales += partida.tiempo;
+    });
+
+    const ultima = partidas[partidas.length - 1];
+
+    return {
+        nombre: jugador.nombre,
+        id: jugador.id,
+        animal: jugador.animal,
+        actividad: actividad,
+        progreso: progreso.slice(-5),
+        puntos: puntos,
+        tiempoTotal: minutosTotales + " minutos",
+        ultimaSesion: ultima.fecha.split(",")[0],
+        jugoCon: ultima.contrincante
+
+    };
+
+}
+
+async function mostrarInforme(jugador) {
 
     jugadorActual = jugador;
+
+    let datos = jugador;
+
+    try {
+        const respuesta = await fetch(SERVIDOR + "/resultados/usuario/" + encodeURIComponent(jugador.nombre));
+
+        const partidas = await respuesta.json();
+
+        if (partidas.length > 0) {
+            datos = calcularInforme(jugador, partidas);
+        }
+    }
+
+    catch (error) {
+        console.log("No se pudo conectar con el servidor, muestra los datos de ejemplo");
+    }
+
+    hacerInforme(datos);
+
+}
+
+function hacerInforme(jugador) {
 
     cambiarPantalla("pantalla-informe-usuario");
 
@@ -216,7 +292,7 @@ document.getElementById("btn-eliminar-usuario").addEventListener("click", () => 
     jugadores.splice(posicion, 1);
 
     guardarJugadores();
-    
+
     mostrarListaUsuarios();
     cambiarPantalla("pantalla-informes");
 });
@@ -230,7 +306,7 @@ const mensajeCambiarId = document.getElementById("mensaje-cambiar-id");
 
 function cerrarCambiarId() {
     popupCambiarId.classList.remove("visible");
-    
+
     campoIdNuevo.value = "";
     campoIdRepetido.value = "";
 

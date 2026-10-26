@@ -1,4 +1,6 @@
 
+const SERVIDOR = "http://localhost:3000";
+
 function cambiarPantalla(idPantalla) {
     console.log(idPantalla);
 

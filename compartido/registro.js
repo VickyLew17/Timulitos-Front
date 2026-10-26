@@ -1,6 +1,4 @@
 
-const SERVIDOR = "http://localhost:3000";
-
 const rutasJuegos = {
     "Burbujero": "burbujero",
     "Destellos": "destellos",
@@ -17,7 +15,7 @@ function registrarPartida(nombreJugador, nombreCompañero, juego, minutos, punto
 
     const ruta = rutasJuegos[juego];
 
-    fetch(SERVIDOR + "/resultados/" + ruta, {
+    return fetch(SERVIDOR + "/resultados/" + ruta, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

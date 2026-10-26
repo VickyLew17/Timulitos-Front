@@ -50,7 +50,7 @@ document.querySelectorAll(".BotonSalir").forEach(boton => {
     boton.addEventListener("click", terminarPartida);
 });
 
-function terminarPartida() {
+async function terminarPartida(event) {
     if (inicioPartida === null) {
         return;
     }
@@ -61,15 +61,16 @@ function terminarPartida() {
         return;
     }
 
+    event.preventDefault();
+    const destino = event.currentTarget.href;
+
     const actuales = JSON.parse(guardado);
     const minutos = Math.ceil((Date.now() - inicioPartida) / 60000);
 
-    registrarPartida(actuales.jugador1, actuales.jugador2, nombreJuego, minutos, toquesJ1);
-    registrarPartida(actuales.jugador2, actuales.jugador1, nombreJuego, minutos, toquesJ2);
+    inicioPartida = null;
 
+    await registrarPartida(actuales.jugador1, actuales.jugador2, nombreJuego, minutos, toquesJ1);
+    await registrarPartida(actuales.jugador2, actuales.jugador1, nombreJuego, minutos, toquesJ2);
 
-    alert(actuales);
-
-
-    inicioPartida = null
+    window.location.href = destino;
 }
