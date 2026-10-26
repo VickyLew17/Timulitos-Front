@@ -193,8 +193,6 @@ function hacerInforme(jugador) {
 
     actividad.forEach(dato => {
 
-        console.log(dato);
-
         const item = document.createElement("p");
 
         item.classList.add("item-actividad");
