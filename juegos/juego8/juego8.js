@@ -2,6 +2,8 @@ cambiarPantalla("portada-juego8");
 
 document.getElementById("btn-comenzar-juego8").addEventListener("click", function () {
     cambiarPantalla("juego8");
+
+    setTimeout(sacarTopo, 500)
 });
 
 const juego8 = document.getElementById("juego8");
@@ -9,106 +11,72 @@ const juego8 = document.getElementById("juego8");
 const martillo1 = document.getElementById("martillo-1");
 const martillo2 = document.getElementById("martillo-2");
 
-const topos = [
-    document.getElementById("topo-1"),
-    document.getElementById("topo-2"),
-    document.getElementById("topo-3"),
-    document.getElementById("topo-4"),
-    document.getElementById("topo-5"),
-    document.getElementById("topo-6")
-];
+const topos = document.querySelectorAll(".topo");
 
 let topoActual = null;
-let golpeando1 = false;
-let golpeando2 = false;
+let turno = 1;
+let golpeando = false;
 
-function mostrarTopo() {
 
-    topos.forEach(topo => {
-        topo.style.display = "none";
-    });
+function sacarTopo() {
 
     const numero = Math.floor(Math.random() * topos.length);
 
     topoActual = topos[numero];
 
-    topoActual.style.display = "block";
+    topoActual.classList.add("arriba");
 }
 
-mostrarTopo();
 
 document.addEventListener("keydown", function (event) {
 
+    if (juego8.style.display !== "block" || golpeando || topoActual === null) {
+        return;
+    }
+
     if (juego8.style.display === "block") {
 
-        if (event.code === "Space" && !golpeando1) {
-            golpear(martillo1, 1);
+        if (event.code === "Space" && turno === 1) {
+            golpear(martillo1, 40);
         }
 
-        if (event.code === "Enter" && !golpeando2) {
-            golpear(martillo2, 2);
+        if (event.code === "Enter" && turno === 2) {
+            golpear(martillo2, -40);
         }
-
     }
-
 });
 
-function golpear(martillo, jugador) {
+function golpear(martillo, angulo) {
 
-    let posicion = 10;
+    golpeando = true;
 
-    if (jugador === 1) {
-        golpeando1 = true;
-    } else {
-        golpeando2 = true;
-    }
+    const cajaTopo = topoActual.getBoundingClientRect();
+    const cajaMartillo = martillo.getBoundingClientRect();
 
-    function bajarMartillo() {
+    const moverX = (cajaTopo.left + cajaTopo.width / 2) - (cajaMartillo.left + cajaMartillo.width / 2);
+    const moverY = cajaTopo.top - (cajaMartillo.top + cajaMartillo.height / 2) - 30;
 
-        posicion += 2;
 
-        martillo.style.top = posicion + "%";
+    martillo.style.transform = `translate(${moverX}px, ${moverY}px)`;
 
-        if (posicion < 45) {
+    setTimeout(() => {
+        martillo.style.transform = `translate(${moverX}px, ${moverY}px) rotate(${angulo}deg)`;
+    }, 500);
 
-            requestAnimationFrame(bajarMartillo);
+    setTimeout(() => {
+        topoActual.classList.remove("arriba");
+        martillo.style.transform = "";
+    }, 1600);
 
-        } else {
-
-            if (topoActual !== null) {
-                topoActual.style.display = "none";
-            }
-
-            subirMartillo();
+    setTimeout(() => {
+        if (turno === 1) {
+            turno = 2;
         }
-    }
-
-
-    function subirMartillo() {
-
-        posicion -= 2;
-
-        martillo.style.top = posicion + "%";
-
-        if (posicion > 10) {
-
-            requestAnimationFrame(subirMartillo);
-
-        } else {
-
-            martillo.style.top = "10%";
-
-            if (jugador === 1) {
-                golpeando1 = false;
-            } else {
-                golpeando2 = false;
-            }
-
-            setTimeout(() => {
-                mostrarTopo();
-            }, 500);
+        else {
+            turno = 1;
         }
-    }
 
-    bajarMartillo();
+        golpeando = false;
+        sacarTopo();
+    }, 2300);
 }

@@ -86,10 +86,10 @@ function tirarPelota(pelota, aro) {
 
             if (turno === 1) {
                 puntajeJ1++;
-                document.getElementById("puntaje-juego3-J1").textContent = "Puntaje J1: " + puntajeJ1;
+                document.getElementById("puntaje-juego3-J1").textContent = puntajeJ1 + "   ⭐️";
             } else {
                 puntajeJ2++;
-                document.getElementById("puntaje-juego3-J2").textContent = "Puntaje J2: " + puntajeJ2;
+                document.getElementById("puntaje-juego3-J2").textContent = puntajeJ2 + "   ⭐️";
             }
 
             let tiempoCaida = 0;

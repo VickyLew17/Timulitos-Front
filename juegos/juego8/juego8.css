@@ -3,97 +3,70 @@
     height: 100vh;
     position: relative;
     overflow: hidden;
+
+    background-image: url("../../assets/fondos/fondo8.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
-
-.martillo {
+.campo {
     position: absolute;
-    width: 28vw;
-    z-index: 10;
-    transition: translate 0.25s ease-in;
+    top: 25%;
+    left: 15%;
+    right: 15%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3vw 4vw;
 }
 
-#martillo-1 {
-    left: 25%;
-    top: 10%;
-
-    transform: rotate(90deg);
+.madriguera {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#martillo-2 {
-    right: 25%;
-    top: 10%;
-}
+.ventana-topo {
+    width: 50%;
+    aspect-ratio: 230 / 313;
+    overflow: hidden;
 
-
-.agujero {
-    position: absolute;
-    width: 20vw;
-}
-
-#agujero-1 {
-    left: 10%;
-    top: 40%;
-}
-
-#agujero-2 {
-    left: 43%;
-    top: 40%;
-}
-
-#agujero-3 {
-    right: 10%;
-    top: 40%;
-}
-
-#agujero-4 {
-    left: 10%;
-    top: 72%;
-}
-
-#agujero-5 {
-    left: 43%;
-    top: 72%;
-}
-
-#agujero-6 {
-    right: 10%;
-    top: 72%;
+    position: relative;
+    z-index: 2;
 }
 
 .topo {
+    display: block;
+    width: 100%;
+
+    transform: translateY(100%);
+    transition: transform 0.5s ease;
+}
+
+.topo.arriba {
+    transform: translateY(0);
+}
+
+.agujero {
+    display: block;
+    width: 100%;
+    margin-top: -18%;
+}
+
+.martillo {
     position: absolute;
-    width: 10vw;
-    max-width: 130px;
-    z-index: 5;
+    top: 8%;
+    width: 14vw;
+    z-index: 10;
+
+    transition: transform 0.4s ease, filter 0.3s ease;
 }
 
-#topo-1 {
-    left: 12%;
-    top: 43%;
+#martillo-1 {
+    left: 3%;
 }
 
-#topo-2 {
-    left: 45%;
-    top: 43%;
-}
-
-#topo-3 {
-    right: 12%;
-    top: 43%;
-}
-
-#topo-4 {
-    left: 12%;
-    top: 65%;
-}
-
-#topo-5 {
-    left: 45%;
-    top: 65%;
-}
-
-#topo-6 {
-    right: 12%;
-    top: 65%;
+#martillo-2 {
+    right: 3%;
 }
