@@ -70,3 +70,45 @@
 #martillo-2 {
     right: 3%;
 }
+
+#puntaje-juego8-J1, #puntaje-juego8-J2 {
+    position: absolute;
+    top: 20px;
+    right: 230px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000000;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+#puntaje-juego8-J1 {
+    border: 6px solid #2A05FE;
+}
+
+#puntaje-juego8-J2 {
+    right: 90px;
+    border: 6px solid #FF1F22;
+}
+
+#portada-juego8 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    overflow: hidden;
+
+    background-image: url('../../assets/portadas/inicio8.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#portada-juego8 .div-btn-comenzar-juego {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}

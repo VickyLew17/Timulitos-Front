@@ -17,6 +17,9 @@ let topoActual = null;
 let turno = 1;
 let golpeando = false;
 
+let puntos1 = 0;
+let puntos2 = 0;
+
 
 function sacarTopo() {
 
@@ -62,6 +65,15 @@ function golpear(martillo, angulo) {
     setTimeout(() => {
         martillo.style.transform = `translate(${moverX}px, ${moverY}px) rotate(${angulo}deg)`;
     }, 500);
+
+    if (turno === 1){
+        puntos1 ++;
+        document.getElementById("puntaje-juego8-J1").textContent = puntos1 + "   ⭐";
+    }
+    else if (turno === 2){
+        puntos2 ++;
+        document.getElementById("puntaje-juego8-J2").textContent = puntos2 + "   ⭐"
+    }
 
     setTimeout(() => {
         topoActual.classList.remove("arriba");

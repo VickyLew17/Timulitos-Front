@@ -65,3 +65,45 @@
     right: 15%;
     transform: translateY(-100%) scaleX(-1);
 }
+
+#puntaje-juego7-J1, #puntaje-juego7-J2 {
+    position: absolute;
+    top: 20px;
+    right: 230px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000000;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+#puntaje-juego7-J1 {
+    border: 6px solid #2A05FE;
+}
+
+#puntaje-juego7-J2 {
+    right: 90px;
+    border: 6px solid #FF1F22;
+}
+
+#portada-juego7 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    overflow: hidden;
+
+    background-image: url('../../assets/portadas/inicio7.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#portada-juego7 .div-btn-comenzar-juego {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}

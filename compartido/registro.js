@@ -11,9 +11,11 @@ const rutasJuegos = {
 };
 
 
-function registrarPartida(nombreJugador, nombreCompañero, juego, minutos, puntos) {
+function registrarPartida(nombreJugador, nombreCompañero, juego, minutos, puntos, boton) {
 
     const ruta = rutasJuegos[juego];
+
+   
 
     return fetch(SERVIDOR + "/resultados/" + ruta, {
         method: "POST",

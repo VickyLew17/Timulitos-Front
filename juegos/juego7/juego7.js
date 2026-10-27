@@ -13,6 +13,9 @@ const anzuelo2 = document.getElementById("anzuelo-2");
 let pescando1 = false;
 let pescando2 = false;
 
+let puntos1 = 0;
+let puntos2 = 0;
+
 const peces = [
     document.getElementById("pez-1"),
     document.getElementById("pez-2"),
@@ -126,6 +129,17 @@ function pescar(anzuelo, jugador) {
                 pez.style.transform = "rotate(90deg)";
             } else if (pez === peces[2]) {
                 pez.style.transform = "rotate(-90deg)";
+            }
+
+            if (jugador === 1){
+                puntos1 ++;
+
+                document.getElementById("puntaje-juego7-J1").textContent = puntos1 + "    ⭐"
+            }
+            else if (jugador === 2){
+                puntos2 ++;
+
+                document.getElementById("puntaje-juego7-J2").textContent = puntos2 + "   ⭐"
             }
 
             subirAnzuelo();

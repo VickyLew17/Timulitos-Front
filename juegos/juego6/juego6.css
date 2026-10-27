@@ -37,3 +37,24 @@
     bottom: 25%;
     opacity: 0;
 }
+
+#portada-juego6 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    overflow: hidden;
+
+    background-image: url('../../assets/portadas/inicio6.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#portada-juego6 .div-btn-comenzar-juego {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
