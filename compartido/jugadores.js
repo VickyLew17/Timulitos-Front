@@ -281,10 +281,12 @@ if (jugadoresGuardados === null) {
     jugadores = JSON.parse(jugadoresGuardados);
 }
 
+
 function guardarJugadores() {
     localStorage.setItem('jugadores', JSON.stringify(jugadores));
 }
 
+/*
 async function cargarJugadoresDelServidor(){
     try {
         const respuesta = await fetch(SERVIDOR + "/jugadores");
@@ -303,3 +305,4 @@ async function cargarJugadoresDelServidor(){
     
     }
 }
+    */  

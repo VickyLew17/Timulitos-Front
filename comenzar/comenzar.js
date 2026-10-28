@@ -192,7 +192,7 @@ document.querySelectorAll("#btn-jugar1, #btn-jugar2").forEach(boton => {
 
         guardarJugadores();
 
-        fetch(SERVIDOR + "/jugadores", {
+       /* fetch(SERVIDOR + "/jugadores", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ nombre: nombre, id: idUsuario, animal: animal, color: color })
@@ -200,7 +200,7 @@ document.querySelectorAll("#btn-jugar1, #btn-jugar2").forEach(boton => {
         })
         .catch(error => {
             console.log("no se pudo guardar el usuario en el srvidor", error);
-        })
+        })*/
 
         if (boton.id === "btn-jugar1") {
             jugadorSeleccionado1 = jugadores[jugadores.length - 1];
@@ -370,7 +370,8 @@ function mostrarJugadores() {
     });
 }
 
-cargarJugadoresDelServidor().then(mostrarJugadores);
+/*cargarJugadoresDelServidor().then(mostrarJugadores);*/
+mostrarJugadores();
 
 
 function comprobarSeleccion() {
