@@ -52,10 +52,10 @@
 #icono-terapeutas {
     position: absolute;
 
-    width: 80px;
+    width: 190px;
 
-    left: 50%;
-    top: 3%;
+    left: 20%;
+    top: 3.5%;
 
     transform: translate(-50%, -85%);
 
@@ -440,7 +440,7 @@
 }
 
 .tarjeta-titulo img {
-    width: 50px;
+    width: 80px;
 }
 
 .tarjeta-titulo h3 {

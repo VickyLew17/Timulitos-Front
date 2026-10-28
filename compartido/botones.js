@@ -2,11 +2,11 @@ const conexionBotones = new EventSource(SERVIDOR + "/botones");
 
 conexionBotones.addEventListener("message", (event) => {
     
-    if (event.data === "1") {
+    if (event.data === "A") {
         document.dispatchEvent(new KeyboardEvent("keydown", { code: "Space" }));
     }
 
-    if (event.data ==="2") {
+    if (event.data ==="R") {
         document.dispatchEvent(new KeyboardEvent("keydown", { code: "Enter"}));
     }
 });

@@ -18,13 +18,16 @@
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 3vw 4vw;
+    gap: 3vw;
+
 }
 
 .madriguera {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    margin-bottom: -80px;
 }
 
 .ventana-topo {
@@ -73,8 +76,8 @@
 
 #puntaje-juego8-J1, #puntaje-juego8-J2 {
     position: absolute;
-    top: 20px;
-    right: 230px;
+    top: -1%;
+   
     font-size: 2rem;
     font-weight: bold;
     color: #000000;
@@ -85,10 +88,11 @@
 
 #puntaje-juego8-J1 {
     border: 6px solid #2A05FE;
+    left: 20%;
 }
 
 #puntaje-juego8-J2 {
-    right: 90px;
+    right: 20%;
     border: 6px solid #FF1F22;
 }
 

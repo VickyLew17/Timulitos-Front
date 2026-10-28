@@ -68,8 +68,8 @@
 
 #puntaje-juego7-J1, #puntaje-juego7-J2 {
     position: absolute;
-    top: 20px;
-    right: 230px;
+    top: -1%;
+    right: 88%;
     font-size: 2rem;
     font-weight: bold;
     color: #000000;
@@ -83,7 +83,7 @@
 }
 
 #puntaje-juego7-J2 {
-    right: 90px;
+    right: 6%;
     border: 6px solid #FF1F22;
 }
 
