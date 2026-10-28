@@ -10,3 +10,16 @@ conexionBotones.addEventListener("message", (event) => {
         document.dispatchEvent(new KeyboardEvent("keydown", { code: "Enter"}));
     }
 });
+
+function avisarTurno(turno){
+    fetch(SERVIDOR + "/turno", {
+        method: "POST",
+        headers: {"Content-Type": "applicatio/json"},
+        body: JSON.stringify({turno: turno})
+    })
+    .catch(error => {
+        console.log("no se pudo avisar el turno al arduino desde back:", error);
+    });
+}
+
+avisarTurno(0);

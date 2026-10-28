@@ -2,6 +2,7 @@ cambiarPantalla("portada-juego3");
 
 document.getElementById("btn-comenzar-juego3").addEventListener("click", function () {
     cambiarPantalla("juego3");
+    avisarTurno(1);
 });
 
 
@@ -35,6 +36,8 @@ function cambiarTurno() {
     }
 
     cambiarAro();
+
+    avisarTurno(turno);
 }
 
 document.addEventListener("keydown", function (event) {

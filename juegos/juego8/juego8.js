@@ -3,7 +3,9 @@ cambiarPantalla("portada-juego8");
 document.getElementById("btn-comenzar-juego8").addEventListener("click", function () {
     cambiarPantalla("juego8");
 
-    setTimeout(sacarTopo, 500)
+    setTimeout(sacarTopo, 500);
+
+    avisarTurno(1);
 });
 
 const juego8 = document.getElementById("juego8");
@@ -87,6 +89,8 @@ function golpear(martillo, angulo) {
         else {
             turno = 1;
         }
+
+        avisarTurno(turno);
 
         golpeando = false;
         sacarTopo();
