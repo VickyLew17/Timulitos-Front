@@ -284,3 +284,22 @@ if (jugadoresGuardados === null) {
 function guardarJugadores() {
     localStorage.setItem('jugadores', JSON.stringify(jugadores));
 }
+
+async function cargarJugadoresDelServidor(){
+    try {
+        const respuesta = await fetch(SERVIDOR + "/jugadores");
+
+        if(!respuesta.ok){      //ni idea honestamente como tendria q ser. seria tipo manda ok si el back contesto bien
+            return;
+        }
+
+        jugadores = await respuesta.json();
+
+        guardarJugadores();
+    }
+
+    catch (error) {
+        console.log("no se pudo conectar con el servidor, usa los jugadores q guarde");
+    
+    }
+}

@@ -58,7 +58,8 @@ document.getElementById("btn-con-cuenta").addEventListener("click", () => {
     document.getElementById("conejo-colgando").style.display = "none";
 
     document.querySelectorAll('.jugador-item').forEach(function (elemento) {
-        elemento.classList.remove('seleccionado');    });
+        elemento.classList.remove('seleccionado');
+    });
 
     jugadorSeleccionado1 = null
     jugadorSeleccionado2 = null
@@ -191,6 +192,15 @@ document.querySelectorAll("#btn-jugar1, #btn-jugar2").forEach(boton => {
 
         guardarJugadores();
 
+        fetch(SERVIDOR + "/jugadores", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ nombre: nombre, id: idUsuario, animal: animal, color: color })
+
+        })
+        .catch(error => {
+            console.log("no se pudo guardar el usuario en el srvidor", error);
+        })
 
         if (boton.id === "btn-jugar1") {
             jugadorSeleccionado1 = jugadores[jugadores.length - 1];
@@ -360,17 +370,16 @@ function mostrarJugadores() {
     });
 }
 
-
-mostrarJugadores();
+cargarJugadoresDelServidor().then(mostrarJugadores);
 
 
 function comprobarSeleccion() {
     if (jugadorSeleccionado1 !== null && jugadorSeleccionado2 !== null) {
 
-       /*jugadores*/ localStorage.setItem("jugadoresActuales", JSON.stringify ({
-            jugador1: jugadorSeleccionado1.nombre,
-            jugador2: jugadorSeleccionado2.nombre
-        }))
+       /*jugadores*/ localStorage.setItem("jugadoresActuales", JSON.stringify({
+        jugador1: jugadorSeleccionado1.nombre,
+        jugador2: jugadorSeleccionado2.nombre
+    }))
 
         const titulo = document.getElementById("titulo-tutorial");
 
