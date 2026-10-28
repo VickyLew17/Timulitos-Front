@@ -6,6 +6,11 @@
     left: 0;
     overflow: hidden;
     background-color: #000000;
+
+    background-image: url("../../assets/fondos/fondo2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .particula {

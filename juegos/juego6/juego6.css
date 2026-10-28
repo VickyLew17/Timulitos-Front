@@ -5,27 +5,22 @@
     position: relative;
     overflow: hidden;
 
-    background-color: #DBBEFF;
+    background-image: url("../../assets/fondos/fondo6.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
-
-#sombrero-mago {
-    position: absolute;
-    width: 30vw;
-    left: 30%;
-    bottom: 5%;
-
-    z-index: 100;
-}
 
 
 #varita-magica {
     position: absolute;
-    width: 6vw;
-    max-width: 280px;
-    left: 15%;
-    top: 25%;
+   
+    left: -32%;
+    top: -25%;
     transform-origin:bottom center;
+
+    z-index: 2;
 }
 
 

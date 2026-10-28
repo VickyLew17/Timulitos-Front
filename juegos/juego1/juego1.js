@@ -17,7 +17,9 @@ function crearBurbujas() {
 
     for (let i = 0; i < 30; i++) {
 
-        const burbuja = document.createElement("div");
+        const burbuja = document.createElement("img");
+
+        burbuja.src = "../../assets/personajes/burbuja.png";
 
         burbuja.classList.add("burbuja");
 
