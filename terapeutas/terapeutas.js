@@ -74,8 +74,8 @@ function mostrarListaUsuarios() {
     });
 }
 
-/*cargarJugadoresDelServidor().then(mostrarListaUsuarios);*/
-mostrarListaUsuarios();
+cargarJugadoresDelServidor().then(mostrarListaUsuarios);
+/*mostrarListaUsuarios();*/
 
 
 const buscador = document.getElementById("buscar-usuario");
@@ -287,13 +287,13 @@ document.getElementById("btn-eliminar-usuario").addEventListener("click", () => 
         return;
     }
 
-  /*  fetch(SERVIDOR + "/jugadores/" + encodeURIComponent(jugadorActual.nombre), {
+   fetch(SERVIDOR + "/jugadores/" + encodeURIComponent(jugadorActual.nombre), {
         method: "DELETE"
     })
     .catch(error => {
         console.log("no se pudo eliminar el usuario en el servidor", error);
     });
- */
+ 
     const posicion = jugadores.indexOf(jugadorActual);
 
     jugadores.splice(posicion, 1);
