@@ -68,7 +68,7 @@ function golpear(martillo, angulo) {
 
     setTimeout(() => {
         martillo.style.transform = `translate(${moverX}px, ${moverY}px) rotate(${angulo}deg)`;
-        topoActual.src = "../../assets/animales/topo-mareado.png"; 
+        topoActual.src = "../../assets/personajes/animales/topo-mareado.png"; 
     }, 500);
 
     if (turno === 1){
@@ -97,7 +97,7 @@ function golpear(martillo, angulo) {
 
         golpeando = false;
 
-        topoActual.src = "../../assets/animales/topo.png";
+        topoActual.src = "../../assets/personajes/animales/topo.png";
 
         sacarTopo();
     }, 2300);
