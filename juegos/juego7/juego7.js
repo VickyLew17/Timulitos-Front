@@ -2,6 +2,8 @@ cambiarPantalla("portada-juego7");
 
 document.getElementById("btn-comenzar-juego7").addEventListener("click", function () {
     cambiarPantalla("juego7");
+
+    avisarTurno(1);
 });
 
 const juego7 = document.getElementById("juego7");
@@ -10,8 +12,8 @@ const anzuelo1 = document.getElementById("anzuelo-1");
 const anzuelo2 = document.getElementById("anzuelo-2");
 
 
-let pescando1 = false;
-let pescando2 = false;
+let pescando = false;
+let turno = 1;
 
 let puntos1 = 0;
 let puntos2 = 0;
@@ -29,43 +31,16 @@ const peces = [
 let pezPescado = null;
 
 let movimientoPeces = 0;
-function moverPeces() {
 
+function moverPeces() {
     movimientoPeces += 0.01;
 
-    if (pezPescado !== peces[0]) {
-        peces[0].style.transform =
-            `translateX(${Math.sin(movimientoPeces) * 30}px)`;
-    }
-
-    if (pezPescado !== peces[1]) {
-        peces[1].style.transform =
-            `translateX(${Math.sin(movimientoPeces + 1) * 30}px)`;
-    }
-
-    if (pezPescado !== peces[2]) {
-        peces[2].style.transform =
-            `translateX(${Math.sin(movimientoPeces + 2) * 30}px)`;
-    }
-
-    if (pezPescado !== peces[3]) {
-        peces[3].style.transform =
-            `translateX(${Math.sin(movimientoPeces + 3) * 30}px)`;
-    }
-
-    if (pezPescado !== peces[4]) {
-        peces[4].style.transform =
-            `translateX(${Math.sin(movimientoPeces + 4) * 30}px)`;
-    }
-
-    if (pezPescado !== peces[5]) {
-        peces[5].style.transform =
-            `translateX(${Math.sin(movimientoPeces + 5) * 30}px)`;
-    }
-    if (pezPescado !== peces[6]) {
-        peces[6].style.transform =
-            `translateX(${Math.sin(movimientoPeces + 6) * 30}px)`;
-    }
+    peces.forEach((pez, i) => {
+        if (pezPescado !== pez) {
+            pez.style.transform =
+                `translateX(${Math.sin(movimientoPeces + i) * 30}px)`;
+        }
+    });
 
     requestAnimationFrame(moverPeces);
 }
@@ -76,12 +51,12 @@ document.addEventListener("keydown", function (event) {
 
     if (juego7.style.display === "block") {
 
-        if (event.code === "Space" && !pescando1) {
+        if (event.code === "Space" && turno === 1 && !pescando) {
 
             pescar(anzuelo1, 1);
         }
 
-        if (event.code === "Enter" && !pescando2) {
+        if (event.code === "Enter" && turno === 2 && !pescando) {
 
             pescar(anzuelo2, 2);
         }
@@ -104,11 +79,7 @@ function pescar(anzuelo, jugador) {
 
     let posicion = 25;
 
-    if (jugador === 1) {
-        pescando1 = true;
-    } else {
-        pescando2 = true;
-    }
+   pescando = true;
 
 
     function bajarAnzuelo() {
@@ -179,6 +150,16 @@ function pescar(anzuelo, jugador) {
                 }
 
                 pezPescado = null;
+
+                if (turno === 1) {
+                    turno = 2;
+                } else {
+                    turno = 1;
+                }
+
+                avisarTurno(turno);
+
+                pescando = false;
 
             }, 500);
         }

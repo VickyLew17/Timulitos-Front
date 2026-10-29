@@ -582,7 +582,11 @@
     color: #888;
 }
 
-#id-nuevo:focus,  #id-repetido:focus{
+#id-nuevo, #id-repetido{
+    border-radius: 15px;
+}
+
+#id-nuevo:focus, #id-repetido:focus{
     border-color: #9E4EFF;
 }
 
