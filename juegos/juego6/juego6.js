@@ -25,6 +25,10 @@ const objetos = [
 
     {
         imagen: "../../assets/personajes/papel-higenico.png"
+    },
+
+    {
+        imagen: "../../assets/personajes/libro.png"
     }
 ]
 
@@ -97,7 +101,7 @@ function sacarObjeto() {
         objeto.style.left = x + "%";
         objeto.style.bottom = y + "%";
 
-        if (tiempo < .7) {
+        if (tiempo < .8) {
             requestAnimationFrame(animarObjeto);
         }
 
@@ -107,15 +111,17 @@ function sacarObjeto() {
     animarObjeto();
 
 
+
+    setTimeout(() => {
+
+        objeto.style.opacity = 0;
+
+        
     numero6++;
 
     if (numero6 >= objetos.length) {
         numero6 = 0;
     }
-
-    setTimeout(() => {
-
-        objeto.style.opacity = 0;
 
     }, 2000);
 }

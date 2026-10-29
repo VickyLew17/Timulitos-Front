@@ -11,8 +11,6 @@
     background-position: center;
 }
 
- 
-
 #varita-magica {
     position: absolute;
    
@@ -23,7 +21,6 @@
     z-index: 2;
 }
 
-
 #objeto-juego6 {
     position: absolute;
     width: 15vw;
@@ -31,6 +28,7 @@
     left: 20%;
     bottom: 25%;
     opacity: 0;
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.6));
 }
 
 #portada-juego6 {
