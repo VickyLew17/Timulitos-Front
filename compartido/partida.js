@@ -55,7 +55,7 @@ async function terminarPartida(event) {
         return;
     }
 
-    const guardado = localStorage.getItem("jugadoresActuales");
+    const guardado = localStorage.getItem("jugadoresActuales"); //ESTE LOCAL STORAGE ESTA BN
 
     if (guardado === null) {
         return;

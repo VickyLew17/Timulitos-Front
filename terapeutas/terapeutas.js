@@ -3,7 +3,7 @@ cambiarPantalla("UsuarioTerapeuta");
 const ID_INICIAL = "Sonnys2026";
 
 function leerIdTerapeutas() {
-    const guardado = localStorage.getItem("idTerapeutas");
+    const guardado = localStorage.getItem("idTerapeutas"); //LO TIENE Q IR A BUSCAR DEL BACK
 
     if (guardado === null) {
         return ID_INICIAL;
@@ -343,7 +343,7 @@ document.getElementById("btn-guardar-id").addEventListener("click", () => {
         return;
     }
 
-    localStorage.setItem("idTerapeutas", nuevo);
+    localStorage.setItem("idTerapeutas", nuevo); //TIENE Q SER DEL BACK
 
     cerrarCambiarId();
 });

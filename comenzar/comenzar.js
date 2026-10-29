@@ -45,7 +45,7 @@ document.getElementById("btn-sin-cuenta").addEventListener("click", () => {
     jugadorSeleccionado1 = null
     jugadorSeleccionado2 = null
 
-    /*jugadores*/localStorage.removeItem("jugadoresActuales");
+    /*ESTE LOCLASTORAGE ESTA BN*/localStorage.removeItem("jugadoresActuales");
 
 });
 
@@ -377,7 +377,7 @@ cargarJugadoresDelServidor().then(mostrarJugadores);
 function comprobarSeleccion() {
     if (jugadorSeleccionado1 !== null && jugadorSeleccionado2 !== null) {
 
-       /*jugadores*/ localStorage.setItem("jugadoresActuales", JSON.stringify({
+       /*ESTE LOCALSTORAGE ESTA BIEN*/ localStorage.setItem("jugadoresActuales", JSON.stringify({
         jugador1: jugadorSeleccionado1.nombre,
         jugador2: jugadorSeleccionado2.nombre
     }))
