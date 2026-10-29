@@ -14,7 +14,7 @@ conexionBotones.addEventListener("message", (event) => {
 function avisarTurno(turno){
     fetch(SERVIDOR + "/turno", {
         method: "POST",
-        headers: {"Content-Type": "applicatio/json"},
+        headers: {"Content-Type": "application/json"},
         body: JSON.stringify({turno: turno})
     })
     .catch(error => {

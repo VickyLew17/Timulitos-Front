@@ -192,7 +192,7 @@ document.querySelectorAll("#btn-jugar1, #btn-jugar2").forEach(boton => {
 
         guardarJugadores();
 
-        fetch("http://localhost:3000/jugadores", {
+        fetch(SERVIDOR + "/jugadores", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ nombre: nombre, id: idUsuario, animal: animal, color: color })
