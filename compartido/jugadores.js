@@ -291,7 +291,7 @@ async function cargarJugadoresDelServidor(){
     try {
         const respuesta = await fetch(SERVIDOR + "/jugadores");
 
-        if(!respuesta.ok){      //ni idea honestamente como tendria q ser. seria tipo manda ok si el back contesto bien
+        if(!respuesta.ok){      
             return;
         }
 

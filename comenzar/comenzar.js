@@ -166,6 +166,13 @@ document.querySelectorAll("#btn-jugar1, #btn-jugar2").forEach(boton => {
             return;
         }
 
+        const nombreRepetido = jugadores.find(jugador => jugador.nombre.toLowerCase() === nombre.toLowerCase());
+
+        if (nombreRepetido != undefined){
+            alert("Ese nombre ya existe, probá con otro");
+            return;
+        }
+
         document.getElementById("elegir-usuarios").style.display = "flex";
         document.getElementById("CrearUsuario1").style.display = "none";
         document.getElementById("CrearUsuario2").style.display = "none";

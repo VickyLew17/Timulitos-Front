@@ -1,6 +1,7 @@
 cambiarPantalla("UsuarioTerapeuta");
 
 const ID_INICIAL = "Sonnys2026";
+let idTerapeutaActual = null;
 
 function leerIdTerapeutas() {
     const guardado = localStorage.getItem("idTerapeutas"); //LO TIENE Q IR A BUSCAR DEL BACK
@@ -12,12 +13,21 @@ function leerIdTerapeutas() {
     return guardado;
 }
 
-document.getElementById("btn-entrar-terapeuta").addEventListener("click", () => {
+document.getElementById("btn-entrar-terapeuta").addEventListener("click", async () => {
 
     const input = document.getElementById("ID-terapeutas");
     const error = document.getElementById("error-id-terapeutas");
+    const id = input.value.trim();
 
-    if (input.value.trim() === leerIdTerapeutas()) {
+    const respuesta = await fetch(SERVIDOR + "/login/terapeuta", {
+        method: "POST",
+        headers:{"Content-Type": "application/json"},
+        body: JSON.stringify({ id: id })
+    });
+
+    if (respuesta.ok) {
+        idTerapeutaActual = id;
+
         input.classList.remove("input-error");
         error.classList.remove("visible");
 
@@ -326,7 +336,7 @@ document.getElementById("btn-abrir-cambiar-id").addEventListener("click", () => 
 
 document.getElementById("btn-cancelar-id").addEventListener("click", cerrarCambiarId);
 
-document.getElementById("btn-guardar-id").addEventListener("click", () => {
+document.getElementById("btn-guardar-id").addEventListener("click", async () => {
 
     const nuevo = campoIdNuevo.value.trim();
     const repetido = campoIdRepetido.value.trim();
@@ -343,7 +353,13 @@ document.getElementById("btn-guardar-id").addEventListener("click", () => {
         return;
     }
 
-    localStorage.setItem("idTerapeutas", nuevo); //TIENE Q SER DEL BACK
+    await fetch (SERVIDOR + "/terapeutas/" + encodeURIComponent(idTerapeutaActual), {
+        method: "PUT",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({ nuevoId: nuevo })
+    });
+
+    idTerapeutaActual = nuevo;
 
     cerrarCambiarId();
 });

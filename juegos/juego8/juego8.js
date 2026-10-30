@@ -30,7 +30,7 @@ function sacarTopo() {
     topoActual = topos[numero];
 
     topoActual.classList.add("arriba");
-    
+
 
 }
 
@@ -68,19 +68,22 @@ function golpear(martillo, angulo) {
 
     setTimeout(() => {
         martillo.style.transform = `translate(${moverX}px, ${moverY}px) rotate(${angulo}deg)`;
-        topoActual.src = "../../assets/personajes/animales/topo-mareado.png"; 
+        topoActual.src = "../../assets/personajes/animales/topo-mareado.png";
+
+         if (turno === 1) {
+            puntos1++;
+            document.getElementById("puntaje-juego8-J1").textContent = puntos1 + "   ⭐";
+        }
+        else if (turno === 2) {
+            puntos2++;
+            document.getElementById("puntaje-juego8-J2").textContent = puntos2 + "   ⭐"
+        }
     }, 500);
 
-    if (turno === 1){
-        puntos1 ++;
-        document.getElementById("puntaje-juego8-J1").textContent = puntos1 + "   ⭐";
-    }
-    else if (turno === 2){
-        puntos2 ++;
-        document.getElementById("puntaje-juego8-J2").textContent = puntos2 + "   ⭐"
-    }
+
 
     setTimeout(() => {
+       
         topoActual.classList.remove("arriba");
         martillo.style.transform = "";
     }, 1400);
