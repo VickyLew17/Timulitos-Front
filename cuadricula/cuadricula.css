@@ -46,3 +46,14 @@
 #logo-sonnys {
     width: 44vh;
 }
+
+#logo-sonnys:hover{
+    transform: translateY(0);
+    cursor: default;
+}
+
+#logo-sonnys:active {
+    transform: translateY(0);
+    cursor: default;
+    box-shadow: none;
+}
