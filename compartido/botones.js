@@ -15,7 +15,8 @@ function avisarTurno(turno){
     fetch(SERVIDOR + "/turno", {
         method: "POST",
         headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({turno: turno})
+        body: JSON.stringify({turno: turno}),
+        keepalive: true
     })
     .catch(error => {
         console.log("no se pudo avisar el turno al arduino desde back:", error);
@@ -23,3 +24,7 @@ function avisarTurno(turno){
 }
 
 avisarTurno(0);
+
+window.addEventListener("pagehide", () => {
+    avisarTurno(3);
+});
