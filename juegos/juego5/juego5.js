@@ -14,32 +14,38 @@ let sonido5 = new Audio();
 const animales = [
     {
         imagen: "../../assets/personajes/animales/pato.png",
-        sonido: "../../assets/sonidos/pato.mp3"
+        sonido: "../../assets/sonidos/pato.mp3",
+        left: "69%", top: "60%"
     },
 
     {
         imagen: "../../assets/personajes/animales/conejo.png",
-        sonido: "../../assets/sonidos/conejo.mp3"
+        sonido: "../../assets/sonidos/conejo.mp3",
+        left: "37%", top: "45%"
     },
 
     {
         imagen: "../../assets/personajes/animales/cerdo.png",
-        sonido: "../../assets/sonidos/cerdo.mp3"
+        sonido: "../../assets/sonidos/cerdo.mp3",
+        left: "14%", top: "64%"
     },
 
     {
         imagen: "../../assets/personajes/animales/gato.png",
-        sonido: "../../assets/sonidos/gato.mp3"
+        sonido: "../../assets/sonidos/gato.mp3",
+        left: "84%", top: "35%"
     },
 
     {
         imagen: "../../assets/personajes/animales/leon.png",
-        sonido: "../../assets/sonidos/leon.mp3"
+        sonido: "../../assets/sonidos/leon.mp3",
+        left: "59%", top: "17%"
     },
 
     {
         imagen: "../../assets/personajes/animales/buho.png",
-        sonido: "../../assets/sonidos/buho.mp3"
+        sonido: "../../assets/sonidos/buho.mp3",
+        left: "44%", top: "2%"
     }
 ]
 
@@ -53,6 +59,9 @@ animales.forEach(dato => {
     imagen.src = dato.imagen;
     imagen.classList.add("personaje");
 
+    imagen.style.left = dato.left;
+    imagen.style.top = dato.top;
+
     fila5.appendChild(imagen);
     imagenes5.push(imagen);
 });
@@ -64,7 +73,8 @@ document.addEventListener("keydown", function (event) {
     if (event.code === "Space" || event.code === "Enter") {
         if (juego5.style.display === "block") {
 
-            if (numero5 >= 0) { imagenes5[numero5].classList.remove("activo");
+            if (numero5 >= 0) {
+                imagenes5[numero5].classList.remove("activo");
                 imagenes5[numero5].style.transform = "";
             }
 
@@ -82,11 +92,11 @@ document.addEventListener("keydown", function (event) {
             const moverX = window.innerWidth / 2 - (caja.left + caja.width / 2);
             const moverY = window.innerHeight / 2 - (caja.top + caja.height / 2);
 
-            
-            imagen.style.transform = `translate(${moverX}px, ${moverY}px) scale(3.2)`;
+
+            imagen.style.transform = `translate(${moverX}px, ${moverY}px) scale(3.2)`; 
             imagen.classList.add("activo");
 
-            
+
             sonido5.pause();
             sonido5.currentTime = 0;
             sonido5.src = animales[numero5].sonido;

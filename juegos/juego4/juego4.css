@@ -16,22 +16,16 @@
 
 .fila-personajes {
     position: absolute;
-    bottom: 20%;
+    top: 0;
     left: 0;
     width: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    gap: 3vw;
+    height: 100%;
 }
 
 .personaje {
-    width: 12vw;
-    height: 12vw;
+    position: absolute;
+    height: auto;
     object-fit: contain;
-
-    position: relative;
     transition: transform 0.4s ease, filter 0.4s ease;
 }
 
