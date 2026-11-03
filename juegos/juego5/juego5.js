@@ -15,7 +15,7 @@ const animales = [
     {
         imagen: "../../assets/personajes/animales/pato.png",
         sonido: "../../assets/sonidos/pato.mp3",
-        left: "69%", top: "60%"
+        left: "71%", top: "60%"
     },
 
     {
@@ -27,7 +27,7 @@ const animales = [
     {
         imagen: "../../assets/personajes/animales/cerdo.png",
         sonido: "../../assets/sonidos/cerdo.mp3",
-        left: "14%", top: "64%"
+        left: "18%", top: "67%"
     },
 
     {
@@ -39,13 +39,13 @@ const animales = [
     {
         imagen: "../../assets/personajes/animales/leon.png",
         sonido: "../../assets/sonidos/leon.mp3",
-        left: "59%", top: "17%"
+        left: "63%", top: "14%"
     },
 
     {
         imagen: "../../assets/personajes/animales/buho.png",
         sonido: "../../assets/sonidos/buho.mp3",
-        left: "44%", top: "2%"
+        left: "47%", top: "-1%"
     }
 ]
 
